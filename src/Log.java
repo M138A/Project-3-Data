@@ -7,7 +7,7 @@ public class Log extends JFrame {
     public static void main(String[] args) {
         Log frameTabel = new Log();
     }
-
+//JO RENÉ ALLES GOED?
     JButton blogin = new JButton("Login");
     JPanel panel = new JPanel();
     JTextField txuser = new JTextField(15);
