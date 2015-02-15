@@ -12,7 +12,7 @@ public class adminEnvironment {
     /**
      * Link the logged in user to this session
      *
-     * @param user
+     * @param user which is set in adminEnvironment line 51
      */
     public adminEnvironment(authorizedUser user) {
         currentUser = user;

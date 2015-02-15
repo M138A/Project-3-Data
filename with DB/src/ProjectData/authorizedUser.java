@@ -12,10 +12,14 @@ public class authorizedUser {
     Boolean authorized = false;
     String username;
 
-    public boolean checkCredentials(String username1, String password) {
+    public boolean checkCredentials(String username1, String notEncPassword) {
         Connection conn = null;
         String dbPass = null;
+        crypt encryptAES = new crypt();
+        String password = null;
+
         try {
+            password = encryptAES.encrypt(notEncPassword);
             Class.forName("com.mysql.jdbc.Driver");
             //connect to database
             conn = DriverManager.getConnection("jdbc:mysql://mijnmarklinbaan.nl/mijnma1q_PrjData", "mijnma1q_prjuser", "password");
@@ -33,8 +37,12 @@ public class authorizedUser {
 
         } catch (SQLException e) {//throwed when there is an sql exception
             e.printStackTrace();
+            return false;
         } catch (ClassNotFoundException e) {//throwed when com.mysql.jdbc.Driver is not found
 
+            e.printStackTrace();
+            return false;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         if (dbPass != null && dbPass.equals(password)) {//when password is not null and equals entered password : log user in
