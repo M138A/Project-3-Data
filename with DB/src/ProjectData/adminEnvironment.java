@@ -6,18 +6,27 @@ import javax.swing.*;
  * Created by MarkGame on 14-2-2015.
  */
 public class adminEnvironment {
+    //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
-    public adminEnvironment(authorizedUser user){
+
+    /**
+     * Link the logged in user to this session
+     *
+     * @param user
+     */
+    public adminEnvironment(authorizedUser user) {
         currentUser = user;
         showScreen();
     }
-    private void showScreen()
-    {
+
+    /**
+     * Shows the administrator screen
+     */
+    private void showScreen() {
         JFrame x = new JFrame();
         x.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        x.add(new JLabel("Welkom " + currentUser.username));
+        x.add(new JLabel("Welkom " + currentUser.getUsername()));
         x.setVisible(true);
-        x.setSize(300,300);
-
+        x.setSize(300, 300);
     }
 }
