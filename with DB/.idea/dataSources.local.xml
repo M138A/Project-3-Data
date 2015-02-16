@@ -2,10 +2,8 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="MySQL - mijnma1q_PrjData@mijnmarklinbaan.nl" uuid="a6c635a2-78ce-41c2-a066-667d04ca8469">
-      <secret-storage>master_key</secret-storage>
       <user-name>mijnma1q_prjuser</user-name>
-      <schema-pattern>mijnma1q_PrjData.*</schema-pattern>
-      <default-schemas>mijnma1q_PrjData.*</default-schemas>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
     </data-source>
   </component>
 </project>

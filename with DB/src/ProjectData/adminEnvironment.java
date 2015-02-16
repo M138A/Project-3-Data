@@ -3,7 +3,7 @@ package ProjectData;
 import javax.swing.*;
 
 /**
- * Created by MarkGame on 14-2-2015.
+ * Created by Mark on 14-2-2015.
  */
 public class adminEnvironment {
     //the authorized user, which will be set in the constructor
