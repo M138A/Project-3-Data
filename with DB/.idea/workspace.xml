@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2515b17-a7c4-4ccb-8727-eae131917709" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/cypt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ProjectData/cypt.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/adminEnvironment.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/adminEnvironment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/authorizedUser.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/authorizedUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/crypt.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/crypt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/loginForm$1.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/loginForm$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/loginForm.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/loginForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Data 2.iml" afterPath="$PROJECT_DIR$/Project Data 2.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectData/adminEnvironment.java" afterPath="$PROJECT_DIR$/src/ProjectData/adminEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectData/authorizedUser.java" afterPath="$PROJECT_DIR$/src/ProjectData/authorizedUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectData/crypt.java" afterPath="$PROJECT_DIR$/src/ProjectData/crypt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project Data 2.iws" />
@@ -49,24 +41,6 @@
         <option name="myItemId" value="MySQL - mijnma1q_PrjData@mijnmarklinbaan.nl" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="mijnma1q_PrjData" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Leden" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - mijnma1q_PrjData@mijnmarklinbaan.nl" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -75,11 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="loginForm.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginForm.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ProjectData/loginForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.30564263" vertical-offset="360" max-vertical-offset="1365">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,18 +65,30 @@
         <entry file="file://$PROJECT_DIR$/src/ProjectData/crypt.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminEnvironment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminEnvironment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProjectData/adminEnvironment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11755486" vertical-offset="0" max-vertical-offset="638">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authorizedUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProjectData/authorizedUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+              <folding>
+                <marker date="1424091354459" expanded="true" signature="831:892" placeholder="SELECT passw..Leden..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,8 +106,10 @@
         <option value="$PROJECT_DIR$/src/adminEnvironment.java" />
         <option value="$PROJECT_DIR$/src/ProjectData/loginForm.java" />
         <option value="$PROJECT_DIR$/src/ProjectData/cypt.java" />
-        <option value="$PROJECT_DIR$/src/ProjectData/authorizedUser.java" />
         <option value="$PROJECT_DIR$/src/ProjectData/adminEnvironment.java" />
+        <option value="$PROJECT_DIR$/src/ProjectData/authorizedUser.java" />
+        <option value="$PROJECT_DIR$/src/ProjectData/crypt.java" />
+        <option value="$PROJECT_DIR$/src/ProjectData/testForm.form" />
       </list>
     </option>
   </component>
@@ -159,6 +147,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,8 +191,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -525,12 +513,13 @@
       <workItem from="1424014032443" duration="1231000" />
       <workItem from="1424078237201" duration="64000" />
       <workItem from="1424081486287" duration="131000" />
-      <workItem from="1424085224792" duration="442000" />
+      <workItem from="1424085224792" duration="1514000" />
+      <workItem from="1424088113323" duration="4813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18003000" />
+    <option name="totallyTimeSpent" value="23888000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -612,6 +601,42 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ProjectData/loginForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1410">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectData/crypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="630">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectData/adminEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="585">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectData/authorizedUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1424091354459" expanded="true" signature="831:892" placeholder="SELECT passw..Leden..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectData/loginForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
@@ -959,37 +984,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectData/crypt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectData/loginForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectData/authorizedUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0830721" vertical-offset="352" max-vertical-offset="990">
-          <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
-          <folding>
-            <marker date="1424078119900" expanded="true" signature="-1:-1" placeholder="SELECT passw..Leden..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectData/adminEnvironment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11755486" vertical-offset="0" max-vertical-offset="638">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectData/authorizedUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <marker date="1424091354459" expanded="true" signature="831:892" placeholder="SELECT passw..Leden..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectData/loginForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30564263" vertical-offset="360" max-vertical-offset="1365">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

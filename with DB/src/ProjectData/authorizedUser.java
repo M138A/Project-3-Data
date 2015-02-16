@@ -5,7 +5,7 @@ import java.sql.*;
 /**
  * Created by Mark on 14-2-2015.
  * The test user :
- * username : user
+ * username : user2
  * password : pass
  */
 public class authorizedUser {
@@ -45,6 +45,7 @@ public class authorizedUser {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         if (dbPass != null && dbPass.equals(password)) {//when password is not null and equals entered password : log user in
             authorized = true;
             username = username1;
