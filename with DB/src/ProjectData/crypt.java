@@ -27,8 +27,8 @@ public class crypt {
         Key key = generateKey();
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.DECRYPT_MODE, key);
-        byte[] decordedValue = new BASE64Decoder().decodeBuffer(encryptedData);
-        byte[] decValue = c.doFinal(decordedValue);
+        byte[] decodedValue = new BASE64Decoder().decodeBuffer(encryptedData);
+        byte[] decValue = c.doFinal(decodedValue);
         String decryptedValue = new String(decValue);
         return decryptedValue;
     }

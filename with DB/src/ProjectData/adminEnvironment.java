@@ -1,11 +1,11 @@
 package ProjectData;
 
 import javax.swing.*;
-
 /**
  * Created by Mark on 14-2-2015.
  */
 public class adminEnvironment {
+
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
 
