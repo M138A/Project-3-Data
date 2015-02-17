@@ -11,6 +11,7 @@ import java.sql.*;
 public class adminEnvironment extends loginForm {
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
+    /** Variables declarated outside Method scope, because they have to be used in different method**/
     private static String[] userGrant = {"", "1", "2"};
     private static JComboBox<String> userList = new JComboBox<String>(userGrant);
 
@@ -97,6 +98,7 @@ public class adminEnvironment extends loginForm {
     public static void connectionDB(String u, String p, String f)
     {
         try {
+            /**Database login credentials**/
             String username = "mijnma1q_prjuser";
             String password = "password";
             String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
@@ -108,11 +110,14 @@ public class adminEnvironment extends loginForm {
             preparedStatement.setString(2,p);
             preparedStatement.setInt(3,foo);
             preparedStatement.execute();
+            /**Close connection with Database **/
                 connection.close();
+            /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        
+        /**Reports Account made in terminal**/
+        System.out.println("Account gemaakt!");
     }
 
 }
