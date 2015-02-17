@@ -7,6 +7,7 @@ import java.sql.*;
 
 
 
+
 public class adminEnvironment extends loginForm {
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
@@ -73,6 +74,12 @@ public class adminEnvironment extends loginForm {
                 String username = userField.getText();
                 String password = String.valueOf(passField.getPassword());
                 String functions = (String) userList.getSelectedItem();
+                crypt AESCrypter = new crypt();
+                try {
+                    password = AESCrypter.encrypt(password);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
                 connectionDB(username, password, functions);
             }
         });
