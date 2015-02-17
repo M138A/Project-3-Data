@@ -6,11 +6,15 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 
 
+
 public class adminEnvironment extends loginForm {
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
     private static String[] userGrant = {"", "1", "2"};
     private static JComboBox<String> userList = new JComboBox<String>(userGrant);
+    private static String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
+    private static String username = "mijnma1q_prjuser";
+    private static String password = "password";
 
 
     /**
@@ -21,6 +25,7 @@ public class adminEnvironment extends loginForm {
     public adminEnvironment(authorizedUser user) {
         currentUser = user;
         showScreen();
+        connection();
     }
 
     /**
@@ -58,42 +63,24 @@ public class adminEnvironment extends loginForm {
                 String password = String.valueOf(passField.getPassword());
                 String functions = (String) userList.getSelectedItem();
                 System.out.println(username + password + functions);
+
             }
         });
         return btnAddAccount;
+
     }
-
-    public boolean checkCredentials(String username1, String password1, String functions1) {
-        Connection conn = null;
-        String dbPass = null;
-        crypt encryptAES = new crypt();
-
+    public static void connection(){ 
+    {
         try {
-            crypt.encrypt(password1);
-            Class.forName("com.mysql.jdbc.Driver");
-            //connect to database
-            conn = DriverManager.getConnection("jdbc:mysql://mijnmarklinbaan.nl/mijnma1q_PrjData", "mijnma1q_prjuser", "password");
-            Statement statement = conn.createStatement();
-            String sql;
-            sql = "INSERT INTO \"Leden\" (ID, \"username\",\"password\", \"role\") \n" +
-                    "VALUES(4 , username1,password1, 2);";
-            //execute sql query
-            ResultSet rs = statement.executeQuery(sql);
-            //process result of query
-            //close database connection
-            conn.close();
-
-        } catch (SQLException e) {//throwed when there is an sql exception
-            e.printStackTrace();
-            return false;
-        } catch (ClassNotFoundException e) {//throwed when com.mysql.jdbc.Driver is not found
-
-            e.printStackTrace();
-            return false;
-        } catch (Exception e) {
+            Connection connection = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        return true;
+        
+        System.out.println("Database connected!");
+    }
+
     }
 }
+
 
