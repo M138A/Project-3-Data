@@ -73,9 +73,7 @@ public class adminEnvironment extends loginForm {
                 String username = userField.getText();
                 String password = String.valueOf(passField.getPassword());
                 String functions = (String) userList.getSelectedItem();
-                System.out.println(username + password + functions);
                 connectionDB(username, password, functions);
-
             }
         });
         return btnAddAccount;
@@ -108,7 +106,6 @@ public class adminEnvironment extends loginForm {
             e.printStackTrace();
         }
         
-        System.out.println("Database connected!");
     }
 
 }
