@@ -12,9 +12,6 @@ public class adminEnvironment extends loginForm {
     authorizedUser currentUser = null;
     private static String[] userGrant = {"", "1", "2"};
     private static JComboBox<String> userList = new JComboBox<String>(userGrant);
-    private static String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
-    private static String username = "mijnma1q_prjuser";
-    private static String password = "password";
 
 
     /**
@@ -72,6 +69,9 @@ public class adminEnvironment extends loginForm {
     public static void connection(){ 
     {
         try {
+            String username = "mijnma1q_prjuser";
+            String password = "password";
+            String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
             Connection connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
             e.printStackTrace();
