@@ -93,6 +93,7 @@ public class loginForm extends JFrame {
     }
     public static void close()
     {
+        
         main.setVisible(false);
     }
 }

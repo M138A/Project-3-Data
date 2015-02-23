@@ -15,8 +15,6 @@ public class adminEnvironment extends loginForm {
     private static String[] userGrant = {"", "1", "2"};
     private static JComboBox<String> userList = new JComboBox<String>(userGrant);
 
-
-
     /**
      * Link the logged in user to this session
      *
@@ -81,7 +79,13 @@ public class adminEnvironment extends loginForm {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                connectionDB(username, password, functions);
+                /***
+                 * Checks If fields are empty, if they aren't the parameters are passed to the Database Method
+                 *
+                 */
+                if (!username.isEmpty() & passField.getText().trim().length() != 0 ) {
+                    connectionDB(username, password, functions);
+                }
             }
         });
         return btnAddAccount;
@@ -106,20 +110,19 @@ public class adminEnvironment extends loginForm {
             Connection connection = DriverManager.getConnection(url, username, password);
             String sql = "INSERT INTO Leden (ID, username, password, role) VALUES (null,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,u);
-            preparedStatement.setString(2,p);
-            preparedStatement.setInt(3,foo);
+            preparedStatement.setString(1, u);
+            preparedStatement.setString(2, p);
+            preparedStatement.setInt(3, foo);
             preparedStatement.execute();
             /**Close connection with Database **/
-                connection.close();
+            connection.close();
             /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
-        } catch (SQLException e) {
+        }catch (SQLException e) {
             e.printStackTrace();
         }
         /**Reports Account made in terminal**/
         System.out.println("Account gemaakt!");
     }
-
 }
 
 
