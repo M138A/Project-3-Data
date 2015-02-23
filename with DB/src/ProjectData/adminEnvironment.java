@@ -8,7 +8,7 @@ import java.sql.*;
 
 
 
-public class adminEnvironment extends loginForm {
+public class adminEnvironment extends loginEnvironment {
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
     /** Variables declarated outside Method scope, because they have to be used in different method**/
@@ -85,6 +85,9 @@ public class adminEnvironment extends loginForm {
                  */
                 if (!username.isEmpty() & passField.getText().trim().length() != 0 ) {
                     connectionDB(username, password, functions);
+                }
+                else {
+                    System.out.println("Voer data in!");
                 }
             }
         });
