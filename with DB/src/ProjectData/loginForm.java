@@ -11,15 +11,14 @@ import java.awt.event.ActionListener;
  * This class generates and shows the login form.
  */
 public class loginForm extends loginEnvironment {
-
-    public static void main(String[] args) {
-
+   private static JFrame main = new JFrame();
+    
+    public static void main (String[] args){
         generateGUI();
+        
     }
 
-
     public static void generateGUI() {
-        JFrame main = new JFrame();
         main.setSize(300, 200);
         main.setLayout(null);
         main.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

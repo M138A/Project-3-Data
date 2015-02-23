@@ -5,4 +5,8 @@ package ProjectData;
  */
 public class analistEnvironment extends loginEnvironment {
 
+    public analistEnvironment() {
+        basicEnviromentScreen();
+
+    }
 }
