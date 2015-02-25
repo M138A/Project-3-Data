@@ -30,9 +30,9 @@ public class loginForm extends loginEnvironment {
     }
 
     public static void setUpContent(Container pane) {
-        pane.add(createUserNameLabel(20, 20));
+        pane.add(createUserNameLabel("Username",20, 20));
         pane.add(createUserNameField(150, 20));
-        pane.add(createPasswordLabel(20, 50));
+        pane.add(createUserNameLabel("Password",20, 50));
         pane.add(createPassWordField(150, 50));
         pane.add(createSubmitButton(75, 80));
         pane.add(errorMessageLabel);
