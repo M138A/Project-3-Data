@@ -40,14 +40,14 @@ public class adminEnvironment extends loginEnvironment{
         x.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         x.setLocationRelativeTo(null);
         x.setLayout(null);
-        x.add(createUserNameLabel(10, 20));
+        x.add(createUserNameLabel("Username",10, 20));
         x.add(createUserNameField(90, 20));
-        x.add(createPasswordLabel(10, 50));
+        x.add(createUserNameLabel("Password",10, 50));
         x.add(createPassWordField(90, 50));
         x.add(createComboBox(90, 80));
         x.add(createValidationButton(90, 120));
         x.setVisible(true);
-        x.setSize(300, 300);
+        x.setSize(1000, 800);
     }
 
     /***
