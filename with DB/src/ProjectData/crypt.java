@@ -1,6 +1,11 @@
 package ProjectData;
 
 import java.security.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.*;
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import sun.misc.*;
@@ -13,6 +18,7 @@ public class crypt {
     private static final byte[] keyValue =
             new byte[] { 'C', '1', 'g', 'r', 'M', '$', 'g',
                     'h', '&', '5', 'n',',', 'x', '7', 'Y', 'b' };
+
 
     public static String encrypt(String Data) throws Exception {
         Key key = generateKey();

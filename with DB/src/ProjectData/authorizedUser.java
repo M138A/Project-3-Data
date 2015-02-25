@@ -17,6 +17,7 @@ public class authorizedUser {
         String dbPass = null;
         crypt encryptAES = new crypt();
         String password = null;
+        int roles = 0;
 
         try {
             password = encryptAES.encrypt(notEncPassword);
@@ -25,12 +26,13 @@ public class authorizedUser {
             conn = DriverManager.getConnection("jdbc:mysql://mijnmarklinbaan.nl/mijnma1q_PrjData", "mijnma1q_prjuser", "password");
             Statement statement = conn.createStatement();
             String sql;
-            sql = "SELECT password FROM Leden WHERE username='" + username1 + "'";
+            sql = "SELECT password,role FROM Leden WHERE username='" + username1 + "'";
             //execute sql query
             ResultSet rs = statement.executeQuery(sql);
             //process result of query
             while (rs.next()) {
                 dbPass = rs.getString("password");
+                roles = rs.getInt("role");
             }
             //close database connection
             conn.close();
@@ -49,7 +51,13 @@ public class authorizedUser {
         if (dbPass != null && dbPass.equals(password)) {//when password is not null and equals entered password : log user in
             authorized = true;
             username = username1;
-            adminEnvironment x = new adminEnvironment(this);
+            switch(roles){
+               case 1: adminEnvironment x = new adminEnvironment(this);
+                  break;
+               case 2: analistEnvironment x1 = new analistEnvironment(this);
+                  break;
+            }
+//            adminEnvironment x = new adminEnvironment(this);
             return true;//returned to loginForm to close the login screen
         } else {
             return false;//returned to loginForm to show error message

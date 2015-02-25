@@ -1,6 +1,7 @@
 package ProjectData;
 
 import javax.swing.*;
+import javax.swing.text.Document;
 
 /**
  * Created by Bart on 23-2-2015.
@@ -72,5 +73,4 @@ public class loginEnvironment extends JFrame{
         pLabel.setBounds(x, y, 100, 20);
         return pLabel;
     }
-    
 }

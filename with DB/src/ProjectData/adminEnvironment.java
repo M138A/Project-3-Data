@@ -8,12 +8,17 @@ import java.sql.*;
 
 
 
-public class adminEnvironment extends loginEnvironment {
+public class adminEnvironment extends loginEnvironment{
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
     /** Variables declarated outside Method scope, because they have to be used in different method**/
-    private static String[] userGrant = {"", "1", "2"};
+    private static String[] userGrant = {"1", "2"};
     private static JComboBox<String> userList = new JComboBox<String>(userGrant);
+    /**Database login credentials**/
+    private static final String username = "mijnma1q_prjuser";
+    private static final String password = "password";
+    private static final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
+    private static JButton btnAddAccount = new JButton("Voeg Account Toe");
 
     /**
      * Link the logged in user to this session
@@ -65,7 +70,6 @@ public class adminEnvironment extends loginEnvironment {
      * @return the Jbutton
      */
     public static JButton createValidationButton(int x, int y) {
-        JButton btnAddAccount = new JButton("Voeg Account Toe");
         btnAddAccount.setBounds(x, y, 100, 20);
         btnAddAccount.addActionListener(new ActionListener() {
             @Override
@@ -105,10 +109,6 @@ public class adminEnvironment extends loginEnvironment {
     public static void connectionDB(String u, String p, String f)
     {
         try {
-            /**Database login credentials**/
-            String username = "mijnma1q_prjuser";
-            String password = "password";
-            String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
             int foo = Integer.parseInt(f);  // String f to int (1 or 2)
             Connection connection = DriverManager.getConnection(url, username, password);
             String sql = "INSERT INTO Leden (ID, username, password, role) VALUES (null,?,?,?)";
@@ -125,6 +125,32 @@ public class adminEnvironment extends loginEnvironment {
         }
         /**Reports Account made in terminal**/
         System.out.println("Account gemaakt!");
+    }
+
+    /**
+     * WORK IN PROGRESS
+     * @param username1
+     * @return
+     * @throws SQLException
+     */
+    public static boolean checkIfUsernameExists(String username1) throws SQLException {
+
+        Connection connection = DriverManager.getConnection(url, username, password);
+        Statement statement = connection.createStatement();
+        String user = null;
+        String sql = "SELECT * FROM Leden WHERE username='" +username1+ "'";
+
+        ResultSet rs = statement.executeQuery(sql);
+        while (rs.next()) {
+            user = rs.getString("username");
+        }
+        if (username1 == user) {
+            btnAddAccount.setEnabled(false);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
 

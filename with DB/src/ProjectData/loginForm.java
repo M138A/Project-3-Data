@@ -12,12 +12,11 @@ import java.awt.event.ActionListener;
  */
 public class loginForm extends loginEnvironment {
    private static JFrame main = new JFrame();
-    
-    public static void main (String[] args){
-        generateGUI();
-        
-    }
 
+    public static void main(String[] args){
+        generateGUI();
+    }
+    
     public static void generateGUI() {
         main.setSize(300, 200);
         main.setLayout(null);
