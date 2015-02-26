@@ -3,19 +3,21 @@ package ProjectData;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.sql.*;
 
 
 
 
-public class adminEnvironment extends loginEnvironment{
+public class adminEnvironment extends loginEnvironment implements FocusListener {
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
     /** Variables declarated outside Method scope, because they have to be used in different method**/
     private static String[] userGrant = {"1", "2"};
     private static JComboBox<String> userList = new JComboBox<String>(userGrant);
     /**Database login credentials**/
-    private static final String username = "mijnma1q_prjuser";
+    private static final String usernameDB = "mijnma1q_prjuser";
     private static final String password = "password";
     private static final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
     private static JButton btnAddAccount = new JButton("Voeg Account Toe");
@@ -40,8 +42,9 @@ public class adminEnvironment extends loginEnvironment{
         x.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         x.setLocationRelativeTo(null);
         x.setLayout(null);
-        x.add(createUserNameLabel("Username",10, 20));
+        x.add(createUserNameLabel("Username", 10, 20));
         x.add(createUserNameField(90, 20));
+        userField.addFocusListener(this);
         x.add(createUserNameLabel("Password",10, 50));
         x.add(createPassWordField(90, 50));
         x.add(createComboBox(90, 80));
@@ -110,7 +113,7 @@ public class adminEnvironment extends loginEnvironment{
     {
         try {
             int foo = Integer.parseInt(f);  // String f to int (1 or 2)
-            Connection connection = DriverManager.getConnection(url, username, password);
+            Connection connection = DriverManager.getConnection(url, usernameDB, password);
             String sql = "INSERT INTO Leden (ID, username, password, role) VALUES (null,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, u);
@@ -129,27 +132,46 @@ public class adminEnvironment extends loginEnvironment{
 
     /**
      * WORK IN PROGRESS
-     * @param username1
      * @return
      * @throws SQLException
      */
-    public static boolean checkIfUsernameExists(String username1) throws SQLException {
+    public static boolean checkIfUsernameExists() throws SQLException {
 
-        Connection connection = DriverManager.getConnection(url, username, password);
+        Connection connection = DriverManager.getConnection(url, usernameDB, password);
         Statement statement = connection.createStatement();
+        String check = userField.getText();
         String user = null;
-        String sql = "SELECT * FROM Leden WHERE username='" +username1+ "'";
+        String sql = "SELECT * FROM Leden WHERE username='" +check+ "'";
 
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
             user = rs.getString("username");
         }
-        if (username1 == user) {
+        if (check.equals(user)) {
             btnAddAccount.setEnabled(false);
             return true;
         }
         else {
+            btnAddAccount.setEnabled(true);
             return false;
+        }
+    }
+
+    @Override
+    public void focusGained(FocusEvent e) {
+        try {
+            checkIfUsernameExists();
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    @Override
+    public void focusLost(FocusEvent e) {
+        try {
+            checkIfUsernameExists();
+        } catch (SQLException e1) {
+            e1.printStackTrace();
         }
     }
 }

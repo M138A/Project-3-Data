@@ -56,7 +56,7 @@ public class loginEnvironment extends JFrame{
         JTextField uField = new JTextField();
         uField.setBounds(x, y, 100, 20);
         userField = uField;
-        return uField;//
+        return uField;
     }
 
     /**
@@ -72,5 +72,5 @@ public class loginEnvironment extends JFrame{
         return uPassField;
     }
 
-    
+
 }
