@@ -1,26 +1,26 @@
 package ProjectData;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import java.sql.*;
 
 
 
 
-public class adminEnvironment extends loginEnvironment implements FocusListener {
+public class adminEnvironment extends loginEnvironment implements DocumentListener {
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
     /** Variables declarated outside Method scope, because they have to be used in different method**/
-    private static String[] userGrant = {"1", "2"};
-    private static JComboBox<String> userList = new JComboBox<String>(userGrant);
+    private String[] userGrant = {"1", "2"};
+    private JComboBox<String> userList = new JComboBox<String>(userGrant);
     /**Database login credentials**/
-    private static final String usernameDB = "mijnma1q_prjuser";
-    private static final String password = "password";
-    private static final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
-    private static JButton btnAddAccount = new JButton("Voeg Account Toe");
+    private final String usernameDB = "mijnma1q_prjuser";
+    private final String password = "password";
+    private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
+    private JButton btnAddAccount = new JButton("Voeg Account Toe");
 
     /**
      * Link the logged in user to this session
@@ -44,7 +44,7 @@ public class adminEnvironment extends loginEnvironment implements FocusListener 
         x.setLayout(null);
         x.add(createUserNameLabel("Username", 10, 20));
         x.add(createUserNameField(90, 20));
-        userField.addFocusListener(this);
+        userField.getDocument().addDocumentListener(this);
         x.add(createUserNameLabel("Password",10, 50));
         x.add(createPassWordField(90, 50));
         x.add(createComboBox(90, 80));
@@ -60,7 +60,7 @@ public class adminEnvironment extends loginEnvironment implements FocusListener 
      * @param y-Location
      * @return the JComboBox<String>
      */
-    public static JComboBox<String> createComboBox(int x, int y) {
+    public JComboBox<String> createComboBox(int x, int y) {
         userList.setBounds(x, y, 100, 20);
         return userList;
     }
@@ -72,7 +72,7 @@ public class adminEnvironment extends loginEnvironment implements FocusListener 
      * @param y-location
      * @return the Jbutton
      */
-    public static JButton createValidationButton(int x, int y) {
+    public JButton createValidationButton(int x, int y) {
         btnAddAccount.setBounds(x, y, 100, 20);
         btnAddAccount.addActionListener(new ActionListener() {
             @Override
@@ -109,7 +109,7 @@ public class adminEnvironment extends loginEnvironment implements FocusListener 
      * @password p
      * @role (1,2) f
      */
-    public static void connectionDB(String u, String p, String f)
+    public void connectionDB(String u, String p, String f)
     {
         try {
             int foo = Integer.parseInt(f);  // String f to int (1 or 2)
@@ -119,7 +119,9 @@ public class adminEnvironment extends loginEnvironment implements FocusListener 
             preparedStatement.setString(1, u);
             preparedStatement.setString(2, p);
             preparedStatement.setInt(3, foo);
-            preparedStatement.execute();
+            if (!checkIfUsernameExists()) {
+                preparedStatement.execute();
+            }
             /**Close connection with Database **/
             connection.close();
             /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
@@ -135,7 +137,7 @@ public class adminEnvironment extends loginEnvironment implements FocusListener 
      * @return
      * @throws SQLException
      */
-    public static boolean checkIfUsernameExists() throws SQLException {
+    public boolean checkIfUsernameExists() throws SQLException {
 
         Connection connection = DriverManager.getConnection(url, usernameDB, password);
         Statement statement = connection.createStatement();
@@ -158,7 +160,7 @@ public class adminEnvironment extends loginEnvironment implements FocusListener 
     }
 
     @Override
-    public void focusGained(FocusEvent e) {
+    public void insertUpdate(DocumentEvent e) {
         try {
             checkIfUsernameExists();
         } catch (SQLException e1) {
@@ -167,7 +169,16 @@ public class adminEnvironment extends loginEnvironment implements FocusListener 
     }
 
     @Override
-    public void focusLost(FocusEvent e) {
+    public void removeUpdate(DocumentEvent e) {
+        try {
+            checkIfUsernameExists();
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent e) {
         try {
             checkIfUsernameExists();
         } catch (SQLException e1) {
