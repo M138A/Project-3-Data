@@ -1,8 +1,6 @@
 package ProjectData;
 
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -10,7 +8,7 @@ import java.sql.*;
 
 
 
-public class adminEnvironment extends loginEnvironment implements DocumentListener {
+public class adminEnvironment extends loginEnvironment {
     //the authorized user, which will be set in the constructor
     authorizedUser currentUser = null;
     /** Variables declarated outside Method scope, because they have to be used in different method**/
@@ -44,7 +42,6 @@ public class adminEnvironment extends loginEnvironment implements DocumentListen
         x.setLayout(null);
         x.add(createUserNameLabel("Username", 10, 20));
         x.add(createUserNameField(90, 20));
-        userField.getDocument().addDocumentListener(this);
         x.add(createUserNameLabel("Password",10, 50));
         x.add(createPassWordField(90, 50));
         x.add(createComboBox(90, 80));
@@ -114,22 +111,20 @@ public class adminEnvironment extends loginEnvironment implements DocumentListen
         try {
             int foo = Integer.parseInt(f);  // String f to int (1 or 2)
             Connection connection = DriverManager.getConnection(url, usernameDB, password);
-            String sql = "INSERT INTO Leden (ID, username, password, role) VALUES (null,?,?,?)";
+            String sql = "INSERT INTO Leden (username, password, role) VALUES (?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, u);
             preparedStatement.setString(2, p);
             preparedStatement.setInt(3, foo);
-            if (!checkIfUsernameExists()) {
-                preparedStatement.execute();
-            }
+            preparedStatement.execute();
+                /**Reports Account made in terminal**/
+                System.out.println("Account gemaakt!");
             /**Close connection with Database **/
             connection.close();
             /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
         }catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Username bestaat al!");
         }
-        /**Reports Account made in terminal**/
-        System.out.println("Account gemaakt!");
     }
 
     /**
@@ -137,7 +132,7 @@ public class adminEnvironment extends loginEnvironment implements DocumentListen
      * @return
      * @throws SQLException
      */
-    public boolean checkIfUsernameExists() throws SQLException {
+    /*public boolean checkIfUsernameExists() throws SQLException {
 
         Connection connection = DriverManager.getConnection(url, usernameDB, password);
         Statement statement = connection.createStatement();
@@ -150,41 +145,14 @@ public class adminEnvironment extends loginEnvironment implements DocumentListen
             user = rs.getString("username");
         }
         if (check.equals(user)) {
-            btnAddAccount.setEnabled(false);
+            connection.close();
             return true;
         }
         else {
-            btnAddAccount.setEnabled(true);
+            connection.close();
             return false;
         }
-    }
-
-    @Override
-    public void insertUpdate(DocumentEvent e) {
-        try {
-            checkIfUsernameExists();
-        } catch (SQLException e1) {
-            e1.printStackTrace();
-        }
-    }
-
-    @Override
-    public void removeUpdate(DocumentEvent e) {
-        try {
-            checkIfUsernameExists();
-        } catch (SQLException e1) {
-            e1.printStackTrace();
-        }
-    }
-
-    @Override
-    public void changedUpdate(DocumentEvent e) {
-        try {
-            checkIfUsernameExists();
-        } catch (SQLException e1) {
-            e1.printStackTrace();
-        }
-    }
+    }*/
 }
 
 
