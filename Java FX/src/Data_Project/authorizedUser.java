@@ -50,10 +50,10 @@ public class authorizedUser{
         if (dbPass != null && dbPass.equals(password)) {//when password is not null and equals entered password : log user in
             authorized = true;
             username = username1;
-            System.out.println("Logged in");
+
             return true;//returned to loginForm to close the login screen
         } else {
-            System.out.println("Not Logged in");
+
             return false;//returned to loginForm to show error message
         }
     }

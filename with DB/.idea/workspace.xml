@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2515b17-a7c4-4ccb-8727-eae131917709" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/adminEnvironment$1.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/adminEnvironment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/adminEnvironment.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/adminEnvironment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/authorizedUser.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/authorizedUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/crypt.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/crypt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/loginForm$1.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/loginForm$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/loginForm.class" afterPath="$PROJECT_DIR$/out/production/Project Data 2/ProjectData/loginForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ProjectData/loginForm.java" afterPath="$PROJECT_DIR$/src/ProjectData/loginForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a2515b17-a7c4-4ccb-8727-eae131917709" name="Default" comment="" />
     <ignored path="Project Data 2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
