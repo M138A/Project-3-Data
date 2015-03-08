@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-android-test/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-android/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-appengine/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-appengine/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-findbugs/google-http-client-findbugs-test/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-findbugs/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-gson/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-gson/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-jackson2/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-jackson2/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-jackson/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-jackson/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-jdo/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-jdo/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-protobuf/src/main/java/com/google/api/client/http/protobuf" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-protobuf/src/main/java/com/google/api/client/protobuf" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-protobuf/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-test/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-test/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-xml/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client-xml/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/google-http-client/src/test/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/samples/dailymotion-simple-cmdline-sample/src/main/java" />
+      <root url="jar://$USER_HOME$/Desktop/Java apis libraries/google-http-java-client-master.zip!/google-http-java-client-master/samples/googleplus-simple-cmdline-sample/src/main/java" />
+    </SOURCES>
+  </library>
+</component>
