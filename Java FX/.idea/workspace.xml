@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\FB4J.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GP4J$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GP4J$Activity.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GP4J$ActivityFeed.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GP4J$ActivityObject.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GP4J$PlusOners.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GP4J$PlusUrl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GP4J$ReviewFeed.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GP4J.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\GPlaces4J.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\Main.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\TW4J$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\TW4J$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\TW4J$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\TW4J.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\Temperatuur.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\APIcollection\out\production\APIcollection\weerInfo.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/Controller.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/Controller.class" />
-      <change type="MODIFICATION" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\Java FX\out\production\Project Data 3 FX\Data_Project\Main.class" afterPath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\Java FX\out\production\Project Data 3 FX\Data_Project\Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/authorizedUser.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/authorizedUser.class" />
-      <change type="MODIFICATION" beforePath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\Java FX\out\production\Project Data 3 FX\Data_Project\crypt.class" afterPath="C:\Users\Bart\Documents\Code 3 data\Project-3-Data\Java FX\out\production\Project Data 3 FX\Data_Project\crypt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../APIcollection/APIcollection.iml" afterPath="$PROJECT_DIR$/../APIcollection/APIcollection.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/Controller.java" afterPath="$PROJECT_DIR$/src/Data_Project/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/Main.java" afterPath="$PROJECT_DIR$/src/Data_Project/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project Data 3 FX.iml" afterPath="$PROJECT_DIR$/Project Data 3 FX.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mysql.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mysql.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/sample.fxml" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/sample.fxml" afterPath="$PROJECT_DIR$/src/Data_Project/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../twittertest/untitled1/untitled1.iml" afterPath="$PROJECT_DIR$/../twittertest/untitled1/untitled1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../APIcollection/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../APIcollection/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Data_Project/Admin.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Data_Project/Admin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -101,8 +71,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.747557" vertical-offset="0" max-vertical-offset="714">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.35993487" vertical-offset="0" max-vertical-offset="714">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,24 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/Admin.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5333333" vertical-offset="0" max-vertical-offset="306">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="816">
-              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="816">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#460#461#0" expanded="true" />
@@ -137,19 +94,6 @@
                 <element signature="e#865#866#0" expanded="true" />
                 <element signature="e#907#908#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/sample.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8" vertical-offset="17" max-vertical-offset="663">
-              <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -596,16 +540,23 @@
       <workItem from="1425831921966" duration="4373000" />
       <workItem from="1425842621909" duration="824000" />
       <workItem from="1425843455715" duration="11000" />
-      <workItem from="1425846261089" duration="6549000" />
+      <workItem from="1425846261089" duration="6705000" />
     </task>
+    <task id="LOCAL-00001" summary="Scene swaps">
+      <created>1425856719404</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1425856719404</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20490000" />
+    <option name="totallyTimeSpent" value="20646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -621,7 +572,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3227848" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19791667" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19791667" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -654,6 +605,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Scene swaps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scene swaps" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -906,17 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/Admin.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5333333" vertical-offset="0" max-vertical-offset="306">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/sample.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -928,10 +870,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/Admin.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23287672" vertical-offset="0" max-vertical-offset="584">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="816">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="816">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#460#461#0" expanded="true" />
@@ -946,8 +899,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.747557" vertical-offset="0" max-vertical-offset="714">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.35993487" vertical-offset="0" max-vertical-offset="714">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
