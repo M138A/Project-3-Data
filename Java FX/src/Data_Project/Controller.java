@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-public class Controller extends fxmlController {
+public class Controller {
 
     @FXML Button submitButton;
     @FXML TextField userField;
@@ -20,7 +20,7 @@ public class Controller extends fxmlController {
         else{
 
             fxmlController x = new fxmlController();
-            x.setMainStage();
+            x.setMainStage("Log in 2", "sample2.fxml", 500,700);
 
         }
     }
