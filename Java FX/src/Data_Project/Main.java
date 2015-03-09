@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.awt.*;
+
 public class Main extends Application{
     public static Stage theStage ;
     public static  Parent root;
@@ -14,12 +16,18 @@ public class Main extends Application{
         theStage = primaryStage;
         root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         theStage.setTitle("Log in");
-        theStage.setScene(new Scene(root, 500, 500));
+        theStage.setScene(new Scene(root, GetScreenWorkingWidth()/2 , GetScreenWorkingHeight()/2 ));
         theStage.show();
 
     }
     public static void main(String[] args) {
         launch(args);
+    }
+    public static double GetScreenWorkingWidth() {
+       return Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+    }
 
+    public static double GetScreenWorkingHeight() {
+       return Toolkit.getDefaultToolkit().getScreenSize().getHeight();
     }
 }

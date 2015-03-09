@@ -9,12 +9,12 @@ import java.io.IOException;
  */
 public class fxmlController extends Main {
 
-    public void setMainStage(String Title, String fxmlURL, int SceneWidth, int SceneHeight) {
+    public void setMainStage(String Title, String fxmlURL) {
         try {
 
             root = FXMLLoader.load(getClass().getResource(fxmlURL));
             theStage.setTitle(Title);
-            theStage.setScene(new Scene(root, GetScreenWorkingWidth(), GetScreenWorkingHeight()));
+            theStage.setScene(new Scene(root, GetScreenWorkingWidth()/1.1 , GetScreenWorkingHeight()/1.1));
             theStage.centerOnScreen();
             theStage.show();
 
@@ -23,13 +23,6 @@ public class fxmlController extends Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    public static int GetScreenWorkingWidth() {
-        return java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().width;
-    }
-
-    public static int GetScreenWorkingHeight() {
-        return java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().height;
     }
 
 
