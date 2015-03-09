@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import java.io.IOException;
 
 /**
- * Created by mark on 9-3-15.
+ * Created by mark&bart on 9-3-15.
  */
 public class fxmlController extends Main {
 

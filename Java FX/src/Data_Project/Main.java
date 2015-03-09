@@ -18,20 +18,6 @@ public class Main extends Application{
         theStage.show();
 
     }
-    public Parent getRoot()
-    {
-        return root;
-    }
-    public Stage getTheStage()
-    {
-        return theStage;
-    }
-/*
-    public void refreshStage(Stage x)
-    {
-        theStage = x;
-    }*/
-
     public static void main(String[] args) {
         launch(args);
 

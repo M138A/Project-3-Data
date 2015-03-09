@@ -1,0 +1,12 @@
+.root {
+    -fx-background-color: #80CBC4;
+
+}
+
+#submitButton {
+    -fx-background-color: #0f9d58;
+
+}
+#submitButton:hover {
+    -fx-border-color: black;
+}
