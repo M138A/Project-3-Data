@@ -14,13 +14,22 @@ public class fxmlController extends Main {
 
             root = FXMLLoader.load(getClass().getResource(fxmlURL));
             theStage.setTitle(Title);
-            theStage.setScene(new Scene(root, SceneWidth, SceneHeight));
+            theStage.setScene(new Scene(root, GetScreenWorkingWidth(), GetScreenWorkingHeight()));
+            theStage.centerOnScreen();
             theStage.show();
+
 
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public static int GetScreenWorkingWidth() {
+        return java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().width;
+    }
+
+    public static int GetScreenWorkingHeight() {
+        return java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds().height;
     }
 
 
