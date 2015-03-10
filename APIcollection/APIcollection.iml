@@ -22,5 +22,10 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="facebook4j-core-2.2.21" level="project" />
+    <orderEntry type="library" name="twitter4j-core-4.0.2" level="project" />
+    <orderEntry type="library" name="google-places-api-java1" level="project" />
+    <orderEntry type="library" name="commons-logging-1.1.1" level="project" />
+    <orderEntry type="library" name="owm-japis-2.5.0.5" level="project" />
   </component>
 </module>

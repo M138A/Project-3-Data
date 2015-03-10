@@ -6,30 +6,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.awt.*;
 
-public class Main extends Application {
-    public Stage window;
+public class Main extends Application{
+    public static Stage theStage ;
+    public static  Parent root;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        window = primaryStage;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
-      //  FXMLLoader loader1 = new FXMLLoader(getClass().getResource("Admin.fxml"));
-        Parent root = loader.load();
-       // Parent root1 = loader1.load();
-        Controller a1 = loader.getController();
-        //Admin a2 = loader1.getController();
-       /** a1.getSubmitButton().setOnAction(e -> {
-                window.setScene(new Scene(root1,500,500));
-               });**/
-              window.setTitle("Log in");
-              window.setScene(new Scene(root, 500, 500));
-              window.show();
-          }
+        theStage = primaryStage;
+        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        theStage.setTitle("Log in");
+        theStage.setScene(new Scene(root, GetScreenWorkingWidth()/2 , GetScreenWorkingHeight()/2 ));
+        theStage.show();
 
+    }
+    public static void main(String[] args) {
+        launch(args);
+    }
+    public static double GetScreenWorkingWidth() {
+       return Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+    }
 
-    public static void main(String[] args) throws IOException {
-       launch(args);
-
+    public static double GetScreenWorkingHeight() {
+       return Toolkit.getDefaultToolkit().getScreenSize().getHeight();
     }
 }
