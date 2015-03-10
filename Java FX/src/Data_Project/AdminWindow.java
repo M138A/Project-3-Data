@@ -28,4 +28,7 @@ public class AdminWindow {
         fxmlController logout =  new fxmlController();
         logout.setLogin("Log in", "sample.fxml");
     }
+
+    public void addAccount(ActionEvent actionEvent) {
+    }
 }
