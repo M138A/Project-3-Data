@@ -68,7 +68,7 @@ public class AdminWindow {
     private void connectionDB(String username, String password, String functions) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(url, usernameDB, password);
+            Connection connection = DriverManager.getConnection("jdbc:mysql://mijnmarklinbaan.nl/mijnma1q_PrjData", "mijnma1q_prjuser", "password");
             String sql = "INSERT INTO Leden (username, password, role) VALUES (?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, username);
