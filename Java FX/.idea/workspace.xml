@@ -4,13 +4,7 @@
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/AdminWindow.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/AdminWindow.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/Controller.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/AdminWindow.fxml" afterPath="$PROJECT_DIR$/src/Data_Project/AdminWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/AdminWindow.java" afterPath="$PROJECT_DIR$/src/Data_Project/AdminWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/Controller.java" afterPath="$PROJECT_DIR$/src/Data_Project/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/Main.java" afterPath="$PROJECT_DIR$/src/Data_Project/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/addAccount.fxml" afterPath="$PROJECT_DIR$/src/Data_Project/addAccount.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/sample.fxml" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/sample.fxml" afterPath="$PROJECT_DIR$/src/Data_Project/sample.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -102,8 +96,8 @@
       <file leaf-file-name="AdminWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/AdminWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5692568" vertical-offset="1023" max-vertical-offset="1802">
-              <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+            <state vertical-scroll-proportion="2.6131756" vertical-offset="0" max-vertical-offset="1802">
+              <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1425994299059" expanded="true" signature="2289:2348" placeholder="INSERT INTO ..." />
@@ -633,7 +627,7 @@
       <workItem from="1425931440554" duration="69000" />
       <workItem from="1425931805707" duration="5435000" />
       <workItem from="1425972857621" duration="3344000" />
-      <workItem from="1425983188075" duration="10332000" />
+      <workItem from="1425983188075" duration="10361000" />
     </task>
     <task id="LOCAL-00001" summary="Scene swaps">
       <created>1425856719404</created>
@@ -683,11 +677,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425990244695</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Screen width and height changed">
+      <created>1425994332183</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1425994332183</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40707000" />
+    <option name="totallyTimeSpent" value="40736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1212,8 +1212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/AdminWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5692568" vertical-offset="1023" max-vertical-offset="1802">
-          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+        <state vertical-scroll-proportion="2.6131756" vertical-offset="0" max-vertical-offset="1802">
+          <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1425994299059" expanded="true" signature="2289:2348" placeholder="INSERT INTO ..." />
