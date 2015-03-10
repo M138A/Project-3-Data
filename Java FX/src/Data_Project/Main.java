@@ -14,7 +14,7 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception{
         theStage = primaryStage;
-        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        root = FXMLLoader.load(getClass().getResource("addAccount.fxml"));
         theStage.setTitle("Log in");
         theStage.setScene(new Scene(root, GetScreenWorkingWidth()/2 , GetScreenWorkingHeight()/2 ));
         theStage.show();
@@ -24,10 +24,10 @@ public class Main extends Application{
         launch(args);
     }
     public static double GetScreenWorkingWidth() {
-       return Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+        return Toolkit.getDefaultToolkit().getScreenSize().getWidth();
     }
 
     public static double GetScreenWorkingHeight() {
-       return Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+        return Toolkit.getDefaultToolkit().getScreenSize().getHeight();
     }
 }
