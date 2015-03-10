@@ -27,11 +27,13 @@ public class AdminWindow {
     public ToggleGroup roleGroup;
     public RadioButton Analist;
     public RadioButton Administrator;
+    public Label errorLabel;
+    public Label passLabel;
     @FXML
     private Button AddAccount;
     //Login credentials
     private final String usernameDB = "mijnma1q_prjuser";
-    private final String password = "password";
+    private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
 
     public AdminWindow() {
@@ -68,7 +70,7 @@ public class AdminWindow {
     private void connectionDB(String username, String password, String functions) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(url, usernameDB, password);
+            Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
             String sql = "INSERT INTO Leden (username, password, role) VALUES (?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, username);
@@ -76,16 +78,23 @@ public class AdminWindow {
             preparedStatement.setString(3, functions);
             preparedStatement.execute();
             /**Reports Account made in terminal**/
-            System.out.println("Account gemaakt!");
+            errorLabel.setVisible(false);
+            passLabel.setText("Account gemaakt!");
+            passLabel.setVisible(true);
             /**Close connection with Database **/
             connection.close();
             /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
         }catch (SQLException e) {
-            System.out.println("Username bestaat al!");
-            e.printStackTrace();
+            passLabel.setVisible(false);
+            errorLabel.setText("Username Bestaat Al!");
+            errorLabel.setVisible(true);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
+    public void AccountInterface(ActionEvent actionEvent) {
+        new fxmlController().setMainStage("Account Maken","addAccount.fxml");
+
+    }
 }

@@ -19,7 +19,7 @@
       <ColumnConstraints />
    </columnConstraints>
    <children>
-      <Button fx:id="AddAccount" mnemonicParsing="false" text="Voeg Account Toe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="AddAccount" mnemonicParsing="false" text="Voeg Account Toe" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#AccountInterface"/>
       <Button fx:id="Grafiek" mnemonicParsing="false" text="Grafiek" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Button fx:id="RefreshData" mnemonicParsing="false" text="Refresh Data" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button fx:id="Logout" mnemonicParsing="false" text="Logout" onAction="#LogoutScreen" GridPane.columnIndex="2" GridPane.rowIndex="2" />
