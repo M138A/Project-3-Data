@@ -20,7 +20,7 @@ public class Controller {
         else{
 
             fxmlController x = new fxmlController();
-            x.setMainStage("Log in 2", "sample2.fxml");
+            x.setMainStage("Log in 2", "AdminWindow.fxml");
 
         }
     }
