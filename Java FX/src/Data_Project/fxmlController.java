@@ -24,6 +24,21 @@ public class fxmlController extends Main {
             e.printStackTrace();
         }
     }
+    public void setLogin(String Title, String fxmlURL){
+        try {
+
+            root = FXMLLoader.load(getClass().getResource(fxmlURL));
+            theStage.setTitle(Title);
+            theStage.setScene(new Scene(root, GetScreenWorkingWidth()/2 , GetScreenWorkingHeight()/2));
+            theStage.centerOnScreen();
+            theStage.show();
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }
