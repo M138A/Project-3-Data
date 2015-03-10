@@ -18,9 +18,18 @@ public class Controller {
             errorLabel.setText("Invalid credentials");
         }
         else{
-
             fxmlController x = new fxmlController();
-            x.setMainStage("Adminenviroment", "AdminWindow.fxml");
+            String role = user.getDBRole();
+            System.out.println(role);
+            switch(role){
+                case "Administrator":
+                    x.setMainStage("Adminenviroment", "AdminWindow.fxml");
+                    break;
+                case "Analist":
+                    x.setMainStage("Analist", "AnalistWindow.fxml");
+                    break;
+            }
+
 
         }
     }

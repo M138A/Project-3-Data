@@ -11,10 +11,12 @@ import java.sql.*;
 public class authorizedUser{
     Boolean authorized = false;
     String username;
+    String dbRole = null;
 
     public boolean checkCredentials(String username1, String notEncPassword) {
         Connection conn = null;
         String dbPass = null;
+
 
         crypt encryptAES = new crypt();
         String password = null;
@@ -26,12 +28,14 @@ public class authorizedUser{
             conn = DriverManager.getConnection("jdbc:mysql://mijnmarklinbaan.nl/mijnma1q_PrjData", "mijnma1q_prjuser", "password");
             Statement statement = conn.createStatement();
             String sql;
-            sql = "SELECT password FROM Leden WHERE username='" + username1 + "'";
+            sql = "SELECT password,role FROM Leden WHERE username='" + username1 + "'";
             //execute sql query
             ResultSet rs = statement.executeQuery(sql);
             //process result of query
             while (rs.next()) {
                 dbPass = rs.getString("password");
+                dbRole = rs.getString("role");
+
             }
             //close database connection
             conn.close();
@@ -60,6 +64,10 @@ public class authorizedUser{
     public String getUsername()
     {
         return username;
+    }
+
+    public String getDBRole() {
+        return dbRole;
     }
 
 
