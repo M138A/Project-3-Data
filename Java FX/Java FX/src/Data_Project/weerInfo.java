@@ -31,7 +31,7 @@ public class weerInfo {
             double minC = ((min - 32)*5)/9;// magic
             double mid = (maxC + minC) /2;// magic
             String description = cwd.getRawResponse();
-            Descriptionfinal = owm.currentWeatherByCityName("Rotterdam, NL").getWeatherInstance(0).getWeatherDescription();
+            Descriptionfinal = cwd.getWeatherInstance(0).getWeatherDescription();
 
             //Descriptionfinal =  description.substring(89, 107); // dit moet anders
 
