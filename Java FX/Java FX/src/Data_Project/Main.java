@@ -19,6 +19,7 @@ public class Main extends Application{
         theStage.setScene(new Scene(root, GetScreenWorkingWidth()/2 , GetScreenWorkingHeight()/2 ));
         theStage.show();
 
+
     }
     public static void main(String[] args) {
         launch(args);

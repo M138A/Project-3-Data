@@ -7,7 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="923.0" stylesheets="/Data_Project/sample.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Data_Project.AnalistController">
    <children>
-      <Label layoutX="360.0" layoutY="30.0" text="Huidige weersverwachtig" />
+      <Label layoutX="360.0" layoutY="30.0" text="Huidige weersverwachting" />
       <TextArea id="outputTextArea" fx:id="outputTextArea" editable="false" layoutX="506.0" layoutY="76.0" prefHeight="308.0" prefWidth="403.0" promptText="Zoek resultaten" />
       <TextArea id="outputTempArea" fx:id="outputTempArea" editable="false" layoutX="506.0" layoutY="19.0" prefHeight="39.0" prefWidth="403.0" />
       <TextField id="inputTextArea" fx:id="inputTextArea" layoutX="26.0" layoutY="26.0" promptText="..." />

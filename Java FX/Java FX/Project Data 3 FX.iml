@@ -22,5 +22,7 @@
     <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="library" name="google-places-api-java (2)" level="project" />
     <orderEntry type="library" name="owm-japis-2.5.0.5" level="project" />
+    <orderEntry type="library" name="commons-logging-1.1.1" level="project" />
+    <orderEntry type="library" name="mysql1" level="project" />
   </component>
 </module>
