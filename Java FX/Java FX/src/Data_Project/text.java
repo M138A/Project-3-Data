@@ -2,6 +2,7 @@ package Data_Project;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
@@ -9,9 +10,10 @@ import java.util.ArrayList;
  */
 public class text {
     public int checkString(String x) {
+
         ArrayList<String> goodWords = new ArrayList<String>();
         try {
-            BufferedReader bfr = new BufferedReader(new FileReader(getClass().getResource("positief.txt").getPath()));
+            BufferedReader bfr = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("positief.txt")));
             while (bfr.readLine() != null) {
                 goodWords.add(bfr.readLine());
             }
