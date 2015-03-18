@@ -39,6 +39,13 @@ public class AnalistController {
     }
 
     @FXML
+    private void dataButtonAction() {
+        fxmlController logout = new fxmlController();
+        DataController dc = new DataController();
+        logout.setMainStage("Data","Data.fxml");
+    }
+
+    @FXML
     private void HashtaggButtonAction() { //twitter api non oob
         String input = inputTextArea.getText(); // kijkt wat je hebt getypt
         try {
