@@ -1,5 +1,7 @@
 package Data_Project;
 
+import javafx.beans.property.SimpleStringProperty;
+
 import java.sql.*;
 
 /**
@@ -9,9 +11,20 @@ import java.sql.*;
  * password : pass
  */
 public class authorizedUser{
+
+    public authorizedUser(){};
+   public authorizedUser(String name, String pass, String rl)
+    {
+        username= name;
+        password= pass;
+        role= rl;
+    }
+
     Boolean authorized = false;
-    String username;
-    String dbRole = null;
+    private String username =null;
+    private String password =null;
+    private String role =null;
+    private String dbRole = null;
 
     public boolean checkCredentials(String username1, String notEncPassword) {
         Connection conn = null;
@@ -65,6 +78,9 @@ public class authorizedUser{
     {
         return username;
     }
+
+    public String getPassword() {return password;}
+    public String getRole() {return role;}
 
     public String getDBRole() {
         return dbRole;
