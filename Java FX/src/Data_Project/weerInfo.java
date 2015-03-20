@@ -9,10 +9,12 @@ import java.io.IOException;
 
 public class weerInfo {
     double gemid;
+
     double getGemid() {
         return gemid;
     }
     String Descriptionfinal;
+
     String getDescrip(){
         return Descriptionfinal;
     }
