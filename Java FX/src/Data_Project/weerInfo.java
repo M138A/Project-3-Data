@@ -8,16 +8,11 @@ import javax.xml.bind.SchemaOutputResolver;
 import java.io.IOException;
 
 public class weerInfo {
-    double gemid;
 
-    double getGemid() {
-        return gemid;
-    }
-    String Descriptionfinal;
+    private double gemid;
+    private String Descriptionfinal;
 
-    String getDescrip(){
-        return Descriptionfinal;
-    }
+
 
     public weerInfo () throws IOException, JSONException {
         OpenWeatherMap owm = new OpenWeatherMap(""); // Open weather constructor
@@ -42,4 +37,11 @@ public class weerInfo {
             System.out.println(String.valueOf(Math.floor((gemid)*10)/10.0) + "\'C " + Descriptionfinal);
         }
     }
+    public double getGemid() {
+        return gemid;
+    }
+    public String getDescrip(){
+        return Descriptionfinal;
+    }
+
 }
