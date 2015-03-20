@@ -12,6 +12,8 @@ import twitter4j.GeoLocation;
 import twitter4j.*;
 
 import java.io.IOException;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,8 +24,12 @@ import se.walkercrou.places.Place;
  * Created by bart on 10-3-2015.
  */
 public class AnalistController {
+    //Login credentials
+    private final String usernameDB = "mijnma1q_prjuser";
+    private final String passwordDB = "password";
+    private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
 
-
+    //fxml
     @FXML
     public TextArea outputTempArea;
 
@@ -96,6 +102,28 @@ public class AnalistController {
                         "\n\r retweet count :" + RetweetCount +
                         "\n\r "+ end +
                         "\n\r"      );
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
+                    String sql = "INSERT INTO Bericht (Datum, Beschrijving, socialmedia,Positief) VALUES (?,?,?,?)";
+                    PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                    preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
+                    preparedStatement.setString(2, Message);
+                    preparedStatement.setString(3, "Twitter");
+                    preparedStatement.setBoolean(4, true);
+                    preparedStatement.execute();
+                    System.out.println("Success?");
+
+                    /**Close connection with Database **/
+                    connection.close();
+                    /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
+                }catch (SQLException e) {
+                    System.out.println("Error");
+                    e.printStackTrace();
+
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         }catch (TwitterException te) { // error message
             te.printStackTrace();
@@ -120,33 +148,67 @@ public class AnalistController {
         }
 
     }
+    /*
+     https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.2
+      */
 
     @FXML
     private void FacebookButtonAction() throws FacebookException {
-
-        Facebook facebook = new FacebookFactory().getInstance();
-        ResponseList<Post> feeds = facebook.getFeed("313850611958467",/* < dit
-        verwijst naar een OPENBARE  facebook pagina van rotterdam centraal */
-          new Reading().limit(50));
         outputTextArea.setText(" "); // cleanup
 
+        Facebook facebook = new FacebookFactory().getInstance();
+        ResponseList<Post> feeds = facebook.getFeed("313850611958467",new Reading().limit(75));
+
+        Page pgId = facebook.getPage("313850611958467");
+        int likeCount = pgId.getLikes(); // aantal likes op de facebook pagina van rotterdam
+        outputTextArea.appendText("De facebook pagina van Rotterdam Centraal heeft op dit moment : " +likeCount +" likes\n\r \n\r");
         for (int i = 0; i < feeds.size(); i++) {
             Post post = feeds.get(i);
             String message = post.getMessage();
-            // Print console test
-            outputTextArea.appendText(message + "\n\r");
+            Integer sharecount = post.getSharesCount();
+            if (sharecount == null) {
+                sharecount = 0;
+            }
+            // Print textarea test
+            outputTextArea.appendText("Message : \n\r" + message +
+                    "\n\r Shares : " + sharecount+
+                    "\n\r ======\n\r");
         }
-
-
     }
+
     @FXML
     private void WeerButtonAction() throws IOException {
         new weerInfo();
         weerInfo info = new weerInfo();
-        outputTempArea.appendText(String.valueOf(info.getGemid())+ "'C" +String.valueOf(info.getDescrip()));
+        outputTempArea.appendText(String.valueOf(info.getGemid())+ "'C " +String.valueOf(info.getDescrip()));
 
         }
+    @FXML
+    private void UpdateWeather() throws IOException {
+        weerInfo info = new weerInfo();
 
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
+            String sql = "INSERT INTO Weersvoorspelling (Datum, Temperatuur, Weersituatie) VALUES (?,?,?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
+            preparedStatement.setDouble(2, info.getGemid());
+            preparedStatement.setString(3, info.getDescrip());
+            preparedStatement.execute();
+            System.out.println("Success?");
+
+            /**Close connection with Database **/
+            connection.close();
+            /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
+        }catch (SQLException e) {
+            System.out.println("Weer al ge-update, wacht tot morgen.");
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 
 
