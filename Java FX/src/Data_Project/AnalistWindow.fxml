@@ -16,6 +16,6 @@
       <Button layoutX="26.0" layoutY="105.0" mnemonicParsing="false" onAction="#PlacesButtonAction" text="Zoek op Google+" />
       <Button layoutX="26.0" layoutY="146.0" mnemonicParsing="false" onAction="#FacebookButtonAction" text="Zoek op Facebook" />
       <Button layoutX="392.0" layoutY="52.0" mnemonicParsing="false" onAction="#WeerButtonAction" text="Refresh" />
-      <Button layoutX="57.0" layoutY="199.0" mnemonicParsing="false" onAction="#dataButtonAction" text="Button" />
+      <Button layoutX="183.0" layoutY="26.0" mnemonicParsing="false" onAction="#TwitzoekButtonAction" text="Zoek op Twitter Username" />
    </children>
 </Pane>

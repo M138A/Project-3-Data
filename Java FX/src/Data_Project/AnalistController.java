@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import se.walkercrou.places.GooglePlaces;
 import se.walkercrou.places.Place;
 import se.walkercrou.places.Review;
+import twitter4j.GeoLocation;
 import twitter4j.*;
 
 import java.io.IOException;
@@ -46,6 +47,29 @@ public class AnalistController {
     }
 
     @FXML
+    private void TwitzoekButtonAction() {
+
+            String inp = inputTextArea.getText();
+            // input > twitternaam > return timelijn/tweets naar output
+
+            try {
+                outputTextArea.setText(" ");
+                Twitter latestTweetChecker = new TwitterFactory().getInstance();
+                List<Status> statuses = latestTweetChecker.getUserTimeline(inp);
+                outputTextArea.appendText("Showing " + " " + inp + " " + "timeline.\r\n \r\n");
+                for (Status status : statuses) {
+                    outputTextArea.appendText(status.getUser().getName() + ":" +
+                            status.getText() + "\r\n");
+                }
+            }catch (TwitterException te) {
+                te.printStackTrace();
+                outputTextArea.appendText("Failed : " + te.getMessage());
+                System.exit(0);
+            }
+    }
+
+
+    @FXML
     private void HashtaggButtonAction() { //twitter api non oob
         String input = inputTextArea.getText(); // kijkt wat je hebt getypt
         try {
@@ -54,15 +78,30 @@ public class AnalistController {
             Query query = new Query(input);
             QueryResult result = twitter.search(query);
             for (Status status : result.getTweets()) {// print uit
-                outputTextArea.appendText("@" + status.getUser().getScreenName() + " : " + status.getText() + " : " + status.getGeoLocation() + "\n\r");
+
+                String Usrname = status.getUser().getScreenName();
+                int FollowerCount = status.getUser().getFollowersCount();
+                int RetweetCount = status.getRetweetCount();
+                String Message = status.getText();
+                GeoLocation Location = status.getGeoLocation();
+                int FavoriteCount = status.getFavoriteCount();
+                String end = "=-=-=-=-=-=";
+
+
+                outputTextArea.appendText( "Naam : @" + Usrname + " : "+
+                        "\n\r volger count : " + FollowerCount +
+                        "\n\r bericht : " + Message +
+                        "\n\r locatie :" + Location +
+                        "\n\r fav count:" + FavoriteCount +
+                        "\n\r retweet count :" + RetweetCount +
+                        "\n\r "+ end +
+                        "\n\r"      );
             }
         }catch (TwitterException te) { // error message
             te.printStackTrace();
             outputTextArea.appendText("Failed : " + te.getMessage());
             System.exit(0);
         }
-
-
     }
 
     @FXML
