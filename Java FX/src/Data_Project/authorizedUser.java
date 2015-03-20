@@ -25,7 +25,46 @@ public class authorizedUser{
     private String password =null;
     private String role =null;
     private String dbRole = null;
-
+    public void updatePassword(String username1, String password1)
+    {
+        try {
+                Connection conn = new dbConnect().connectToDb();
+                Statement statement;
+                String sql = "UPDATE Leden SET `password` = '" + password1 + "' WHERE username = '" + username1 + "'";
+                statement = conn.prepareStatement(sql);
+                statement.execute(sql);
+                conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void updateRole(String username1, String nRole)
+    {
+        try {
+            Connection conn = new dbConnect().connectToDb();
+            Statement statement;
+            String sql = "UPDATE Leden SET `role` = '" + nRole + "' WHERE username = '" + username1 + "'";
+            statement = conn.prepareStatement(sql);
+            statement.execute(sql);
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void updateUsername(String oldUsername, String replUsername)
+    {
+        //System.out.println(oldUsername + "\n" + replUsername);
+        try {
+            Connection conn = new dbConnect().connectToDb();
+            Statement statement;
+            String sql = "UPDATE Leden SET `username` = '" + replUsername + "' WHERE username = '" + oldUsername + "'";
+            statement = conn.prepareStatement(sql);
+            statement.execute(sql);
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public boolean checkCredentials(String username1, String notEncPassword) {
         Connection conn = null;
         String dbPass = null;
@@ -36,9 +75,7 @@ public class authorizedUser{
 
         try {
             password = encryptAES.encrypt(notEncPassword);
-            Class.forName("com.mysql.jdbc.Driver");
-            //connect to database
-            conn = DriverManager.getConnection("jdbc:mysql://mijnmarklinbaan.nl/mijnma1q_PrjData", "mijnma1q_prjuser", "password");
+            conn = new dbConnect().connectToDb();
             Statement statement = conn.createStatement();
             String sql;
             sql = "SELECT password,role FROM Leden WHERE username='" + username1 + "'";
