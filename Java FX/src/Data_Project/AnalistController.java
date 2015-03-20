@@ -12,6 +12,8 @@ import twitter4j.GeoLocation;
 import twitter4j.*;
 
 import java.io.IOException;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,16 +25,26 @@ import se.walkercrou.places.Place;
  */
 public class AnalistController {
 
-
+    //Login credentials
+    private final String usernameDB = "mijnma1q_prjuser";
+    private final String passwordDB = "password";
+    private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
+    //FXML
     @FXML
     public TextArea outputTempArea;
-
     @FXML
     public TextArea outputTextArea;
     @FXML
     public TextField inputTextArea;
 
+    //Weer info
+    private weerInfo info;
 
+    public AnalistController(weerInfo info) throws IOException {
+        this.info = info;
+    }
+
+    //FXML Buttons/Action listeners
     @FXML
     private void logoutButtonAction() {
         fxmlController logout = new fxmlController();
@@ -141,11 +153,37 @@ public class AnalistController {
     }
     @FXML
     private void WeerButtonAction() throws IOException {
-        new weerInfo();
-        weerInfo info = new weerInfo();
+
         outputTempArea.appendText(String.valueOf(info.getGemid())+ "'C" +String.valueOf(info.getDescrip()));
 
+    }
+    @FXML
+    private void UpdateWeather() throws IOException {
+
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
+            String sql = "INSERT INTO Weersvoorspelling (Datum, Temperatuur, Weersituatie) VALUES (?,?,?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
+            preparedStatement.setDouble(2, info.getGemid());
+            preparedStatement.setString(3, info.getDescrip());
+            preparedStatement.execute();
+            System.out.println("Success?");
+
+            /**Close connection with Database **/
+            connection.close();
+            /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
+        }catch (SQLException e) {
+            System.out.println("Weer al ge-update, wacht tot morgen.");
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
+
+    }
+
 
 }
 

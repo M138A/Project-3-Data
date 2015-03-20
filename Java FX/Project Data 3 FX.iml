@@ -57,5 +57,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Libs" level="project" />
+    <orderEntry type="library" name="Mysql lib" level="project" />
   </component>
 </module>

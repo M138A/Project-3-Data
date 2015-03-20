@@ -1,15 +1,18 @@
+/*
 package Data_Project;
 
 import javafx.beans.property.SimpleStringProperty;
 
 import java.sql.*;
 
+*/
 /**
  * Created by Mark on 14-2-2015.
  * The test user :
  * username : user2
  * password : pass
- */
+ *//*
+
 public class authorizedUser{
 
     public authorizedUser(){};
@@ -125,3 +128,4 @@ public class authorizedUser{
 
 
 }
+*/
