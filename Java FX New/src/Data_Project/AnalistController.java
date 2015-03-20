@@ -153,11 +153,36 @@ public class AnalistController {
         outputTextArea.setText(" "); // cleanup
 
         for (int i = 0; i < places.size(); i++) {
-            Place me = places.get(i);
-            outputTextArea.appendText(String.valueOf(me.getRating())+ "\n\r");
-            // moet if omheen om de -1.0 (geen rating) verwijderen.
-        }
 
+            Place me = places.get(i);
+            String rating = String.valueOf(me.getRating());
+           // outputTextArea.appendText(rating + "\n\r");
+            if (rating.equals("-1.0")) {
+                continue;
+            }else {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
+                    String sql = "INSERT INTO google (rating) VALUES (?)";
+                    PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                    preparedStatement.setString(1, rating);
+                    preparedStatement.execute();
+                    System.out.println("Success?");
+
+                    /**Close connection with Database **/
+                    connection.close();
+                    /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
+                } catch (SQLException e) {
+                    System.out.println("geen nieuwe updates");
+                    e.printStackTrace();
+
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        }
     }
     /*
      https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.2
