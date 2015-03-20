@@ -105,14 +105,25 @@ public class AnalistController {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
-                    String sql = "INSERT INTO Bericht (Datum, Beschrijving, socialmedia,Positief) VALUES (?,?,?,?)";
+                    String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
                     PreparedStatement preparedStatement = connection.prepareStatement(sql);
                     preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
                     preparedStatement.setString(2, Message);
                     preparedStatement.setString(3, "Twitter");
                     preparedStatement.setBoolean(4, true);
                     preparedStatement.execute();
-                    System.out.println("Success?");
+
+                    sql = "INSERT INTO twitter (retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?)";
+                    PreparedStatement preparedStatement2 = connection.prepareStatement(sql);
+                    preparedStatement2.setInt(1, RetweetCount);
+                    preparedStatement2.setInt(2, FavoriteCount);
+                    preparedStatement2.setString(3, Usrname);
+                    preparedStatement2.setInt(4, 1);
+                    preparedStatement2.setInt(5, FollowerCount);
+                    preparedStatement2.execute();
+
+
+                    System.out.println("Success");
 
                     /**Close connection with Database **/
                     connection.close();
