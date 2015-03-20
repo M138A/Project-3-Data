@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="661.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Data_Project.DataGridController">
+  <children>
+    <TableView fx:id="userTable" editable="true" layoutX="110.0" layoutY="31.0" prefHeight="400.0" prefWidth="400.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="User" fx:id="userCol" onEditCommit="#updateUsername">
+          <cellValueFactory>
+            <PropertyValueFactory property="username" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn prefWidth="75.0" text="Password" fx:id="passCol" onEditCommit="#updatePassword">
+          <cellValueFactory>
+            <PropertyValueFactory property="password" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn prefWidth="75.0" text="Role" fx:id="roleCol" onEditCommit="#updateRole" >
+          <cellValueFactory>
+            <PropertyValueFactory property="role"  />
+          </cellValueFactory>
+        </TableColumn>
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>
