@@ -78,6 +78,7 @@ public class AnalistController {
     @FXML
     private void HashtaggButtonAction() { //twitter api non oob
         String input = inputTextArea.getText(); // kijkt wat je hebt getypt
+        int socialmediaID = 0;
         try {
             outputTextArea.setText(" "); // cleanup
             twitter4j.Twitter twitter =  TwitterFactory.getSingleton();
@@ -110,16 +111,27 @@ public class AnalistController {
                     preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
                     preparedStatement.setString(2, Message);
                     preparedStatement.setString(3, "Twitter");
-                    preparedStatement.setBoolean(4, true);
+                    preparedStatement.setInt(4, 1);
                     preparedStatement.execute();
 
-                    sql = "INSERT INTO twitter (retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?)";
+                    Statement statement = connection.createStatement();
+                    sql = "select BerichtID from Bericht where socialmedia = 'Twitter'";
+                    //execute sql query
+                    ResultSet rs = statement.executeQuery(sql);
+                    //process result of query
+                    while (rs.next()) {
+                      socialmediaID = rs.getInt("BerichtID");
+                    }
+
+
+                    sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
                     PreparedStatement preparedStatement2 = connection.prepareStatement(sql);
-                    preparedStatement2.setInt(1, RetweetCount);
-                    preparedStatement2.setInt(2, FavoriteCount);
-                    preparedStatement2.setString(3, Usrname);
-                    preparedStatement2.setInt(4, 1);
-                    preparedStatement2.setInt(5, FollowerCount);
+                    preparedStatement2.setInt(1, socialmediaID);
+                    preparedStatement2.setInt(2, RetweetCount);
+                    preparedStatement2.setInt(3, FavoriteCount);
+                    preparedStatement2.setString(4, Usrname);
+                    preparedStatement2.setInt(5, 1);
+                    preparedStatement2.setInt(6, FollowerCount);
                     preparedStatement2.execute();
 
 
