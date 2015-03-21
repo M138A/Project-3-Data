@@ -2,7 +2,11 @@ package Data_Project;
 
 import facebook4j.*;
 import facebook4j.ResponseList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import se.walkercrou.places.GooglePlaces;
@@ -12,17 +16,23 @@ import twitter4j.GeoLocation;
 import twitter4j.*;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.ResourceBundle;
 
 
 /**
  * Created by bart on 10-3-2015.
  */
-public class AnalistController {
+public class AnalistController implements Initializable {
+    //Social media count
+    private int Googlecount;
+    private int Twittercount;
+    private int Facebookcount;
+
     //Login credentials
     private final String usernameDB = "mijnma1q_prjuser";
     private final String passwordDB = "password";
@@ -30,6 +40,8 @@ public class AnalistController {
     private dbConnect connect = new dbConnect();
     Connection con;
     //fxml
+
+
     @FXML
     public TextArea outputTempArea;
 
@@ -52,8 +64,10 @@ public class AnalistController {
     private void dataButtonAction() {
         fxmlController logout = new fxmlController();
         DataController dc = new DataController();
-        logout.setMainStage("Data","Data.fxml");
+        logout.setLogin("Data","Data.fxml");
     }
+    @FXML
+    PieChart pieChart;
 
     @FXML
     private void TwitzoekButtonAction() {
@@ -157,11 +171,22 @@ public class AnalistController {
             }else {
                 try {
                     Connection con = connect.connectToDb();
-                    String sql = "INSERT INTO google (rating) VALUES (?)";
+
+                    String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
                     PreparedStatement preparedStatement = con.prepareStatement(sql);
-                    preparedStatement.setString(1, rating);
+                    preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
+                    preparedStatement.setString(2, "Google Rating");
+                    preparedStatement.setString(3, "Google");
+                    preparedStatement.setInt(4, 1);
                     preparedStatement.execute();
-                    System.out.println("Success?");
+
+                    sql = "INSERT INTO google (Bericht_BerichtID,rating) VALUES (?,?)";
+                    PreparedStatement preparedStatement2 = con.prepareStatement(sql);
+                    preparedStatement2.setInt(1, connect.getSocialMedia("Google"));
+                    preparedStatement2.setString(2, rating);
+                    preparedStatement2.execute();
+                    System.out.println("Google+ Rating updated");
+
 
                     /**Close connection with Database **/
                     con.close();
@@ -205,6 +230,36 @@ public class AnalistController {
             outputTextArea.appendText("Message : \n\r" + message +
                     "\n\r Shares : " + sharecount+
                     "\n\r ======\n\r");
+            try {
+                Connection con = connect.connectToDb();
+
+                String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
+                PreparedStatement preparedStatement = con.prepareStatement(sql);
+                preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
+                preparedStatement.setString(2, message);
+                preparedStatement.setString(3, "FaceBook");
+                preparedStatement.setInt(4, 1);
+                preparedStatement.execute();
+
+                sql = "INSERT INTO facebook (Bericht_BerichtID,likes,gedeeld) VALUES (?,?,?)";
+                PreparedStatement preparedStatement2 = con.prepareStatement(sql);
+                preparedStatement2.setInt(1, connect.getSocialMedia("Facebook"));
+                preparedStatement2.setInt(2, likeCount);
+                preparedStatement2.setInt(3, sharecount);
+                preparedStatement2.execute();
+                System.out.println("Facebook data updated");
+
+
+                /**Close connection with Database **/
+                con.close();
+                /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
+            } catch (SQLException e) {
+                System.out.println("geen nieuwe updates");
+                e.printStackTrace();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -240,6 +295,46 @@ public class AnalistController {
         }
 
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        System.out.println("Starting..");
+        // gaat af als de class ''start''
+        try {
+            Connection con = connect.connectToDb();
+            Statement statement = con.createStatement();
+            String sql = "SELECT COUNT(socialmedia) as 'Twitter' FROM Bericht where socialmedia ='twitter'";
+            ResultSet rs = statement.executeQuery(sql);
+            if(rs.next()){
+                Twittercount = rs.getInt(1);
+            }
+            sql = "SELECT COUNT(socialmedia) as 'Google' FROM Bericht where socialmedia ='google'";
+            rs = statement.executeQuery(sql);
+            if(rs.next()){
+                Googlecount = rs.getInt(1);
+            }
+            sql = "SELECT COUNT(socialmedia) as 'Facebook' FROM Bericht where socialmedia ='facebook'";
+            rs = statement.executeQuery(sql);
+            if(rs.next()){
+                Facebookcount = rs.getInt(1);
+            }
+
+            con.close();
+            System.out.println("Social media results klaar");
+            System.out.println("Twitter:" + Twittercount);
+            System.out.println("Facebook:" + Facebookcount);
+            System.out.println("Google:" + Googlecount);
+
+
+        } catch (SQLException e ) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
 }
 
 

@@ -18,14 +18,21 @@ public class DataController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        Socialmediacount SocMed = null;
+        try {
+            SocMed = new Socialmediacount();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         ObservableList<PieChart.Data> pieChartData =
                 FXCollections.observableArrayList(
-                        new PieChart.Data("Executed", 60),
-                        new PieChart.Data("Passed", 25),
-                        new PieChart.Data("Fails", 15));
+                        new PieChart.Data("Google", SocMed.getGoogle()),
+                        new PieChart.Data("Twitter", SocMed.getTwitter()),
+                        new PieChart.Data("Facebook", SocMed.getFacebook()));
 
         Piechart.setData(pieChartData);
-
     }
 }
+
 
