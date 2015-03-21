@@ -17,11 +17,16 @@ import twitter4j.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import se.walkercrou.places.Place;
 
 
 /**
@@ -67,7 +72,7 @@ public class AnalistController implements Initializable {
         logout.setLogin("Data", "Data.fxml");
     }
     @FXML
-    PieChart pieChart;
+    PieChart Piechart;
 
     @FXML
     private void TwitzoekButtonAction() {
@@ -299,10 +304,20 @@ public class AnalistController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println("Starting..");
-        // gaat af als de class ''start''
+        Socialmediacount SocMed = null;
+        try {
+            SocMed = new Socialmediacount();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
+        ObservableList<PieChart.Data> pieChartData =
+                FXCollections.observableArrayList(
+                        new PieChart.Data("Google", SocMed.getGoogle()),
+                        new PieChart.Data("Twitter", SocMed.getTwitter()),
+                        new PieChart.Data("Facebook", SocMed.getFacebook()));
 
+        Piechart.setData(pieChartData);
     }
 
 }
