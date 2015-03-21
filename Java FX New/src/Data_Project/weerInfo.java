@@ -57,7 +57,7 @@ public class weerInfo {
      * @param x
      */
     public void getWeatherConditionImg(String x) {
-        String[] myStringArray = {"Thunderstorm","clouds","c"};
+        String[] myStringArray = {"Thunderstorm","clouds","c"}; // need additional information
         for (String aMyStringArray : myStringArray) {
             if (x.contains(aMyStringArray)) {
                 System.out.println("test");
