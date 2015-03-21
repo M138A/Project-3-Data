@@ -18,7 +18,6 @@ public class Socialmediacount {
     private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
     private dbConnect connect = new dbConnect();
-    Connection con;
 
 
     public Socialmediacount() throws Exception {
@@ -60,7 +59,6 @@ public class Socialmediacount {
     public int getGoogle() {
         return Googlecount;
     }
-
     public int getTwitter(){
         return Twittercount;
     }

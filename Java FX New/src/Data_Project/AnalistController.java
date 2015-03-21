@@ -64,7 +64,7 @@ public class AnalistController implements Initializable {
     private void dataButtonAction() {
         fxmlController logout = new fxmlController();
         DataController dc = new DataController();
-        logout.setLogin("Data","Data.fxml");
+        logout.setLogin("Data", "Data.fxml");
     }
     @FXML
     PieChart pieChart;
@@ -100,6 +100,7 @@ public class AnalistController implements Initializable {
             outputTextArea.setText(" "); // cleanup
             twitter4j.Twitter twitter =  TwitterFactory.getSingleton();
             Query query = new Query(input);
+            query.setCount(50);// aantal tweets LAG!
             QueryResult result = twitter.search(query);
             for (Status status : result.getTweets()) {// print uit
 
@@ -300,37 +301,6 @@ public class AnalistController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println("Starting..");
         // gaat af als de class ''start''
-        try {
-            Connection con = connect.connectToDb();
-            Statement statement = con.createStatement();
-            String sql = "SELECT COUNT(socialmedia) as 'Twitter' FROM Bericht where socialmedia ='twitter'";
-            ResultSet rs = statement.executeQuery(sql);
-            if(rs.next()){
-                Twittercount = rs.getInt(1);
-            }
-            sql = "SELECT COUNT(socialmedia) as 'Google' FROM Bericht where socialmedia ='google'";
-            rs = statement.executeQuery(sql);
-            if(rs.next()){
-                Googlecount = rs.getInt(1);
-            }
-            sql = "SELECT COUNT(socialmedia) as 'Facebook' FROM Bericht where socialmedia ='facebook'";
-            rs = statement.executeQuery(sql);
-            if(rs.next()){
-                Facebookcount = rs.getInt(1);
-            }
-
-            con.close();
-            System.out.println("Social media results klaar");
-            System.out.println("Twitter:" + Twittercount);
-            System.out.println("Facebook:" + Facebookcount);
-            System.out.println("Google:" + Googlecount);
-
-
-        } catch (SQLException e ) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
 
     }
