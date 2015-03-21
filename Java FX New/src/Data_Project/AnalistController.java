@@ -28,6 +28,7 @@ public class AnalistController {
     private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
     private dbConnect connect = new dbConnect();
+    Connection con;
     //fxml
     @FXML
     public TextArea outputTempArea;
@@ -36,6 +37,10 @@ public class AnalistController {
     public TextArea outputTextArea;
     @FXML
     public TextField inputTextArea;
+
+    public AnalistController() throws Exception {
+        con = connect.connectToDb();
+    }
 
     @FXML
     private void logoutButtonAction() {
@@ -102,10 +107,9 @@ public class AnalistController {
                         "\n\r "+ end +
                         "\n\r"      );
                 try {
-                    Class.forName("com.mysql.jdbc.Driver");
-                    Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
+                    Connection con = connect.connectToDb();
                     String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
-                    PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                    PreparedStatement preparedStatement = con.prepareStatement(sql);
                     preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
                     preparedStatement.setString(2, Message);
                     preparedStatement.setString(3, "Twitter");
@@ -113,7 +117,7 @@ public class AnalistController {
                     preparedStatement.execute();
 
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
-                    PreparedStatement preparedStatement2 = connection.prepareStatement(sql);
+                    PreparedStatement preparedStatement2 = con.prepareStatement(sql);
                     preparedStatement2.setInt(1, connect.getSocialMedia("Twitter"));
                     preparedStatement2.setInt(2, RetweetCount);
                     preparedStatement2.setInt(3, FavoriteCount);
@@ -121,18 +125,9 @@ public class AnalistController {
                     preparedStatement2.setInt(5, 1);
                     preparedStatement2.setInt(6, FollowerCount);
                     preparedStatement2.execute();
-
-
-                    System.out.println("Success");
-
                     /**Close connection with Database **/
-                    connection.close();
-                    /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
-                }catch (SQLException e) {
-                    System.out.println("Error");
-                    e.printStackTrace();
-
-                } catch (ClassNotFoundException e) {
+                    con.close();
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -161,22 +156,23 @@ public class AnalistController {
                 continue;
             }else {
                 try {
-                    Class.forName("com.mysql.jdbc.Driver");
-                    Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
+                    Connection con = connect.connectToDb();
                     String sql = "INSERT INTO google (rating) VALUES (?)";
-                    PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                    PreparedStatement preparedStatement = con.prepareStatement(sql);
                     preparedStatement.setString(1, rating);
                     preparedStatement.execute();
                     System.out.println("Success?");
 
                     /**Close connection with Database **/
-                    connection.close();
+                    con.close();
                     /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
                 } catch (SQLException e) {
                     System.out.println("geen nieuwe updates");
                     e.printStackTrace();
 
                 } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
@@ -224,10 +220,9 @@ public class AnalistController {
         System.out.println(info.getTranslate());
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB);
+            Connection con = connect.connectToDb();
             String sql = "INSERT INTO Weersvoorspelling (Datum, Temperatuur, Weersituatie) VALUES (?,?,?)";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            PreparedStatement preparedStatement = con.prepareStatement(sql);
             preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
             preparedStatement.setDouble(2, info.getGemid());
             preparedStatement.setString(3, info.getDescrip());
@@ -235,7 +230,7 @@ public class AnalistController {
             System.out.println("Success?");
 
             /**Close connection with Database **/
-            connection.close();
+            con.close();
             /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
         }catch (SQLException e) {
             System.out.println("Weer al ge-update, wacht tot morgen.");
