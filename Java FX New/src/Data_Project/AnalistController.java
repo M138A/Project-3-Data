@@ -17,7 +17,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import se.walkercrou.places.Place;
 
 
 /**
@@ -28,7 +27,7 @@ public class AnalistController {
     private final String usernameDB = "mijnma1q_prjuser";
     private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
-
+    private dbConnect connect = new dbConnect();
     //fxml
     @FXML
     public TextArea outputTempArea;
@@ -37,7 +36,6 @@ public class AnalistController {
     public TextArea outputTextArea;
     @FXML
     public TextField inputTextArea;
-
 
     @FXML
     private void logoutButtonAction() {
@@ -114,19 +112,9 @@ public class AnalistController {
                     preparedStatement.setInt(4, 1);
                     preparedStatement.execute();
 
-                    Statement statement = connection.createStatement();
-                    sql = "select BerichtID from Bericht where socialmedia = 'Twitter'";
-                    //execute sql query
-                    ResultSet rs = statement.executeQuery(sql);
-                    //process result of query
-                    while (rs.next()) {
-                      socialmediaID = rs.getInt("BerichtID");
-                    }
-
-
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
                     PreparedStatement preparedStatement2 = connection.prepareStatement(sql);
-                    preparedStatement2.setInt(1, socialmediaID);
+                    preparedStatement2.setInt(1, connect.getSocialMedia("Twitter"));
                     preparedStatement2.setInt(2, RetweetCount);
                     preparedStatement2.setInt(3, FavoriteCount);
                     preparedStatement2.setString(4, Usrname);
@@ -232,8 +220,9 @@ public class AnalistController {
 
         }
     @FXML
-    private void UpdateWeather() throws IOException {
+    private void UpdateWeather() throws Exception {
         weerInfo info = new weerInfo();
+        System.out.println(info.getTranslate());
 
         try {
             Class.forName("com.mysql.jdbc.Driver");

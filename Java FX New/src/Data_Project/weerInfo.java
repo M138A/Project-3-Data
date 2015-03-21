@@ -1,4 +1,6 @@
 package Data_Project;
+import com.memetix.mst.language.Language;
+import com.memetix.mst.translate.Translate;
 import net.aksingh.owmjapis.AbstractWeather;
 import net.aksingh.owmjapis.CurrentWeather;
 import net.aksingh.owmjapis.OpenWeatherMap;
@@ -11,6 +13,7 @@ public class weerInfo {
 
     private double gemid;
     private String Descriptionfinal;
+    private String translate;
 
 
 
@@ -37,6 +40,15 @@ public class weerInfo {
             System.out.println(String.valueOf(Math.floor((gemid)*10)/10.0) + "\'C " + Descriptionfinal);
         }
     }
+
+    public String getTranslate() throws Exception {
+        Translate.setClientId("buildinganalytics_1");
+        Translate.setClientSecret("o5oXm3zRYKidc/Xb3L9FD8TYwmvcfgoWBhWIw6Y0Vc8=");
+        translate = Translate.execute(getDescrip(), Language.ENGLISH, Language.DUTCH);
+        return translate;
+    }
+
+
     public double getGemid() {
         return gemid;
     }
