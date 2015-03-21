@@ -214,7 +214,6 @@ public class AnalistController {
 
     @FXML
     private void WeerButtonAction() throws IOException {
-        new weerInfo();
         weerInfo info = new weerInfo();
         outputTempArea.appendText(String.valueOf(info.getGemid())+ "'C " +String.valueOf(info.getDescrip()));
 

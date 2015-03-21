@@ -35,6 +35,7 @@ public class dbConnect {
             while (rs.next()) {
                 socialmediaID = rs.getInt("BerichtID");
             }
+            conn.close();
             return socialmediaID;
         }
         catch(Exception e) {

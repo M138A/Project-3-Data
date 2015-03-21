@@ -7,7 +7,10 @@ import net.aksingh.owmjapis.OpenWeatherMap;
 import org.json.JSONException;
 
 import javax.xml.bind.SchemaOutputResolver;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class weerInfo {
 
@@ -38,6 +41,7 @@ public class weerInfo {
             gemid = (Math.floor((mid)*10)/10.0); // < klopt geen fuck van vlgens mij
            // System.out.println("Temperatuur:(min) " + Math.floor((minC)*10)/10.0 + "/ (max)" + Math.ceil((maxC)*10)/10.0  + "\'C");
             System.out.println(String.valueOf(Math.floor((gemid)*10)/10.0) + "\'C " + Descriptionfinal);
+            getWeatherConditionImg(getDescrip());
         }
     }
 
@@ -48,10 +52,23 @@ public class weerInfo {
         return translate;
     }
 
+    /**
+     * TODO
+     * @param x
+     */
+    public void getWeatherConditionImg(String x) {
+        String[] myStringArray = {"Thunderstorm","clouds","c"};
+        for (String aMyStringArray : myStringArray) {
+            if (x.contains(aMyStringArray)) {
+                System.out.println("test");
+            }
+        }
+    }
 
     public double getGemid() {
         return gemid;
     }
+
     public String getDescrip(){
         return Descriptionfinal;
     }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
  * Created by MarkGame on 18-3-2015.
  */
 public class Rating {
+
     public int getRating(String x) {
         try {
             BufferedReader bfr = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("positief.txt")));
