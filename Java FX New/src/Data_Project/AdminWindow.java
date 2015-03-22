@@ -42,7 +42,7 @@ public class AdminWindow {
 
     public void LogoutScreen(ActionEvent actionEvent) {
         fxmlController logout = new fxmlController();
-        logout.setLogin("Log in", "sample.fxml");
+        logout.setLogin("Log in", "Login.fxml");
     }
 
     public void addAccount(ActionEvent actionEvent) {

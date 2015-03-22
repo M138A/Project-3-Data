@@ -41,7 +41,9 @@ public class AnalistController implements Initializable {
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
     //SQL
     private dbConnect connect = new dbConnect();
-    Connection con;
+    private Rating positief = new Rating();
+    private Connection con;
+
     public AnalistController() throws Exception {
         con = connect.connectToDb();
     }
@@ -58,7 +60,7 @@ public class AnalistController implements Initializable {
     @FXML // log out scherm
     private void logoutButtonAction() {
         fxmlController logout = new fxmlController();
-        logout.setLogin("Log in", "sample.fxml");
+        logout.setLogin("Log in", "Login.fxml");
     }
 
     @FXML // data scherm,
@@ -102,7 +104,7 @@ public class AnalistController implements Initializable {
                     preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
                     preparedStatement.setString(2, Message);
                     preparedStatement.setString(3, "Twitter");
-                    preparedStatement.setInt(4, 1);
+                    preparedStatement.setInt(4, positief.getRating(Message));
                     preparedStatement.execute();
 
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
@@ -115,6 +117,7 @@ public class AnalistController implements Initializable {
                     preparedStatement2.setInt(6, FollowerCount);
                     preparedStatement2.execute();
                     /**Close connection with Database **/
+                     con.close();
                 //textareaoutput
                     outputTextArea.appendText(status.getUser().getName() + ":" +
                             status.getText() + "\r\n");
@@ -166,7 +169,7 @@ public class AnalistController implements Initializable {
                     preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
                     preparedStatement.setString(2, Message);
                     preparedStatement.setString(3, "Twitter");
-                    preparedStatement.setInt(4, 1);
+                    preparedStatement.setInt(4, 4);
                     preparedStatement.execute();
 
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
@@ -277,7 +280,7 @@ public class AnalistController implements Initializable {
                 preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
                 preparedStatement.setString(2, message);
                 preparedStatement.setString(3, "FaceBook");
-                preparedStatement.setInt(4, 1);
+                preparedStatement.setInt(4, positief.getRating(message));
                 preparedStatement.execute();
 
                 sql = "INSERT INTO facebook (Bericht_BerichtID,likes,gedeeld) VALUES (?,?,?)";
