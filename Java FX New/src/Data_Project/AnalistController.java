@@ -268,7 +268,27 @@ public class AnalistController implements Initializable {
             }
         }
     }
+@FXML
+private void FacebookData(){
 
+    try {
+        FacebookData fb = new FacebookData();
+    } catch (FacebookException e) {
+        e.printStackTrace();
+    }
+    try {
+        ResponseList<Post> fbmsges = new FacebookData().getFeeds();
+        for (int i = 0; i < fbmsges.size(); i++) {
+            Post post = fbmsges.get(i);
+            String message = post.getMessage();
+
+            System.out.println(message);
+        }
+    } catch (FacebookException e) {
+        e.printStackTrace();
+    }
+
+}
     @FXML
     private void WeerButtonAction() throws IOException {
         weerInfo info = new weerInfo();
@@ -318,7 +338,14 @@ public class AnalistController implements Initializable {
                         new PieChart.Data("Facebook", SocMed.getFacebook()));
 
         Piechart.setData(pieChartData);
+        //
+
+
+
+
     }
+
+
 
 }
 
