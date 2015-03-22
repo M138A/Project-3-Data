@@ -12,10 +12,6 @@ import java.time.LocalDate;
  * Created by Lappie on 3/22/2015.
  */
 public class FacebookData {
-    //Login credentials
-    private final String usernameDB = "mijnma1q_prjuser";
-    private final String passwordDB = "password";
-    private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
     private dbConnect connect = new dbConnect();
     Connection con;
     // Facebook data
@@ -29,18 +25,16 @@ public class FacebookData {
         Page pgId = facebook.getPage("313850611958467");
         Pagelikecount = pgId.getLikes(); // aantal likes op de facebook pagina van rotterdam
 
-        for (int i = 0; i < feeds.size(); i++) {
-            Post post = feeds.get(i);
+        for (Post post : feeds) {
             String msg = post.getMessage();
-//            sharecount = post.getSharesCount();
-/*            if (sharecount == null) {
+            Integer sharecount = post.getSharesCount();
+            if (sharecount == null) {
                 sharecount = 0;
-            }*/
+            }
 
-// database stuff
+            // database stuff
             try {
                 Connection con = connect.connectToDb();
-
                 String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
                 PreparedStatement preparedStatement = con.prepareStatement(sql);
                 preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));

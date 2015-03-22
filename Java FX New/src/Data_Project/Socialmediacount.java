@@ -13,10 +13,6 @@ public class Socialmediacount {
     private int Googlecount;
     private int Twittercount;
     private int Facebookcount;
-    //Login credentials
-    private final String usernameDB = "mijnma1q_prjuser";
-    private final String passwordDB = "password";
-    private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
     private dbConnect connect = new dbConnect();
 
 
@@ -53,7 +49,6 @@ public class Socialmediacount {
             e.printStackTrace();
         }
     }
-
 
     // getters
     public int getGoogle() {
