@@ -292,7 +292,7 @@ private void FacebookData(){
     @FXML
     private void WeerButtonAction() throws IOException {
         weerInfo info = new weerInfo();
-        outputTempArea.appendText(String.valueOf(info.getGemid())+ "'C " +String.valueOf(info.getDescrip()));
+        outputTempArea.appendText(String.valueOf(info.getGemid()) + "'C " + String.valueOf(info.getDescrip()));
 
         }
     @FXML
@@ -325,6 +325,7 @@ private void FacebookData(){
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Socialmediacount SocMed = null;
+
         try {
             SocMed = new Socialmediacount();
         } catch (Exception e) {
@@ -338,7 +339,7 @@ private void FacebookData(){
                         new PieChart.Data("Facebook", SocMed.getFacebook()));
 
         Piechart.setData(pieChartData);
-        //
+
 
 
 
