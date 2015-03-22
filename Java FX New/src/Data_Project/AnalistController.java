@@ -27,65 +27,95 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import se.walkercrou.places.Place;
+import twitter4j.Paging;
 
 
 /**
  * Created by bart on 10-3-2015.
  */
 public class AnalistController implements Initializable {
-    //Social media count
-    private int Googlecount;
-    private int Twittercount;
-    private int Facebookcount;
 
     //Login credentials
     private final String usernameDB = "mijnma1q_prjuser";
     private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
+    //SQL
     private dbConnect connect = new dbConnect();
     Connection con;
+    public AnalistController() throws Exception {
+        con = connect.connectToDb();
+    }
     //fxml
-
-
+    @FXML
+    PieChart Piechart;
     @FXML
     public TextArea outputTempArea;
-
     @FXML
     public TextArea outputTextArea;
     @FXML
     public TextField inputTextArea;
 
-    public AnalistController() throws Exception {
-        con = connect.connectToDb();
-    }
-
-    @FXML
+    @FXML // log out scherm
     private void logoutButtonAction() {
         fxmlController logout = new fxmlController();
         logout.setLogin("Log in", "sample.fxml");
     }
 
-    @FXML
+    @FXML // data scherm,
     private void dataButtonAction() {
         fxmlController logout = new fxmlController();
         DataController dc = new DataController();
         logout.setLogin("Data", "Data.fxml");
     }
-    @FXML
-    PieChart Piechart;
 
-    @FXML
+    @FXML // haalt tweets op van een timelijn
     private void TwitzoekButtonAction() {
 
             String inp = inputTextArea.getText();
             // input > twitternaam > return timelijn/tweets naar output
 
             try {
-                outputTextArea.setText(" ");
+                outputTextArea.setText(" "); // clean up
+                Paging page = new Paging (1, 50); // aantal tweets'perpage'
                 Twitter latestTweetChecker = new TwitterFactory().getInstance();
-                List<Status> statuses = latestTweetChecker.getUserTimeline(inp);
+                List<Status> statuses = latestTweetChecker.getUserTimeline(inp,page);
                 outputTextArea.appendText("Showing " + " " + inp + " " + "timeline.\r\n \r\n");
+                String Message;
+                String Usrname;
+                int FollowerCount;
+                int RetweetCount;
+                int FavoriteCount;
+
                 for (Status status : statuses) {
+
+                    // variable
+                    Message =  status.getText();
+                    Usrname =  status.getUser().getName();
+                    FollowerCount = status.getUser().getFollowersCount();
+                    RetweetCount = status.getRetweetCount();
+                    FavoriteCount = status.getFavoriteCount();
+
+                    //sql connectie
+                    Connection con = connect.connectToDb();
+                    String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
+                    PreparedStatement preparedStatement = con.prepareStatement(sql);
+                    preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
+                    preparedStatement.setString(2, Message);
+                    preparedStatement.setString(3, "Twitter");
+                    preparedStatement.setInt(4, 1);
+                    preparedStatement.execute();
+
+                    sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
+                    PreparedStatement preparedStatement2 = con.prepareStatement(sql);
+                    preparedStatement2.setInt(1, connect.getSocialMedia("Twitter"));
+                    preparedStatement2.setInt(2, RetweetCount);
+                    preparedStatement2.setInt(3, FavoriteCount);
+                    preparedStatement2.setString(4, Usrname);
+                    preparedStatement2.setInt(5, 1);
+                    preparedStatement2.setInt(6, FollowerCount);
+                    preparedStatement2.execute();
+                    /**Close connection with Database **/
+                //textareaoutput
                     outputTextArea.appendText(status.getUser().getName() + ":" +
                             status.getText() + "\r\n");
                 }
@@ -93,11 +123,14 @@ public class AnalistController implements Initializable {
                 te.printStackTrace();
                 outputTextArea.appendText("Failed : " + te.getMessage());
                 System.exit(0);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
     }
 
-
-    @FXML
+    @FXML// haalt tweets op van een hashtagg
     private void HashtaggButtonAction() { //twitter api non oob
         String input = inputTextArea.getText(); // kijkt wat je hebt getypt
         int socialmediaID = 0;
@@ -158,11 +191,11 @@ public class AnalistController implements Initializable {
         }
     }
 
-    @FXML
+    @FXML// haalt rating van google places op
     private void PlacesButtonAction() {
 
         GooglePlaces client = new GooglePlaces("AIzaSyALbXTMU7FfHrYpokHmOYpvJBsXUioQYlg");
-        ArrayList<Place> places = (ArrayList<Place>) client.getPlacesByQuery("Euromast", GooglePlaces.MAXIMUM_RESULTS);
+        ArrayList<Place> places = (ArrayList<Place>) client.getPlacesByQuery("RdamCentraal", GooglePlaces.MAXIMUM_RESULTS);
         int review = 0;
         List<Review> l1 = null;
         outputTextArea.setText(" "); // cleanup
@@ -200,9 +233,9 @@ public class AnalistController implements Initializable {
                 } catch (SQLException e) {
                     System.out.println("geen nieuwe updates");
                     e.printStackTrace();
-
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
+                    System.out.println("Class niet gevonden");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -215,7 +248,7 @@ public class AnalistController implements Initializable {
      https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.2
       */
 
-    @FXML
+    @FXML // haalt facebook posts op van de facebook pagina Rotterdam centraal
     private void FacebookButtonAction() throws FacebookException {
         outputTextArea.setText(" "); // cleanup
 
@@ -268,15 +301,15 @@ public class AnalistController implements Initializable {
             }
         }
     }
-@FXML
-private void FacebookData(){
+    @FXML// haalt facebook posts op van de facebook pagina Rotterdam centraal v2
+    private void FacebookData(){
 
-    try {
+     try {
         FacebookData fb = new FacebookData();
-    } catch (FacebookException e) {
+     } catch (FacebookException e) {
         e.printStackTrace();
-    }
-    try {
+     }
+     try {
         ResponseList<Post> fbmsges = new FacebookData().getFeeds();
         for (int i = 0; i < fbmsges.size(); i++) {
             Post post = fbmsges.get(i);
@@ -284,18 +317,18 @@ private void FacebookData(){
 
             System.out.println(message);
         }
-    } catch (FacebookException e) {
+     } catch (FacebookException e) {
         e.printStackTrace();
-    }
+     }
 
-}
-    @FXML
+    }
+    @FXML // Button voor het ophalen van het weer.
     private void WeerButtonAction() throws IOException {
         weerInfo info = new weerInfo();
         outputTempArea.appendText(String.valueOf(info.getGemid()) + "'C " + String.valueOf(info.getDescrip()));
 
         }
-    @FXML
+    @FXML // Button voor het wegschrijven van het weer naar de db
     private void UpdateWeather() throws Exception {
         weerInfo info = new weerInfo();
         System.out.println(info.getTranslate());
@@ -321,7 +354,8 @@ private void FacebookData(){
         }
 
     }
-
+    // Start de volgende methodes als de het analisten scherm opent
+    // maakt pie chart op basis van SQL query
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Socialmediacount SocMed = null;
@@ -339,8 +373,6 @@ private void FacebookData(){
                         new PieChart.Data("Facebook", SocMed.getFacebook()));
 
         Piechart.setData(pieChartData);
-
-
 
 
 
