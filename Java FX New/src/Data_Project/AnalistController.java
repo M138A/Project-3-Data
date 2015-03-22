@@ -78,7 +78,7 @@ public class AnalistController implements Initializable {
                 outputTextArea.setText(" "); // clean up
                 Paging page = new Paging (1, 50); // aantal tweets'perpage'
                 Twitter latestTweetChecker = new TwitterFactory().getInstance();
-                List<Status> statuses = latestTweetChecker.getUserTimeline(inp,page);
+                List<Status> statuses = latestTweetChecker.getUserTimeline(inp, page);
                 outputTextArea.appendText("Showing " + " " + inp + " " + "timeline.\r\n \r\n");
                 String Message;
                 String Usrname;
@@ -339,7 +339,7 @@ public class AnalistController implements Initializable {
             PreparedStatement preparedStatement = con.prepareStatement(sql);
             preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
             preparedStatement.setDouble(2, info.getGemid());
-            preparedStatement.setString(3, info.getDescrip());
+            preparedStatement.setString(3, info.getTranslate());
             preparedStatement.execute();
             System.out.println("Success?");
 

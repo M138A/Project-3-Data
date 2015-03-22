@@ -1,22 +1,18 @@
 package Data_Project;
 import com.memetix.mst.language.Language;
 import com.memetix.mst.translate.Translate;
-import net.aksingh.owmjapis.AbstractWeather;
 import net.aksingh.owmjapis.CurrentWeather;
 import net.aksingh.owmjapis.OpenWeatherMap;
 import org.json.JSONException;
 
-import javax.xml.bind.SchemaOutputResolver;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class weerInfo {
 
     private double gemid;
     private String Descriptionfinal;
     private String translate;
+    private String image;
 
 
 
@@ -57,10 +53,10 @@ public class weerInfo {
      * @param x
      */
     public void getWeatherConditionImg(String x) {
-        String[] myStringArray = {"Thunderstorm","clouds","c"}; // need additional information
+        String[] myStringArray = {"Thunderstorm","clouds","Sky",}; // need additional information
         for (String aMyStringArray : myStringArray) {
             if (x.contains(aMyStringArray)) {
-                System.out.println("test");
+                //image = "sun.png";
             }
         }
     }
@@ -73,4 +69,7 @@ public class weerInfo {
         return Descriptionfinal;
     }
 
+    public String getImage() {
+        return image;
+    }
 }
