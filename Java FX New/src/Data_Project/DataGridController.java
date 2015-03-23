@@ -61,16 +61,24 @@ public class DataGridController implements Initializable{
         String username = x.getUsername();
         String password = x.getPassword();
         x.updatePassword(username,stCellEditEvent.getNewValue().toString());
+        refreshList();
     }
 
     public void updateUsername(TableColumn.CellEditEvent stCellEditEvent) {
         authorizedUser x = (authorizedUser) stCellEditEvent.getRowValue();
         x.updateUsername(stCellEditEvent.getOldValue().toString(),stCellEditEvent.getNewValue().toString());
+        refreshList();
     }
 
     public void updateRole(TableColumn.CellEditEvent stCellEditEvent) {
         authorizedUser x = (authorizedUser) stCellEditEvent.getRowValue();
         x.updateRole(x.getUsername(), stCellEditEvent.getNewValue().toString());
+        refreshList();
+    }
+    private void refreshList()
+    {
+        userTable.getColumns().removeAll();
+        setUserTable(userTable);
     }
 
 
