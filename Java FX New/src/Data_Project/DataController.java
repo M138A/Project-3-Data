@@ -18,7 +18,7 @@ public class DataController implements Initializable {
     @FXML
     public LineChart<String, Integer> Linechart;
     @FXML
-    public StackedAreaChart<String, Integer> Stackedchart;
+    public StackedAreaChart<Number, Number> Stackedchart;
 
 
     @Override
@@ -44,9 +44,6 @@ public class DataController implements Initializable {
 
         Piechart.setData(pieChartData);
         //  working line chart
-
-
-        // TODO
         Linechart.getXAxis().setAutoRanging(true);
         Linechart.getYAxis().setAutoRanging(true);
 
@@ -55,7 +52,7 @@ public class DataController implements Initializable {
         Linechart.setTitle("Temperatuur Rotterdam");
         Linechart.getYAxis().setLabel("Temperatuur");
         Linechart.getXAxis().setLabel("Dag");
-        series.getData().add(new XYChart.Data<>("dag-6",WH.getD1()));
+        series.getData().add(new XYChart.Data<>("dag-6", WH.getD1()));
         series.getData().add(new XYChart.Data<>("dag-5",WH.getD2()));
         series.getData().add(new XYChart.Data<>("dag-4",WH.getD3()));
         series.getData().add(new XYChart.Data<>("dag-3",4));
@@ -64,6 +61,33 @@ public class DataController implements Initializable {
         series.getData().add(new XYChart.Data<>("Vandaag",4));
 
         Linechart.getData().add(series);
+
+        // Stackedchart
+        Stackedchart.getXAxis().setAutoRanging(true);
+        Stackedchart.getYAxis().setAutoRanging(true);
+
+        XYChart.Series xseries = new XYChart.Series<>();
+        series.setName("Facebook");
+        Stackedchart.setTitle("Like Count");
+        Stackedchart.getYAxis().setLabel("likes");
+        Stackedchart.getXAxis().setLabel("Dag");
+        xseries.setName("XYChart.Series 1");
+        xseries.getData().add(new XYChart.Data<>(0,WH.getD1()));
+        xseries.getData().add(new XYChart.Data<>(1,WH.getD2()));
+        xseries.getData().add(new XYChart.Data<>(2,WH.getD3()));
+        xseries.getData().add(new XYChart.Data<>(3,4));
+        xseries.getData().add(new XYChart.Data<>(4,14));
+        xseries.getData().add(new XYChart.Data<>(5,6));
+        xseries.getData().add(new XYChart.Data<>(6,4));
+        xseries.getData().add(new XYChart.Data<>(7,14));
+        xseries.getData().add(new XYChart.Data<>(8,6));
+        xseries.getData().add(new XYChart.Data<>(9,4));
+        xseries.getData().add(new XYChart.Data<>(10,14));
+        xseries.getData().add(new XYChart.Data<>(11,6));
+        xseries.getData().add(new XYChart.Data<>(12,4));
+        xseries.getData().add(new XYChart.Data<>(13,6));
+
+        Stackedchart.getData().add(xseries);
     }
 }
 
