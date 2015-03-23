@@ -13,6 +13,7 @@ import se.walkercrou.places.GooglePlaces;
 import se.walkercrou.places.Place;
 import se.walkercrou.places.Review;
 import twitter4j.GeoLocation;
+import twitter4j.Paging;
 import twitter4j.*;
 
 import java.io.IOException;
@@ -24,10 +25,10 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import se.walkercrou.places.Place;
-import twitter4j.Paging;
 
 
 /**
@@ -87,6 +88,7 @@ public class AnalistController implements Initializable {
                 int FollowerCount;
                 int RetweetCount;
                 int FavoriteCount;
+                String ID;  // SQL MSG ID
 
                 for (Status status : statuses) {
 
@@ -96,6 +98,7 @@ public class AnalistController implements Initializable {
                     FollowerCount = status.getUser().getFollowersCount();
                     RetweetCount = status.getRetweetCount();
                     FavoriteCount = status.getFavoriteCount();
+                    ID = String.valueOf(status.getId());
 
                     //sql connectie
                     Connection con = connect.connectToDb();
@@ -143,6 +146,7 @@ public class AnalistController implements Initializable {
             Query query = new Query(input);
             query.setCount(50);// aantal tweets LAG!
             QueryResult result = twitter.search(query);
+            String ID;              // SQL MSG ID
             for (Status status : result.getTweets()) {// print uit
 
                 String Usrname = status.getUser().getScreenName();
@@ -151,6 +155,7 @@ public class AnalistController implements Initializable {
                 String Message = status.getText();
                 GeoLocation Location = status.getGeoLocation();
                 int FavoriteCount = status.getFavoriteCount();
+                ID = String.valueOf(status.getId());      //SQL MSG ID
                 String end = "=-=-=-=-=-=";
 
 
@@ -202,12 +207,14 @@ public class AnalistController implements Initializable {
         int review = 0;
         List<Review> l1 = null;
         outputTextArea.setText(" "); // cleanup
-
+        Random random = new Random(); // random ID GEN
+        String ID; // SQL MSG ID
         for (int i = 0; i < places.size(); i++) {
-
+            // variables
+            ID = String.valueOf(random.nextInt(55123124) + 15123); // SQL MSG ID
             Place me = places.get(i);
             String rating = String.valueOf(me.getRating());
-           // outputTextArea.appendText(rating + "\n\r");
+            // if geen rating, do nothing
             if (rating.equals("-1.0")) {
                 continue;
             }else {
@@ -217,7 +224,7 @@ public class AnalistController implements Initializable {
                     String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
                     PreparedStatement preparedStatement = con.prepareStatement(sql);
                     preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
-                    preparedStatement.setString(2, "Google Rating");
+                    preparedStatement.setString(2, "Google Location Rating");
                     preparedStatement.setString(3, "Google");
                     preparedStatement.setInt(4, 1);
                     preparedStatement.execute();
@@ -265,6 +272,7 @@ public class AnalistController implements Initializable {
             Post post = feeds.get(i);
             String message = post.getMessage();
             Integer sharecount = post.getSharesCount();
+            String ID = post.getId();     // SQL MSG ID
             if (sharecount == null) {
                 sharecount = 0;
             }
