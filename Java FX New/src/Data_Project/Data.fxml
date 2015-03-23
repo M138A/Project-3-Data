@@ -52,5 +52,53 @@
                 </AnchorPane>
             </content>
         </Tab>
+      <Tab text="Grafiek 4">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScatterChart id="Scatterchart" fx:id="Scatterchart" layoutX="27.0" layoutY="11.0" prefHeight="349.0" prefWidth="513.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </ScatterChart>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Grafiek 5">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BubbleChart id="Bubblechart" fx:id="Bubblechart" layoutX="62.0" layoutY="51.0" prefHeight="306.0" prefWidth="464.0">
+                    <xAxis>
+                      <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BubbleChart>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Grafiek 6">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BarChart id="Barchart" fx:id="Barchart" layoutX="53.0" layoutY="47.0" prefHeight="310.0" prefWidth="494.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
     </tabs>
 </TabPane>

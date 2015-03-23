@@ -19,7 +19,8 @@ public class DataController implements Initializable {
     public LineChart<String, Integer> Linechart;
     @FXML
     public StackedAreaChart<Number, Number> Stackedchart;
-
+    @FXML
+    public ScatterChart<Number, Number> Scatterchart;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -67,7 +68,7 @@ public class DataController implements Initializable {
         Stackedchart.getYAxis().setAutoRanging(true);
 
         XYChart.Series xseries = new XYChart.Series<>();
-        series.setName("Facebook");
+        xseries.setName("Facebook");
         Stackedchart.setTitle("Like Count");
         Stackedchart.getYAxis().setLabel("likes");
         Stackedchart.getXAxis().setLabel("Dag");
@@ -88,6 +89,22 @@ public class DataController implements Initializable {
         xseries.getData().add(new XYChart.Data<>(13,6));
 
         Stackedchart.getData().add(xseries);
+ /**       // Scatterchart TODO
+        Scatterchart.getXAxis().setAutoRanging(true);
+        Scatterchart.getYAxis().setAutoRanging(true);
+
+        XYChart.Series series1 = new XYChart.Series();
+        series1.setName("Scatterstuff");
+        Scatterchart.setTitle("teesstt");
+        Scatterchart.getYAxis().setLabel("test");
+        Scatterchart.getXAxis().setLabel("test");
+        series1.setName("XYChart.Series 5");
+        series1.getData().add(new XYChart.Data(4.2, 193.2));
+        series1.getData().add(new XYChart.Data(2.8, 33.6));
+        series1.getData().add(new XYChart.Data(23.8, 13.6));
+
+
+        Scatterchart.getData().addAll(series1);*/
     }
 }
 

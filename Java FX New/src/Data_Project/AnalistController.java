@@ -102,17 +102,18 @@ public class AnalistController implements Initializable {
 
                     //sql connectie
                     Connection con = connect.connectToDb();
-                    String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
+                    String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
                     PreparedStatement preparedStatement = con.prepareStatement(sql);
-                    preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
-                    preparedStatement.setString(2, Message);
-                    preparedStatement.setString(3, "Twitter");
-                    preparedStatement.setInt(4, positief.getRating(Message));
+                    preparedStatement.setString(1, ID);
+                    preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
+                    preparedStatement.setString(3, Message);
+                    preparedStatement.setString(4, "Twitter");
+                    preparedStatement.setInt(5, positief.getRating(Message));
                     preparedStatement.execute();
 
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
                     PreparedStatement preparedStatement2 = con.prepareStatement(sql);
-                    preparedStatement2.setInt(1, connect.getSocialMedia("Twitter"));
+                    preparedStatement2.setString(1, ID);
                     preparedStatement2.setInt(2, RetweetCount);
                     preparedStatement2.setInt(3, FavoriteCount);
                     preparedStatement2.setString(4, Usrname);
@@ -169,17 +170,18 @@ public class AnalistController implements Initializable {
                         "\n\r"      );
                 try {
                     Connection con = connect.connectToDb();
-                    String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
+                    String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
                     PreparedStatement preparedStatement = con.prepareStatement(sql);
-                    preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
-                    preparedStatement.setString(2, Message);
-                    preparedStatement.setString(3, "Twitter");
-                    preparedStatement.setInt(4, 4);
+                    preparedStatement.setString(1, ID);
+                    preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
+                    preparedStatement.setString(3, Message);
+                    preparedStatement.setString(4, "Twitter");
+                    preparedStatement.setInt(5,  positief.getRating(Message));
                     preparedStatement.execute();
 
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
                     PreparedStatement preparedStatement2 = con.prepareStatement(sql);
-                    preparedStatement2.setInt(1, connect.getSocialMedia("Twitter"));
+                    preparedStatement2.setString(1, ID);
                     preparedStatement2.setInt(2, RetweetCount);
                     preparedStatement2.setInt(3, FavoriteCount);
                     preparedStatement2.setString(4, Usrname);
@@ -211,9 +213,9 @@ public class AnalistController implements Initializable {
         String ID; // SQL MSG ID
         for (int i = 0; i < places.size(); i++) {
             // variables
-            ID = String.valueOf(random.nextInt(55123124) + 15123); // SQL MSG ID
+            ID = "GP"+ String.valueOf(random.nextInt(55123124) + 15123); // SQL MSG ID
             Place me = places.get(i);
-            String rating = String.valueOf(me.getRating());
+            Double rating = me.getRating();
             // if geen rating, do nothing
             if (rating.equals("-1.0")) {
                 continue;
@@ -221,18 +223,19 @@ public class AnalistController implements Initializable {
                 try {
                     Connection con = connect.connectToDb();
 
-                    String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
+                    String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
                     PreparedStatement preparedStatement = con.prepareStatement(sql);
-                    preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
-                    preparedStatement.setString(2, "Google Location Rating");
-                    preparedStatement.setString(3, "Google");
-                    preparedStatement.setInt(4, 1);
+                    preparedStatement.setString(1, ID);
+                    preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
+                    preparedStatement.setString(3, "Google Location Rating");
+                    preparedStatement.setString(4, "Google");
+                    preparedStatement.setInt(5, 0);
                     preparedStatement.execute();
 
                     sql = "INSERT INTO google (Bericht_BerichtID,rating) VALUES (?,?)";
                     PreparedStatement preparedStatement2 = con.prepareStatement(sql);
-                    preparedStatement2.setInt(1, connect.getSocialMedia("Google"));
-                    preparedStatement2.setString(2, rating);
+                    preparedStatement2.setString(1, ID);
+                    preparedStatement2.setDouble(2, rating);
                     preparedStatement2.execute();
                     System.out.println("Google+ Rating updated");
 
@@ -283,17 +286,18 @@ public class AnalistController implements Initializable {
             try {
                 Connection con = connect.connectToDb();
 
-                String sql = "INSERT INTO Bericht (Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?)";
+                String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
                 PreparedStatement preparedStatement = con.prepareStatement(sql);
-                preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
-                preparedStatement.setString(2, message);
-                preparedStatement.setString(3, "FaceBook");
-                preparedStatement.setInt(4, positief.getRating(message));
+                preparedStatement.setString(1, ID);
+                preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
+                preparedStatement.setString(3, message);
+                preparedStatement.setString(4, "FaceBook");
+                preparedStatement.setInt(5, positief.getRating(message));
                 preparedStatement.execute();
 
                 sql = "INSERT INTO facebook (Bericht_BerichtID,likes,gedeeld) VALUES (?,?,?)";
                 PreparedStatement preparedStatement2 = con.prepareStatement(sql);
-                preparedStatement2.setInt(1, connect.getSocialMedia("Facebook"));
+                preparedStatement2.setString(1, ID);
                 preparedStatement2.setInt(2, likeCount);
                 preparedStatement2.setInt(3, sharecount);
                 preparedStatement2.execute();
