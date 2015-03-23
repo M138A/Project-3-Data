@@ -8,33 +8,49 @@
 <?import javafx.scene.layout.*?>
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Data_Project.DataController">
-  <tabs>
-    <Tab text="Grafiek 1">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <PieChart id="Piechart" fx:id="Piechart" layoutX="14.0" layoutY="14.0" prefHeight="343.0" prefWidth="569.0" title="Social media Content">
-                     <effect>
-                        <Glow />
-                     </effect>
-                  </PieChart>
-               </children></AnchorPane>
-      </content>
-    </Tab>
-    <Tab text="Grafiek 2">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <StackedBarChart id="Barchart" layoutY="1.0" prefHeight="370.0" prefWidth="600.0" title="Barchart">
-                    <xAxis>
-                      <CategoryAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis side="LEFT" />
-                    </yAxis>
-                  </StackedBarChart>
-               </children></AnchorPane>
-      </content>
-    </Tab>
-  </tabs>
+    <tabs>
+        <Tab text="Grafiek 1">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <PieChart id="Piechart" fx:id="Piechart" layoutX="14.0" layoutY="14.0" prefHeight="343.0" prefWidth="569.0" title="Social media Content">
+                            <effect>
+                                <Glow />
+                            </effect>
+                        </PieChart>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Grafiek 2">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <LineChart fx:id="Linechart" layoutX="51.0" layoutY="5.0" prefHeight="366.0" prefWidth="491.0">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis fx:id="yAxis" side="LEFT" />
+                            </yAxis>
+                        </LineChart>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Grafiek 3">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <StackedAreaChart id="Stackedchart" layoutX="50.0" layoutY="9.0" prefHeight="356.0" prefWidth="500.0">
+                            <xAxis>
+                                <NumberAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </StackedAreaChart>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
 </TabPane>
