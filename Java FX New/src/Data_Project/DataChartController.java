@@ -10,7 +10,7 @@ import javafx.scene.chart.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DataController implements Initializable {
+public class DataChartController implements Initializable {
 
     @FXML
     PieChart Piechart;

@@ -7,7 +7,6 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import se.walkercrou.places.GooglePlaces;
 import se.walkercrou.places.Place;
@@ -16,7 +15,6 @@ import twitter4j.GeoLocation;
 import twitter4j.Paging;
 import twitter4j.*;
 
-import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.Date;
@@ -27,8 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
-
-import se.walkercrou.places.Place;
 
 
 /**
@@ -52,9 +48,9 @@ public class AnalistController implements Initializable {
     @FXML
     PieChart Piechart;
     @FXML
-    public TextArea outputTempArea;
+    public TextField outputTempArea;
     @FXML
-    public TextArea outputTextArea;
+    public TextField outputTempDisc;
     @FXML
     public TextField inputTextArea;
 
@@ -67,7 +63,7 @@ public class AnalistController implements Initializable {
     @FXML // data scherm,
     private void dataButtonAction() {
         fxmlController logout = new fxmlController();
-        DataController dc = new DataController();
+        DataChartController dc = new DataChartController();
         logout.setLogin("Data", "Data.fxml");
     }
 
@@ -78,11 +74,10 @@ public class AnalistController implements Initializable {
             // input > twitternaam > return timelijn/tweets naar output
 
             try {
-                outputTextArea.setText(" "); // clean up
                 Paging page = new Paging (1, 50); // aantal tweets'perpage'
                 Twitter latestTweetChecker = new TwitterFactory().getInstance();
                 List<Status> statuses = latestTweetChecker.getUserTimeline(inp, page);
-                outputTextArea.appendText("Showing " + " " + inp + " " + "timeline.\r\n \r\n");
+                System.out.println("Showing " + " " + inp + " " + "timeline.\r\n \r\n");
                 String Message;
                 String Usrname;
                 int FollowerCount;
@@ -123,12 +118,12 @@ public class AnalistController implements Initializable {
                     /**Close connection with Database **/
                      con.close();
                 //textareaoutput
-                    outputTextArea.appendText(status.getUser().getName() + ":" +
+                    System.out.println(status.getUser().getName() + ":" +
                             status.getText() + "\r\n");
                 }
             }catch (TwitterException te) {
                 te.printStackTrace();
-                outputTextArea.appendText("Failed : " + te.getMessage());
+                System.out.println("Failed : " + te.getMessage());
                 System.exit(0);
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -142,7 +137,7 @@ public class AnalistController implements Initializable {
         String input = inputTextArea.getText(); // kijkt wat je hebt getypt
         int socialmediaID = 0;
         try {
-            outputTextArea.setText(" "); // cleanup
+
             twitter4j.Twitter twitter =  TwitterFactory.getSingleton();
             Query query = new Query(input);
             query.setCount(50);// aantal tweets LAG!
@@ -160,14 +155,14 @@ public class AnalistController implements Initializable {
                 String end = "=-=-=-=-=-=";
 
 
-                outputTextArea.appendText( "Naam : @" + Usrname + " : "+
+                System.out.println("Naam : @" + Usrname + " : " +
                         "\n\r volger count : " + FollowerCount +
                         "\n\r bericht : " + Message +
                         "\n\r locatie :" + Location +
                         "\n\r fav count:" + FavoriteCount +
                         "\n\r retweet count :" + RetweetCount +
-                        "\n\r "+ end +
-                        "\n\r"      );
+                        "\n\r " + end +
+                        "\n\r");
                 try {
                     Connection con = connect.connectToDb();
                     String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
@@ -196,7 +191,7 @@ public class AnalistController implements Initializable {
             }
         }catch (TwitterException te) { // error message
             te.printStackTrace();
-            outputTextArea.appendText("Failed : " + te.getMessage());
+            System.out.println("Failed : " + te.getMessage());
             System.exit(0);
         }
     }
@@ -208,22 +203,24 @@ public class AnalistController implements Initializable {
         ArrayList<Place> places = (ArrayList<Place>) client.getPlacesByQuery("RdamCentraal", GooglePlaces.MAXIMUM_RESULTS);
         int review = 0;
         List<Review> l1 = null;
-        outputTextArea.setText(" "); // cleanup
         Random random = new Random(); // random ID GEN
         String ID; // SQL MSG ID
         for (int i = 0; i < places.size(); i++) {
             // variables
             ID = "GP"+ String.valueOf(random.nextInt(55123124) + 15123); // SQL MSG ID
             Place me = places.get(i);
+            List<Review> da = places.get(i).getReviews();
+            String test = places.get(i).getPlaceId();
             Double rating = me.getRating();
             // if geen rating, do nothing
+            System.out.println(test);
             if (rating.equals("-1.0")) {
                 continue;
             }else {
                 try {
                     Connection con = connect.connectToDb();
 
-                    String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
+/*                    String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
                     PreparedStatement preparedStatement = con.prepareStatement(sql);
                     preparedStatement.setString(1, ID);
                     preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
@@ -237,7 +234,7 @@ public class AnalistController implements Initializable {
                     preparedStatement2.setString(1, ID);
                     preparedStatement2.setDouble(2, rating);
                     preparedStatement2.execute();
-                    System.out.println("Google+ Rating updated");
+                    System.out.println("Google+ Rating updated");*/
 
 
                     /**Close connection with Database **/
@@ -263,14 +260,12 @@ public class AnalistController implements Initializable {
 
     @FXML // haalt facebook posts op van de facebook pagina Rotterdam centraal
     private void FacebookButtonAction() throws FacebookException {
-        outputTextArea.setText(" "); // cleanup
 
         Facebook facebook = new FacebookFactory().getInstance();
         ResponseList<Post> feeds = facebook.getFeed("313850611958467",new Reading().limit(75));
 
         Page pgId = facebook.getPage("313850611958467");
         int likeCount = pgId.getLikes(); // aantal likes op de facebook pagina van rotterdam
-        outputTextArea.appendText("De facebook pagina van Rotterdam Centraal heeft op dit moment : " +likeCount +" likes\n\r \n\r");
         for (int i = 0; i < feeds.size(); i++) {
             Post post = feeds.get(i);
             String message = post.getMessage();
@@ -280,9 +275,7 @@ public class AnalistController implements Initializable {
                 sharecount = 0;
             }
             // Print textarea test
-            outputTextArea.appendText("Message : \n\r" + message +
-                    "\n\r Shares : " + sharecount+
-                    "\n\r ======\n\r");
+
             try {
                 Connection con = connect.connectToDb();
 
@@ -338,10 +331,10 @@ public class AnalistController implements Initializable {
 
     }
     @FXML // Button voor het ophalen van het weer.
-    private void WeerButtonAction() throws IOException {
+    private void WeerButtonAction() throws Exception {
         weerInfo info = new weerInfo();
-        outputTempArea.appendText(String.valueOf(info.getGemid()) + "'C " + String.valueOf(info.getDescrip()));
-
+        outputTempArea.appendText(String.valueOf(info.getGemid()) + "'C ");
+        outputTempDisc.appendText(String.valueOf(info.getTranslate()));
         }
     @FXML // Button voor het wegschrijven van het weer naar de db
     private void UpdateWeather() throws Exception {
@@ -373,13 +366,19 @@ public class AnalistController implements Initializable {
     // maakt pie chart op basis van SQL query
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Socialmediacount SocMed = null;
-
         try {
-            SocMed = new Socialmediacount();
+            WeerButtonAction();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Socialmediacount SocMed = null;
+
+        try {
+                SocMed = new Socialmediacount();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
 
         ObservableList<PieChart.Data> pieChartData =
                 FXCollections.observableArrayList(
