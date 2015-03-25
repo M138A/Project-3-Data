@@ -62,8 +62,8 @@ public class DataChartController implements Initializable {
         XYChart.Series series = new XYChart.Series<>();
         XYChart.Series rating = new XYChart.Series<>();
 
-        rating.setName("positief");
-        series.setName("Rotterdam");
+        rating.setName("Positief");
+        series.setName("Temp");
         Linechart.setTitle("Temperatuur/positiviteit Rotterdam");
         Linechart.getYAxis().setLabel("Temperatuur");
         Linechart.getXAxis().setLabel("Dag");
