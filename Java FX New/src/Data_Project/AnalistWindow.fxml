@@ -206,17 +206,8 @@
                     </Label>
                 </children>
             </AnchorPane>
-            <AnchorPane prefHeight="185.0" prefWidth="391.0" GridPane.columnIndex="7" GridPane.rowIndex="13">
-                <children>
-                  <Button layoutX="76.0" layoutY="14.0" mnemonicParsing="false" onAction="#UpdateWeather" text="sqlweer" />
-                  <Button layoutX="147.0" layoutY="48.0" mnemonicParsing="false" onAction="#FacebookButtonAction" text="Fb" />
-                  <Button layoutX="4.0" layoutY="14.0" mnemonicParsing="false" onAction="#PlacesButtonAction" text="googlr" />
-                  <Button layoutX="57.0" layoutY="48.0" mnemonicParsing="false" onAction="#TwitzoekButtonAction" text="TWusrname" />
-                  <Button layoutX="161.0" layoutY="14.0" mnemonicParsing="false" onAction="#HashtaggButtonAction" text="#" />
-                  <Button layoutX="4.0" layoutY="48.0" mnemonicParsing="false" onAction="#WeerButtonAction" text="weer" />
-                </children>
-            </AnchorPane>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="165.0" style="-fx-background-color: #03A9F4;" text="New Data" GridPane.columnIndex="3" GridPane.rowIndex="15" />
+            <AnchorPane prefHeight="185.0" prefWidth="391.0" GridPane.columnIndex="7" GridPane.rowIndex="13" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#UpdatedataButtonAction" prefHeight="42.0" prefWidth="165.0" style="-fx-background-color: #03A9F4;" text="Update data" GridPane.columnIndex="3" GridPane.rowIndex="15" />
             <Button alignment="CENTER" mnemonicParsing="false" onAction="#dataButtonAction" prefHeight="42.0" prefWidth="165.0" style="-fx-background-color: #03A9F4;" text="Data chart" GridPane.columnIndex="1" GridPane.rowIndex="15" />
 
                     <Label text="PERIODE" textFill="#4fc3f7" GridPane.columnIndex="1" GridPane.rowIndex="9">
