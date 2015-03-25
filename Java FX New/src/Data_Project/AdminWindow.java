@@ -36,6 +36,12 @@ public class AdminWindow {
     private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
 
+
+    @FXML // data scherm,
+    private void EditUserDataButtonAction() {
+        fxmlController UD = new fxmlController();
+        UD.setMainStage("Edit gebruiker gegevens", "Datagrid.fxml");
+    }
     public AdminWindow() {
 
     }
