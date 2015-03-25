@@ -332,6 +332,8 @@ public class AnalistController implements Initializable {
     }
     @FXML // Button voor het ophalen van het weer.
     private void WeerButtonAction() throws Exception {
+        outputTempArea.setText("");
+        outputTempDisc.setText("");
         weerInfo info = new weerInfo();
         outputTempArea.appendText(String.valueOf(info.getGemid()) + "'C ");
         outputTempDisc.appendText(String.valueOf(info.getTranslate()));

@@ -58,7 +58,7 @@
                                <Insets top="-50.0" />
                            </GridPane.margin>
                        </Label>
-                       <Button onAction="#submitForm" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #03A9F4;" text="INLOGGEN" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                       <Button onAction="#submitForm" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #03A9F4;" text="INLOGGEN" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5" defaultButton="true">
                            <font>
                                <Font name="Roboto Medium" size="14.0" />
                            </font>

@@ -230,8 +230,8 @@
                   <Image url="@../Images/2013_BR_forecast-iconen_b.png" />
                </image>
             </ImageView>
-            <TextField id="outputTempArea" fx:id="outputTempArea" editable="false" prefHeight="40.0" prefWidth="194.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <TextField id="outputTempDisc" fx:id="outputTempDisc" editable="false" prefHeight="43.0" prefWidth="194.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <TextField id="outputTempArea" fx:id="outputTempArea" disable="true" editable="false" prefHeight="40.0" prefWidth="194.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <TextField id="outputTempDisc" fx:id="outputTempDisc" disable="true" editable="false" prefHeight="43.0" prefWidth="194.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
         </children>
     </GridPane>
 </center>
