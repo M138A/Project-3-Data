@@ -24,8 +24,14 @@ public class DataChartController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        Rating rat = null;
         Socialmediacount SocMed = null;
         weerhistorie WH = null;
+        try {
+            rat = new Rating();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         try {
             WH = new weerhistorie();
         } catch (Exception e) {
@@ -36,7 +42,12 @@ public class DataChartController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        // working piechart
+        System.out.println(WH.getToday());
+        System.out.println(WH.getminD2());
+        System.out.println(WH.getminD3());
+        System.out.println(WH.getminD4());
+
+        // working piechartr
         ObservableList<PieChart.Data> pieChartData =
                 FXCollections.observableArrayList(
                         new PieChart.Data("Google", SocMed.getGoogle()),
@@ -49,19 +60,27 @@ public class DataChartController implements Initializable {
         Linechart.getYAxis().setAutoRanging(true);
 
         XYChart.Series series = new XYChart.Series<>();
+        XYChart.Series rating = new XYChart.Series<>();
+
+        rating.setName("positief");
         series.setName("Rotterdam");
-        Linechart.setTitle("Temperatuur Rotterdam");
+        Linechart.setTitle("Temperatuur/positiviteit Rotterdam");
         Linechart.getYAxis().setLabel("Temperatuur");
         Linechart.getXAxis().setLabel("Dag");
-        series.getData().add(new XYChart.Data<>("dag-6", WH.getD1()));
-        series.getData().add(new XYChart.Data<>("dag-5",WH.getD2()));
-        series.getData().add(new XYChart.Data<>("dag-4",WH.getD3()));
-        series.getData().add(new XYChart.Data<>("dag-3",4));
-        series.getData().add(new XYChart.Data<>("dag-2",14));
-        series.getData().add(new XYChart.Data<>("dag-1",6));
-        series.getData().add(new XYChart.Data<>("Vandaag",4));
 
-        Linechart.getData().add(series);
+        series.getData().add(new XYChart.Data<>("Vandaag",WH.getToday()));
+        series.getData().add(new XYChart.Data<>("dag-1", WH.getminD1()));
+        series.getData().add(new XYChart.Data<>("dag-2",WH.getminD2()));
+        series.getData().add(new XYChart.Data<>("dag-3",WH.getminD3()));
+        series.getData().add(new XYChart.Data<>("dag-4",WH.getminD4()));
+
+        rating.getData().add(new XYChart.Data<>("Vandaag",rat.getRtoday()));
+        rating.getData().add(new XYChart.Data<>("dag-1",rat.getRmin1()));
+        rating.getData().add(new XYChart.Data<>("dag-2",rat.getRmin2()));
+        rating.getData().add(new XYChart.Data<>("dag-3",rat.getRmin3()));
+        rating.getData().add(new XYChart.Data<>("dag-4",5.2));
+
+        Linechart.getData().addAll(series,rating);
 
         // Stackedchart
         Stackedchart.getXAxis().setAutoRanging(true);
@@ -73,20 +92,12 @@ public class DataChartController implements Initializable {
         Stackedchart.getYAxis().setLabel("likes");
         Stackedchart.getXAxis().setLabel("Dag");
         xseries.setName("XYChart.Series 1");
-        xseries.getData().add(new XYChart.Data<>(0,WH.getD1()));
-        xseries.getData().add(new XYChart.Data<>(1,WH.getD2()));
-        xseries.getData().add(new XYChart.Data<>(2,WH.getD3()));
-        xseries.getData().add(new XYChart.Data<>(3,4));
-        xseries.getData().add(new XYChart.Data<>(4,14));
-        xseries.getData().add(new XYChart.Data<>(5,6));
-        xseries.getData().add(new XYChart.Data<>(6,4));
-        xseries.getData().add(new XYChart.Data<>(7,14));
-        xseries.getData().add(new XYChart.Data<>(8,6));
-        xseries.getData().add(new XYChart.Data<>(9,4));
-        xseries.getData().add(new XYChart.Data<>(10,14));
-        xseries.getData().add(new XYChart.Data<>(11,6));
-        xseries.getData().add(new XYChart.Data<>(12,4));
-        xseries.getData().add(new XYChart.Data<>(13,6));
+        xseries.getData().add(new XYChart.Data<>(0,2227));
+        xseries.getData().add(new XYChart.Data<>(1,2231));
+        xseries.getData().add(new XYChart.Data<>(2,2247));
+        xseries.getData().add(new XYChart.Data<>(3,2253));
+        xseries.getData().add(new XYChart.Data<>(4,2273));
+
 
         Stackedchart.getData().add(xseries);
  /**       // Scatterchart TODO

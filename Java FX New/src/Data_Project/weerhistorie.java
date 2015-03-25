@@ -26,20 +26,29 @@ public class weerhistorie {
     //SQL
     private dbConnect connect = new dbConnect();
 
-    public weerhistorie() throws Exception {
+    public weerhistorie() throws Exception {  //TODO dynamic datums
         try {
             Connection con = connect.connectToDb();
             Statement statement = con.createStatement();
-            String sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling;";
+            String sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where Datum = \"2015-03-25\"";
             ResultSet rs = statement.executeQuery(sql);
-            if(rs.next()){
-                Tempmin7 = rs.getInt(1);
+            if (rs.next()) {
+                Tempmin0 = rs.getDouble(1);
             }
-            if(rs.next()){
-                Tempmin6 = rs.getInt(1);
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-24\"";
+            rs = statement.executeQuery(sql);
+            if (rs.next()) {
+                Tempmin1 = rs.getDouble(1);
             }
-            if(rs.next()){
-                Tempmin5 = rs.getInt(1);
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-23\"";
+            rs = statement.executeQuery(sql);
+            if (rs.next()) {
+                Tempmin2 = rs.getDouble(1);
+            }
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-22\"";
+            rs = statement.executeQuery(sql);
+            if (rs.next()) {
+                Tempmin3 = rs.getDouble(1);
             }
             con.close();
         } catch (SQLException e ) {
@@ -53,13 +62,25 @@ public class weerhistorie {
             System.out.println(testar);
         }
     }
-    public double getD1() {
-        return Tempmin7;
+    public double getminD1() {
+        return Tempmin1;
     }
-    public double getD2(){
+    public double getminD2(){
+        return Tempmin2;
+    }
+    public double getminD3(){
+        return Tempmin3;
+    }
+    public double getminD4() {
+        return Tempmin4;
+    }
+    public double getminD5(){
+        return Tempmin5;
+    }
+    public double getminD6(){
         return Tempmin6;
     }
-    public double getD3(){
-        return Tempmin5;
+    public double getToday(){
+        return Tempmin0;
     }
 }
