@@ -207,8 +207,8 @@
                 </children>
             </AnchorPane>
             <AnchorPane prefHeight="185.0" prefWidth="391.0" GridPane.columnIndex="7" GridPane.rowIndex="13" />
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#UpdatedataButtonAction" prefHeight="42.0" prefWidth="165.0" style="-fx-background-color: #03A9F4;" text="Update data" GridPane.columnIndex="3" GridPane.rowIndex="15" />
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#dataButtonAction" prefHeight="42.0" prefWidth="165.0" style="-fx-background-color: #03A9F4;" text="Data chart" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#UpdatedataButtonAction" prefHeight="42.0" prefWidth="165.0" style="-fx-background-color: #03A9F4;" text="Update data" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="15" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#dataButtonAction" prefHeight="42.0" prefWidth="165.0" style="-fx-background-color: #03A9F4;" text="Data chart" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="15" />
 
                     <Label text="PERIODE" textFill="#4fc3f7" GridPane.columnIndex="1" GridPane.rowIndex="9">
                   <font>

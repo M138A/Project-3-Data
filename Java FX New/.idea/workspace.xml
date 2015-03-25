@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Rating also negative now">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/DataChartController.java" afterPath="$PROJECT_DIR$/src/Data_Project/DataChartController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/negatief.txt" afterPath="$PROJECT_DIR$/src/Data_Project/negatief.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml" afterPath="$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,13 +88,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="negatief.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="negatief.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/negatief.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6296296" vertical-offset="0" max-vertical-offset="432">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateDataController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6222" max-vertical-offset="6800">
+              <caret line="392" column="52" selection-start-line="392" selection-start-column="52" selection-end-line="392" selection-end-column="52" />
+              <folding>
+                <marker date="1427306490158" expanded="true" signature="3797:3888" placeholder="INSERT INTO ..." />
+                <marker date="1427306490158" expanded="true" signature="4360:4471" placeholder="INSERT INTO ..." />
+                <marker date="1427306490158" expanded="true" signature="7707:7798" placeholder="INSERT INTO ..." />
+                <marker date="1427306490158" expanded="true" signature="8303:8414" placeholder="INSERT INTO ..." />
+                <marker date="1427306490158" expanded="true" signature="10482:10573" placeholder="INSERT INTO ..." />
+                <marker date="1427306490158" expanded="true" signature="11067:11125" placeholder="INSERT INTO ..." />
+                <marker date="1427306490158" expanded="true" signature="13254:13345" placeholder="INSERT INTO ..." />
+                <marker date="1427306490158" expanded="true" signature="13818:13887" placeholder="INSERT INTO ..." />
+                <marker date="1427306490158" expanded="true" signature="15650:15729" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateDataWindow.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataWindow.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.4" vertical-offset="204" max-vertical-offset="3009">
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnalistWindow.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5244216" vertical-offset="918" max-vertical-offset="3995">
+              <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -208,7 +253,6 @@
         <option value="$PROJECT_DIR$/src/Data_Project/Login.fxml" />
         <option value="$PROJECT_DIR$/src/Data_Project/UpdateDataController.fxml" />
         <option value="$PROJECT_DIR$/src/Data_Project/AnalistController.java" />
-        <option value="$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml" />
         <option value="$PROJECT_DIR$/src/Data_Project/UpdateDataWindow.fxml" />
         <option value="$PROJECT_DIR$/src/Data_Project/Editdata.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/UpdateDataController.java" />
@@ -220,6 +264,7 @@
         <option value="$PROJECT_DIR$/src/Data_Project/weerhistorie.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/DataChartController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/negatief.txt" />
+        <option value="$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml" />
       </list>
     </option>
   </component>
@@ -764,7 +809,7 @@
       <workItem from="1427304811414" duration="2984000" />
       <workItem from="1427307902234" duration="268000" />
       <workItem from="1427310906197" duration="3830000" />
-      <workItem from="1427315809495" duration="485000" />
+      <workItem from="1427315809495" duration="1166000" />
     </task>
     <task id="LOCAL-00001" summary="Scene swaps">
       <created>1425856719404</created>
@@ -824,11 +869,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149506000" />
+    <option name="totallyTimeSpent" value="150187000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -841,7 +886,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27672955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27672955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1830161" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
@@ -1204,13 +1249,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6498" max-vertical-offset="7191">
-          <caret line="390" column="54" selection-start-line="390" selection-start-column="54" selection-end-line="390" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/fxmlController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="816">
@@ -1241,28 +1279,6 @@
         <state vertical-scroll-proportion="-0.0625" vertical-offset="854" max-vertical-offset="1615">
           <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataWindow.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3009">
-          <caret line="12" column="236" selection-start-line="12" selection-start-column="236" selection-end-line="12" selection-end-column="285" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.45132744" vertical-offset="918" max-vertical-offset="3995">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/addAccount.fxml">
@@ -1347,10 +1363,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/negatief.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6296296" vertical-offset="0" max-vertical-offset="432">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6222" max-vertical-offset="6800">
+          <caret line="392" column="52" selection-start-line="392" selection-start-column="52" selection-end-line="392" selection-end-column="52" />
+          <folding>
+            <marker date="1427306490158" expanded="true" signature="3797:3888" placeholder="INSERT INTO ..." />
+            <marker date="1427306490158" expanded="true" signature="4360:4471" placeholder="INSERT INTO ..." />
+            <marker date="1427306490158" expanded="true" signature="7707:7798" placeholder="INSERT INTO ..." />
+            <marker date="1427306490158" expanded="true" signature="8303:8414" placeholder="INSERT INTO ..." />
+            <marker date="1427306490158" expanded="true" signature="10482:10573" placeholder="INSERT INTO ..." />
+            <marker date="1427306490158" expanded="true" signature="11067:11125" placeholder="INSERT INTO ..." />
+            <marker date="1427306490158" expanded="true" signature="13254:13345" placeholder="INSERT INTO ..." />
+            <marker date="1427306490158" expanded="true" signature="13818:13887" placeholder="INSERT INTO ..." />
+            <marker date="1427306490158" expanded="true" signature="15650:15729" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4" vertical-offset="204" max-vertical-offset="3009">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5244216" vertical-offset="918" max-vertical-offset="3995">
+          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>
