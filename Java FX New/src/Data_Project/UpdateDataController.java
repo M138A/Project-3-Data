@@ -55,7 +55,10 @@ public class UpdateDataController implements Initializable {
     public TextField inputhashtaggfield;
     @FXML
     public TextArea outputTextArea;
-
+    @FXML
+    public TextField inputeditdata;
+    @FXML
+    String editdata;
 
     @FXML // log out scherm
     private void logoutButtonAction() {
@@ -76,7 +79,7 @@ public class UpdateDataController implements Initializable {
         logout.setLogin("Log in", "UpdateDataWindow.fxml");
     }
     @FXML // Analisten scherm,
-    private void AnalistButtonAction() {
+         private void AnalistButtonAction() {
         fxmlController AN = new fxmlController();
         AN.setMainStage("Analist", "AnalistWindow.fxml");
     }
@@ -222,7 +225,7 @@ public class UpdateDataController implements Initializable {
     @FXML// haalt rating van google places op
     private void PlacesButtonAction() {
 
-        GooglePlaces client = new GooglePlaces("AIzaSyALbXTMU7FfHrYpokHmOYpvJBsXUioQYlg");
+        GooglePlaces client = new GooglePlaces("AIzaSyALbXTMU7FfHrYpokHmOYpvJBsXUioQYlg"); //RdamCentraal
         ArrayList<se.walkercrou.places.Place> places = (ArrayList<se.walkercrou.places.Place>) client.getPlacesByQuery("RdamCentraal", GooglePlaces.MAXIMUM_RESULTS);
         int review = 0;
         List<Review> l1 = null;
@@ -243,7 +246,7 @@ public class UpdateDataController implements Initializable {
                 try {
                     Connection con = connect.connectToDb();
 
-/*                    String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
+                 String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
                     PreparedStatement preparedStatement = con.prepareStatement(sql);
                     preparedStatement.setString(1, ID);
                     preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
@@ -257,7 +260,7 @@ public class UpdateDataController implements Initializable {
                     preparedStatement2.setString(1, ID);
                     preparedStatement2.setDouble(2, rating);
                     preparedStatement2.execute();
-                    System.out.println("Google+ Rating updated");*/
+                    System.out.println("Google+ Rating updated");
 
 
                     /**Close connection with Database **/
@@ -379,6 +382,13 @@ public class UpdateDataController implements Initializable {
             e.printStackTrace();
         }
 
+    }
+    @FXML
+    private void Editdata(){
+        editdata = inputeditdata.getText();
+        System.out.println(editdata);
+        fxmlController EDIT = new fxmlController();
+        EDIT.setMainStage("Edit Data", "EditDataWindow.fxml");
     }
     // Start de volgende methodes als de het analisten scherm opent
     // maakt pie chart op basis van SQL query
