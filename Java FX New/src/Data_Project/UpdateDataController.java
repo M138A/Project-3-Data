@@ -197,7 +197,7 @@ public class UpdateDataController implements Initializable {
                     preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
                     preparedStatement.setString(3, Message);
                     preparedStatement.setString(4, "Twitter");
-                    preparedStatement.setInt(5,  7);
+                    preparedStatement.setInt(5,  positief.getRating(Message));
                     preparedStatement.execute();
 
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";

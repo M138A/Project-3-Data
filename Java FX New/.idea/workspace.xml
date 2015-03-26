@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Rating also negative now">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/DataChartController.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/DataChartController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/Rating.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/Rating.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/UpdateDataController.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/UpdateDataController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/weerhistorie.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/weerhistorie.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/DataChartController.java" afterPath="$PROJECT_DIR$/src/Data_Project/DataChartController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/Rating.java" afterPath="$PROJECT_DIR$/src/Data_Project/Rating.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/UpdateDataController.java" afterPath="$PROJECT_DIR$/src/Data_Project/UpdateDataController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/twitter4j.properties" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/twitter4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/twitter4j.properties" afterPath="$PROJECT_DIR$/src/twitter4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/weerhistorie.java" afterPath="$PROJECT_DIR$/src/Data_Project/weerhistorie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,66 +83,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TwitterHashtaggData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/TwitterHashtaggData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="221">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UpdateDataController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4794" max-vertical-offset="6817">
-              <caret line="316" column="0" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2751" max-vertical-offset="6817">
+              <caret line="198" column="51" selection-start-line="198" selection-start-column="51" selection-end-line="198" selection-end-column="51" />
               <folding>
-                <marker date="1427364069539" expanded="true" signature="3797:3888" placeholder="INSERT INTO ..." />
-                <marker date="1427364069539" expanded="true" signature="4335:4446" placeholder="INSERT INTO ..." />
-                <marker date="1427364069539" expanded="true" signature="7682:7773" placeholder="INSERT INTO ..." />
-                <marker date="1427364069539" expanded="true" signature="8252:8363" placeholder="INSERT INTO ..." />
-                <marker date="1427364069539" expanded="true" signature="10479:10570" placeholder="INSERT INTO ..." />
-                <marker date="1427364069539" expanded="true" signature="11064:11122" placeholder="INSERT INTO ..." />
-                <marker date="1427364069539" expanded="true" signature="13251:13342" placeholder="INSERT INTO ..." />
-                <marker date="1427364069539" expanded="true" signature="13789:13858" placeholder="INSERT INTO ..." />
-                <marker date="1427364069539" expanded="true" signature="15621:15700" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Data.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/Data.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1870">
-              <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="twitter4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/twitter4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170">
-              <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rating.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/Rating.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="714">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <marker date="1427363225939" expanded="true" signature="108:114" placeholder="SELECT AVG(p..Bericht..." />
+                <marker date="1427367312393" expanded="true" signature="3797:3888" placeholder="INSERT INTO ..." />
+                <marker date="1427367312393" expanded="true" signature="4335:4446" placeholder="INSERT INTO ..." />
+                <marker date="1427367312393" expanded="true" signature="7682:7773" placeholder="INSERT INTO ..." />
+                <marker date="1427367312393" expanded="true" signature="8278:8389" placeholder="INSERT INTO ..." />
+                <marker date="1427367312393" expanded="true" signature="10505:10596" placeholder="INSERT INTO ..." />
+                <marker date="1427367312393" expanded="true" signature="11090:11148" placeholder="INSERT INTO ..." />
+                <marker date="1427367312393" expanded="true" signature="13277:13368" placeholder="INSERT INTO ..." />
+                <marker date="1427367312393" expanded="true" signature="13815:13884" placeholder="INSERT INTO ..." />
+                <marker date="1427367312393" expanded="true" signature="15647:15726" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -155,7 +106,7 @@
       <file leaf-file-name="FacebookData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/FacebookData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1224">
+            <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="1224">
               <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <marker date="1427318978511" expanded="true" signature="1132:1211" placeholder="INSERT INTO ..." />
@@ -175,11 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ratinghistorie.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ratinghistorie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/Ratinghistorie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3935185" vertical-offset="0" max-vertical-offset="986">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="986">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1427362740068" expanded="true" signature="809:889" placeholder="SELECT AVG(p..Bericht..." />
@@ -191,24 +142,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Rating.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Data_Project/Rating.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1018518" vertical-offset="0" max-vertical-offset="680">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weerInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Data_Project/weerInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1156">
+              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditDataController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Data_Project/EditDataController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1394">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+              <folding>
+                <marker date="1427307783527" expanded="true" signature="1448:1654" placeholder="SELECT Beric..Bericht..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DataChartController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/DataChartController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="2057">
               <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbConnect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/dbConnect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="901">
-              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-              <folding>
-                <marker date="1427141079298" expanded="true" signature="885:955" placeholder="select Beric..Bericht..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -269,10 +240,10 @@
         <option value="$PROJECT_DIR$/src/Data_Project/FacebookData.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/weerhistorie.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/dbConnect.java" />
-        <option value="$PROJECT_DIR$/src/Data_Project/Rating.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/DataChartController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/Ratinghistorie.java" />
         <option value="$PROJECT_DIR$/src/twitter4j.properties" />
+        <option value="$PROJECT_DIR$/src/Data_Project/Rating.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/UpdateDataController.java" />
       </list>
     </option>
@@ -820,7 +791,8 @@
       <workItem from="1427310906197" duration="3830000" />
       <workItem from="1427315809495" duration="2943000" />
       <workItem from="1427361407819" duration="2650000" />
-      <workItem from="1427365286447" duration="85000" />
+      <workItem from="1427365286447" duration="2073000" />
+      <workItem from="1427367544728" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="Scene swaps">
       <created>1425856719404</created>
@@ -880,11 +852,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154699000" />
+    <option name="totallyTimeSpent" value="156769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -897,10 +869,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27672955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27672955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1830161" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1830161" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="7.320644E-4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1146,13 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/weerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="708" max-vertical-offset="1156">
-          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/positief.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1358" max-vertical-offset="5389">
@@ -1265,13 +1230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/EditDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="1615">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="3995">
@@ -1306,10 +1264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1292">
           <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-          <folding>
-            <element signature="e#2163#2164#0" expanded="true" />
-            <element signature="e#2194#2195#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,9 +1271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <marker date="1427141079298" expanded="true" signature="885:955" placeholder="select Beric..Bericht..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1327,15 +1278,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/fxmlController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,21 +1289,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/twitter4j.properties">
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/weerInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1156">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="714">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1427363225939" expanded="true" signature="108:114" placeholder="SELECT AVG(p..Bericht..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1372,6 +1304,38 @@
           <folding>
             <marker date="1427318978511" expanded="true" signature="1132:1211" placeholder="INSERT INTO ..." />
             <marker date="1427318978511" expanded="true" signature="1602:1671" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/fxmlController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/EditDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <marker date="1427307783527" expanded="true" signature="1448:1654" placeholder="SELECT Beric..Bericht..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/Ratinghistorie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="986">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1427362740068" expanded="true" signature="809:889" placeholder="SELECT AVG(p..Bericht..." />
+            <marker date="1427362740068" expanded="true" signature="1059:1139" placeholder="SELECT AVG(p..Bericht..." />
+            <marker date="1427362740068" expanded="true" signature="1296:1376" placeholder="SELECT AVG(p..Bericht..." />
+            <marker date="1427362740068" expanded="true" signature="1533:1613" placeholder="SELECT AVG(p..Bericht..." />
           </folding>
         </state>
       </provider>
@@ -1387,35 +1351,36 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/twitter4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4794" max-vertical-offset="6817">
-          <caret line="316" column="0" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2751" max-vertical-offset="6817">
+          <caret line="198" column="51" selection-start-line="198" selection-start-column="51" selection-end-line="198" selection-end-column="51" />
           <folding>
-            <marker date="1427364069539" expanded="true" signature="3797:3888" placeholder="INSERT INTO ..." />
-            <marker date="1427364069539" expanded="true" signature="4335:4446" placeholder="INSERT INTO ..." />
-            <marker date="1427364069539" expanded="true" signature="7682:7773" placeholder="INSERT INTO ..." />
-            <marker date="1427364069539" expanded="true" signature="8252:8363" placeholder="INSERT INTO ..." />
-            <marker date="1427364069539" expanded="true" signature="10479:10570" placeholder="INSERT INTO ..." />
-            <marker date="1427364069539" expanded="true" signature="11064:11122" placeholder="INSERT INTO ..." />
-            <marker date="1427364069539" expanded="true" signature="13251:13342" placeholder="INSERT INTO ..." />
-            <marker date="1427364069539" expanded="true" signature="13789:13858" placeholder="INSERT INTO ..." />
-            <marker date="1427364069539" expanded="true" signature="15621:15700" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="3797:3888" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="4335:4446" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="7682:7773" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="8278:8389" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="10505:10596" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="11090:11148" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="13277:13368" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="13815:13884" placeholder="INSERT INTO ..." />
+            <marker date="1427367312393" expanded="true" signature="15647:15726" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/Ratinghistorie.java">
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/Rating.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3935185" vertical-offset="0" max-vertical-offset="986">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1427362740068" expanded="true" signature="809:889" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427362740068" expanded="true" signature="1059:1139" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427362740068" expanded="true" signature="1296:1376" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427362740068" expanded="true" signature="1533:1613" placeholder="SELECT AVG(p..Bericht..." />
-          </folding>
+        <state vertical-scroll-proportion="1.1018518" vertical-offset="0" max-vertical-offset="680">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

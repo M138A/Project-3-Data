@@ -9,8 +9,6 @@ import java.io.InputStreamReader;
  */
 public class Rating {
 
-
-
     public int getRating(String x) {
         int score  = 0;
         try {
