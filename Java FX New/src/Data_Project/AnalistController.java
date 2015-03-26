@@ -9,10 +9,6 @@ import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 
@@ -63,37 +59,12 @@ public class AnalistController implements Initializable {
     @FXML // Button voor het ophalen van het weer.
     private void WeerButtonAction() throws Exception {
         outputTempArea.setText("");
-        outputTempDisc.setText("");
+        outputTempDisc.setText(""); // maakt venster leeg.
         weerInfo info = new weerInfo();
         outputTempArea.appendText(String.valueOf(info.getGemid()) + "'C ");
         outputTempDisc.appendText(String.valueOf(info.getTranslate()));
         }
-    @FXML // Button voor het wegschrijven van het weer naar de db
-    private void UpdateWeather() throws Exception {
-        weerInfo info = new weerInfo();
-        System.out.println(info.getTranslate());
 
-        try {
-            Connection con = connect.connectToDb();
-            String sql = "INSERT INTO Weersvoorspelling (Datum, Temperatuur, Weersituatie) VALUES (?,?,?)";
-            PreparedStatement preparedStatement = con.prepareStatement(sql);
-            preparedStatement.setDate(1, Date.valueOf(LocalDate.now()));
-            preparedStatement.setDouble(2, info.getGemid());
-            preparedStatement.setString(3, info.getTranslate());
-            preparedStatement.execute();
-            System.out.println("Success?");
-
-            /**Close connection with Database **/
-            con.close();
-            /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
-        }catch (SQLException e) {
-            System.out.println("Weer al ge-update, wacht tot morgen.");
-
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-    }
     // Start de volgende methodes als de het analisten scherm opent
     // maakt pie chart op basis van SQL query
     @Override

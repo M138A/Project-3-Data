@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 /**
- * Created by Lappie on 3/22/2015.
+ * DOET NOG NIETS
  */
 public class FacebookData {
     private dbConnect connect = new dbConnect();
@@ -19,7 +19,7 @@ public class FacebookData {
     private int Pagelikecount;
     private ResponseList<Post> feeds;
 
-    public  FacebookData () throws FacebookException {
+    public FacebookData () throws FacebookException {
         Facebook facebook = new FacebookFactory().getInstance();
         feeds = facebook.getFeed("313850611958467",new Reading().limit(75));
         Page pgId = facebook.getPage("313850611958467");
@@ -30,6 +30,7 @@ public class FacebookData {
             Integer sharecount = post.getSharesCount();
             if (sharecount == null) {
                 sharecount = 0;
+
             }
 
             // database stuff
@@ -50,7 +51,6 @@ public class FacebookData {
                 preparedStatement2.setInt(3, sharecount);
                 preparedStatement2.execute();
                 System.out.println("Facebook data updated");
-
 
                 /**Close connection with Database **/
                 con.close();
