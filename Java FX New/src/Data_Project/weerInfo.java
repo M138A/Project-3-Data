@@ -6,6 +6,8 @@ import net.aksingh.owmjapis.OpenWeatherMap;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class weerInfo {
 
@@ -36,8 +38,8 @@ public class weerInfo {
 
             gemid = (Math.floor((mid)*10)/10.0); // < klopt geen fuck van vlgens mij
            // System.out.println("Temperatuur:(min) " + Math.floor((minC)*10)/10.0 + "/ (max)" + Math.ceil((maxC)*10)/10.0  + "\'C");
-            System.out.println(String.valueOf(Math.floor((gemid)*10)/10.0) + "\'C " + Descriptionfinal);
-            getWeatherConditionImg(getDescrip());
+            System.out.println(String.valueOf(Math.floor((gemid) * 10) / 10.0) + "\'C " + Descriptionfinal);
+            //getWeatherConditionImg(getDescrip());
         }
     }
 
@@ -52,13 +54,31 @@ public class weerInfo {
      * TODO
      * @param x
      */
-    public void getWeatherConditionImg(String x) {
-        String[] myStringArray = {"Thunderstorm","clouds","Sky",}; // need additional information
-        for (String aMyStringArray : myStringArray) {
-            if (x.contains(aMyStringArray)) {
-                //image = "sun.png";
-            }
-        }
+    public String getWeatherConditionImg(String x) {
+        ArrayList<String> Thunderstorm = new ArrayList<String>();
+        Thunderstorm.add("thunderstorm");
+        ArrayList<String> Rain = new ArrayList<String>();
+        Rain.add("drizzle");
+        Rain.add("light rain");
+        ArrayList<String> Snow = new ArrayList<String>();
+        Snow.add("snow");
+        Snow.add("sleet");
+        ArrayList<String> Mist = new ArrayList<String>();
+        Mist.add("mist");
+        Mist.add("haze");
+        ArrayList<String> Clouds = new ArrayList<String>();
+        Clouds.add("clouds");
+        ArrayList<String> Sunny = new ArrayList<String>();
+        Sunny.add("clear sky");
+        Sunny.add("sun");
+
+        for (String s : Thunderstorm) if (s.contains(x)) return "Images/15.png";
+        for (String s : Rain) if (s.contains(x)) return "Images/12.png";
+        for (String s : Snow) if (s.contains(x)) return "Images/19.png";
+        for (String s : Mist) if (s.contains(x)) return "Images/11.png";
+        for (String s : Clouds) if (s.contains(x)) return "Images/8.png";
+        for (String s : Sunny) if (s.contains(x)) return "Images/1.png";
+        return null;
     }
 
     public double getGemid() {
@@ -70,6 +90,6 @@ public class weerInfo {
     }
 
     public String getImage() {
-        return image;
+        return getWeatherConditionImg(getDescrip());
     }
 }

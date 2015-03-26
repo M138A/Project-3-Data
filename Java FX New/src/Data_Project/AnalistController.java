@@ -5,8 +5,13 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 
+import java.io.File;
 import java.net.URL;
 import java.sql.Connection;
 import java.util.ResourceBundle;
@@ -21,14 +26,20 @@ public class AnalistController implements Initializable {
     private final String usernameDB = "mijnma1q_prjuser";
     private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
+    public StackPane sp;
+    public ImageView weerplaatje;
     //SQL
     private dbConnect connect = new dbConnect();
     private Rating positief = new Rating();
+    private weerInfo weatherInfo = new weerInfo();
+    private String img = weatherInfo.getImage();
     private Connection con;
 
     public AnalistController() throws Exception {
         con = connect.connectToDb();
+       //System.out.println(img)
     }
+
     //fxml
     @FXML
     PieChart Piechart;
@@ -69,6 +80,7 @@ public class AnalistController implements Initializable {
     // maakt pie chart op basis van SQL query
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        weerplaatje.setImage(new Image(img));
         try {
             WeerButtonAction();
         } catch (Exception e) {
@@ -91,12 +103,7 @@ public class AnalistController implements Initializable {
 
         Piechart.setData(pieChartData);
 
-
-
     }
-
-
-
 }
 
 
