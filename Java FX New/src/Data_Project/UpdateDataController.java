@@ -120,7 +120,7 @@ public class UpdateDataController implements Initializable {
                 preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
                 preparedStatement.setString(3, Message);
                 preparedStatement.setString(4, "Twitter");
-                preparedStatement.setInt(5, positief.getRating(Message));
+                preparedStatement.setInt(5, 13);
                 preparedStatement.execute();
 
                 sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
@@ -197,7 +197,7 @@ public class UpdateDataController implements Initializable {
                     preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
                     preparedStatement.setString(3, Message);
                     preparedStatement.setString(4, "Twitter");
-                    preparedStatement.setInt(5,  positief.getRating(Message));
+                    preparedStatement.setInt(5,  7);
                     preparedStatement.execute();
 
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
@@ -213,6 +213,7 @@ public class UpdateDataController implements Initializable {
                     con.close();
                 } catch (Exception e) {
                     e.printStackTrace();
+                    System.out.println("help");
                 }
             }
         }catch (TwitterException te) { // error message
@@ -311,7 +312,7 @@ public class UpdateDataController implements Initializable {
                 preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
                 preparedStatement.setString(3, message);
                 preparedStatement.setString(4, "FaceBook");
-                preparedStatement.setInt(5, positief.getRating(message));
+                preparedStatement.setInt(5, 7);
                 preparedStatement.execute();
 
                 sql = "INSERT INTO facebook (Bericht_BerichtID,likes,gedeeld) VALUES (?,?,?)";

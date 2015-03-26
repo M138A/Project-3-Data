@@ -30,22 +30,22 @@ public class weerhistorie {
         try {
             Connection con = connect.connectToDb();
             Statement statement = con.createStatement();
-            String sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where Datum = \"2015-03-25\"";
+            String sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where Datum = \"2015-03-26\"";
             ResultSet rs = statement.executeQuery(sql);
             if (rs.next()) {
                 Tempmin0 = rs.getDouble(1);
             }
-            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-24\"";
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-25\"";
             rs = statement.executeQuery(sql);
             if (rs.next()) {
                 Tempmin1 = rs.getDouble(1);
             }
-            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-23\"";
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-24\"";
             rs = statement.executeQuery(sql);
             if (rs.next()) {
                 Tempmin2 = rs.getDouble(1);
             }
-            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-22\"";
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-23\"";
             rs = statement.executeQuery(sql);
             if (rs.next()) {
                 Tempmin3 = rs.getDouble(1);

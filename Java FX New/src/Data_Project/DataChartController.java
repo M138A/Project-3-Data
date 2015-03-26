@@ -24,11 +24,11 @@ public class DataChartController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Rating rat = null;
+        Ratinghistorie rat = null;
         Socialmediacount SocMed = null;
         weerhistorie WH = null;
         try {
-            rat = new Rating();
+            rat = new Ratinghistorie();
         } catch (Exception e) {
             e.printStackTrace();
         }
