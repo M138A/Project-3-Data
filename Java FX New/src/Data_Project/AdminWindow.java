@@ -27,6 +27,7 @@ public class AdminWindow {
     public ToggleGroup roleGroup;
     public RadioButton Analist;
     public RadioButton Administrator;
+    public RadioButton Systeembeheerder;
     public Label errorLabel;
     public Label passLabel;
     @FXML

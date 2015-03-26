@@ -20,7 +20,7 @@ public class Controller {
         else{
             fxmlController x = new fxmlController();
             String role = user.getDBRole();
-            System.out.println(role);
+
             switch(role){
                 case "Administrator":
                     x.setMainStage("Adminenviroment", "AdminWindow.fxml");
@@ -28,6 +28,8 @@ public class Controller {
                 case "Analist":
                     x.setMainStage("Analist", "AnalistWindow.fxml");
                     break;
+                case "Systeembeheerder":
+                    x.setMainStage("Systeembeheerder", "DataGrid.fxml");
             }
 
 

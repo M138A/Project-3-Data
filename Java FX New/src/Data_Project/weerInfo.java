@@ -51,7 +51,7 @@ public class weerInfo {
     }
 
     /**
-     * TODO
+     * Method returns the right Image depending on the weather
      * @param x
      */
     public String getWeatherConditionImg(String x) {
