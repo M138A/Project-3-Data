@@ -32,6 +32,7 @@ public class UpdateDataController implements Initializable {
     private final String usernameDB = "mijnma1q_prjuser";
     private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
+    public String Message = "";
     //SQL
     private dbConnect connect = new dbConnect();
     private Rating positief = new Rating();
@@ -85,7 +86,7 @@ public class UpdateDataController implements Initializable {
     }
 
     @FXML // haalt tweets op van een timelijn
-    private void TwitzoekButtonAction() {
+    public void TwitzoekButtonAction() {
 
         String inp = inputusernamefield.getText();
         // input > twitternaam > return timelijn/tweets naar output
@@ -152,11 +153,12 @@ public class UpdateDataController implements Initializable {
     }
 
     @FXML// haalt tweets op van een hashtagg
-    private void HashtaggButtonAction() { //twitter api non oob
+    public void HashtaggButtonAction() { //twitter api non oob
         String input = inputhashtaggfield.getText(); // kijkt wat je hebt getypt
         int socialmediaID = 0;
-        try {
 
+        try {
+            Connection con = connect.connectToDb();
             twitter4j.Twitter twitter =  TwitterFactory.getSingleton();
             Query query = new Query(input);
             query.setCount(50);// aantal tweets LAG!
@@ -167,7 +169,9 @@ public class UpdateDataController implements Initializable {
                 String Usrname = status.getUser().getScreenName();
                 int FollowerCount = status.getUser().getFollowersCount();
                 int RetweetCount = status.getRetweetCount();
-                String Message = status.getText();
+                 Message = status.getText();
+                Rating myRating = new Rating();
+                int rating = myRating.getRating(Message);
                 GeoLocation Location = status.getGeoLocation();
                 int FavoriteCount = status.getFavoriteCount();
                 ID = String.valueOf(status.getId());      //SQL MSG ID
@@ -190,14 +194,14 @@ public class UpdateDataController implements Initializable {
                         "\n\r " + end +
                         "\n\r");
                 try {
-                    Connection con = connect.connectToDb();
-                    String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";
+                    con = connect.connectToDb();
+                    String sql = "INSERT INTO Bericht (BerichtID,Datum, Beschrijving,socialmedia,Positief) VALUES (?,?,?,?,?)";                    
                     PreparedStatement preparedStatement = con.prepareStatement(sql);
                     preparedStatement.setString(1, ID);
                     preparedStatement.setDate(2, Date.valueOf(LocalDate.now()));
                     preparedStatement.setString(3, Message);
                     preparedStatement.setString(4, "Twitter");
-                    preparedStatement.setInt(5,  positief.getRating(Message));
+                    preparedStatement.setInt(5, rating);
                     preparedStatement.execute();
 
                     sql = "INSERT INTO twitter (Bericht_BerichtID,retweet, favorite,username,gerelateerd,volgercount) VALUES (?,?,?,?,?,?)";
@@ -220,6 +224,8 @@ public class UpdateDataController implements Initializable {
             te.printStackTrace();
             System.out.println("Failed : " + te.getMessage());
             System.exit(0);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

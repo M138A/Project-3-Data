@@ -15,12 +15,14 @@ public class Rating {
             BufferedReader bfrP = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("positief.txt")));
             BufferedReader bfrN= new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("negatief.txt")));
             while (bfrP.readLine() != null) {
+
                 if (x.contains(bfrP.readLine())) {
                     score++;
                 }
             }
-            while(bfrN.readLine() != null)
+            while(bfrN.readLine() != null && bfrN != null)
             {
+
                 if (x.contains(bfrN.readLine())) {
                     score--;
                 }

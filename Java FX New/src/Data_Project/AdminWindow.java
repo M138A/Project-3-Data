@@ -40,7 +40,7 @@ public class AdminWindow {
     @FXML // data scherm,
     private void EditUserDataButtonAction() {
         fxmlController UD = new fxmlController();
-        UD.setMainStage("Edit gebruiker gegevens", "Datagrid.fxml");
+        UD.setMainStage("Edit gebruiker gegevens", "DataGrid.fxml");
     }
     public AdminWindow() {
 
