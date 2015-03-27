@@ -14,7 +14,6 @@ public class weerInfo {
     private double gemid;
     private String Descriptionfinal;
     private String translate;
-    private String image;
 
 
 
@@ -39,7 +38,7 @@ public class weerInfo {
             gemid = (Math.floor((mid)*10)/10.0); // < klopt geen fuck van vlgens mij
            // System.out.println("Temperatuur:(min) " + Math.floor((minC)*10)/10.0 + "/ (max)" + Math.ceil((maxC)*10)/10.0  + "\'C");
             System.out.println(String.valueOf(Math.floor((gemid) * 10) / 10.0) + "\'C " + Descriptionfinal);
-            //getWeatherConditionImg(getDescrip());
+            getWeatherConditionImg(getDescrip());
         }
     }
 
@@ -59,7 +58,7 @@ public class weerInfo {
         Thunderstorm.add("thunderstorm");
         ArrayList<String> Rain = new ArrayList<String>();
         Rain.add("drizzle");
-        Rain.add("light rain");
+        Rain.add("rain");
         ArrayList<String> Snow = new ArrayList<String>();
         Snow.add("snow");
         Snow.add("sleet");
@@ -73,11 +72,11 @@ public class weerInfo {
         Sunny.add("sun");
 
         for (String s : Thunderstorm) if (s.contains(x)) return "Images/15.png";
-        for (String s : Rain) if (s.contains(x)) return "Images/12.png";
-        for (String s : Snow) if (s.contains(x)) return "Images/19.png";
-        for (String s : Mist) if (s.contains(x)) return "Images/11.png";
-        for (String s : Clouds) if (s.contains(x)) return "Images/8.png";
-        for (String s : Sunny) if (s.contains(x)) return "Images/1.png";
+        for (String s : Rain) if (x.contains(s)) return "Images/12.png";
+        for (String s : Snow) if (x.contains(s)) return "Images/19.png";
+        for (String s : Mist) if (x.contains(s)) return "Images/11.png";
+        for (String s : Clouds) if (x.contains(s)) return "Images/8.png";
+        for (String s : Sunny) if (x.contains(s)) return "Images/1.png";
         return null;
     }
 

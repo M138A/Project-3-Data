@@ -32,12 +32,10 @@ public class AnalistController implements Initializable {
     private dbConnect connect = new dbConnect();
     private Rating positief = new Rating();
     private weerInfo weatherInfo = new weerInfo();
-    private String img = weatherInfo.getImage();
     private Connection con;
 
     public AnalistController() throws Exception {
         con = connect.connectToDb();
-       //System.out.println(img)
     }
 
     //fxml
@@ -80,7 +78,7 @@ public class AnalistController implements Initializable {
     // maakt pie chart op basis van SQL query
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        weerplaatje.setImage(new Image(img));
+        weerplaatje.setImage(new Image(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip())));
         try {
             WeerButtonAction();
         } catch (Exception e) {

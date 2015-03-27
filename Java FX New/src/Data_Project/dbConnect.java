@@ -33,7 +33,7 @@ public class dbConnect {
             ResultSet rs = statement.executeQuery(sql);
             //process result of query
             while (rs.next()) {
-                socialmediaID = rs.getInt("BerichtID");
+                socialmediaID = rs.getInt("BerichtID    ");
             }
             conn.close();
             return socialmediaID;
