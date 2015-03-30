@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -20,7 +22,9 @@ import java.util.ResourceBundle;
  * Created by bart on 10-3-2015.
  */
 public class AnalistController implements Initializable {
-
+    @FXML
+    public ImageView weerplaatje;
+    private weerInfo weatherInfo = new weerInfo();
     //Login credentials
     private final String usernameDB = "mijnma1q_prjuser";
     private final String passwordDB = "password";
@@ -98,8 +102,9 @@ public class AnalistController implements Initializable {
     // maakt pie chart op basis van SQL query
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        weerplaatje.setImage(new Image(weatherInfo.setWeatherImage(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip()))));
         try {
-            // TODO FIX  WeerButtonAction();
+       WeerButtonAction();
         } catch (Exception e) {
             e.printStackTrace();
         }

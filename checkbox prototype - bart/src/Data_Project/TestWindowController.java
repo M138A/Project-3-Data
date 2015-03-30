@@ -85,6 +85,7 @@ public class TestWindowController implements Initializable {
 
 
     public void initialize(URL url, ResourceBundle rb) {
+
         System.out.println("Test Window is open!");
         System.out.println("\n\r");
     }
