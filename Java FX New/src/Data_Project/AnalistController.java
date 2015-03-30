@@ -78,7 +78,7 @@ public class AnalistController implements Initializable {
     // maakt pie chart op basis van SQL query
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        weerplaatje.setImage(new Image(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip())));
+        weerplaatje.setImage(new Image(weatherInfo.setWeatherImage(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip()))));
         try {
             WeerButtonAction();
         } catch (Exception e) {
@@ -102,6 +102,7 @@ public class AnalistController implements Initializable {
         Piechart.setData(pieChartData);
 
     }
+
 }
 
 

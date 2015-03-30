@@ -59,6 +59,7 @@ public class weerInfo {
         ArrayList<String> Rain = new ArrayList<String>();
         Rain.add("drizzle");
         Rain.add("rain");
+        Rain.add("hail");
         ArrayList<String> Snow = new ArrayList<String>();
         Snow.add("snow");
         Snow.add("sleet");
@@ -71,12 +72,30 @@ public class weerInfo {
         Sunny.add("clear sky");
         Sunny.add("sun");
 
-        for (String s : Thunderstorm) if (s.contains(x)) return "Images/15.png";
-        for (String s : Rain) if (x.contains(s)) return "Images/12.png";
-        for (String s : Snow) if (x.contains(s)) return "Images/19.png";
-        for (String s : Mist) if (x.contains(s)) return "Images/11.png";
-        for (String s : Clouds) if (x.contains(s)) return "Images/8.png";
-        for (String s : Sunny) if (x.contains(s)) return "Images/1.png";
+        for (String s : Thunderstorm) if (s.contains(x)) return "Thunderstorm";
+        for (String s : Rain) if (x.contains(s)) return "Rain";
+        for (String s : Snow) if (x.contains(s)) return "Snow";
+        for (String s : Mist) if (x.contains(s)) return "Mist";
+        for (String s : Clouds) if (x.contains(s)) return "Clouds";
+        for (String s : Sunny) if (x.contains(s)) return "Sunny";
+        return null;
+    }
+
+    public String setWeatherImage(String x) {
+        switch(x){
+            case "Rain":
+                return "Images/12.png";
+            case "Thunderstorm":
+                return "Images/15.png";
+            case "Snow":
+                return "Images/19.png";
+            case "Mist":
+                return "Images/11.png";
+            case "Clouds":
+                return "Images/8.png";
+            case "Sunny":
+                return "Images/1.png";
+        }
         return null;
     }
 

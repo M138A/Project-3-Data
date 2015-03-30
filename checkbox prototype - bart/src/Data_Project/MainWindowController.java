@@ -17,8 +17,8 @@ public void nextbutton(){
 
     fxmlController logout = new fxmlController();
     logout.setLogin("new", "TestWindow.fxml");
-
 }
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         theStage = primaryStage;

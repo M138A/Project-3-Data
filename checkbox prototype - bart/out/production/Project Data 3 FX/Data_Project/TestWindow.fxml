@@ -37,9 +37,6 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <CheckBox fx:id="FCB6" mnemonicParsing="false" text="temp &lt; 0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-      <CheckBox fx:id="FCB7" mnemonicParsing="false" text="temp &gt;0 tot 15" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6" />
-      <CheckBox fx:id="FCB8" mnemonicParsing="false" text="temp 15 &gt;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" />
       <CheckBox fx:id="FCB9" mnemonicParsing="false" text="Zon" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9" />
       <CheckBox fx:id="FCB10" mnemonicParsing="false" text="Regen" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="10" />
       <CheckBox fx:id="FCB11" mnemonicParsing="false" text="Mist" GridPane.columnIndex="1" GridPane.rowIndex="11" />
@@ -64,5 +61,13 @@
       </RadioButton>
       <RadioButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Negatief" toggleGroup="$raiting" GridPane.columnIndex="3" GridPane.rowIndex="3" />
       <RadioButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Allebei" toggleGroup="$raiting" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <RadioButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="&lt; 0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <toggleGroup>
+            <ToggleGroup fx:id="temperatuur" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text=" = 0 &gt; 15" toggleGroup="$temperatuur" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <RadioButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="&gt; 15" toggleGroup="$temperatuur" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <RadioButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Alle temperaturen" toggleGroup="$temperatuur" GridPane.columnIndex="4" GridPane.rowIndex="6" />
    </children>
 </GridPane>
