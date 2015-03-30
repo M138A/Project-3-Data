@@ -26,7 +26,6 @@ public class AnalistController implements Initializable {
     private final String usernameDB = "mijnma1q_prjuser";
     private final String passwordDB = "password";
     private final String url = "jdbc:mysql://mijnmarklinbaan.nl:3306/mijnma1q_PrjData";
-    public StackPane sp;
     public ImageView weerplaatje;
     //SQL
     private dbConnect connect = new dbConnect();
@@ -78,7 +77,7 @@ public class AnalistController implements Initializable {
     // maakt pie chart op basis van SQL query
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        weerplaatje.setImage(new Image(weatherInfo.setWeatherImage(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip()))));
+       weerplaatje.setImage(new Image(weatherInfo.setWeatherImage(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip()))));
         try {
             WeerButtonAction();
         } catch (Exception e) {
