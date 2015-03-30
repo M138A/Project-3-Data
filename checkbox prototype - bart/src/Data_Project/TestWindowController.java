@@ -27,14 +27,14 @@ public class TestWindowController implements Initializable {
            String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
            if(toggle.equals("Alles")){
                sql = "";
-               sql += "SELECT COUNT(socialmedia='Twitter'), " +
-                       "COUNT(socialmedia='Facebook'), " +
-                       "COUNT(socialmedia='Google') FROM Bericht";
+               sql += "SELECT COUNT(IF(socialmedia='Twitter',1,null)), " +
+                       "COUNT(IF(socialmedia='Facebook',1,null)), " +
+                       "COUNT(IF(socialmedia='Google',1,null)) FROM Bericht";
                getTemperature();
            }
            else {
                sql = "";
-               sql += "SELECT COUNT (socialmedia='" + toggle + "') FROM Bericht";
+               sql += "SELECT COUNT (IF(socialmedia='" + toggle + "',1,null)) FROM Bericht";
                getTemperature();
            }
        }

@@ -86,8 +86,8 @@
       <file leaf-file-name="TestWindowController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/TestWindowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3645267" vertical-offset="5898" max-vertical-offset="6817">
-              <caret line="111" column="52" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.44396082" vertical-offset="187" max-vertical-offset="6817">
+              <caret line="35" column="61" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -203,7 +203,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java FX New" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -560,6 +560,7 @@
       <workItem from="1427556488486" duration="25000" />
       <workItem from="1427653108932" duration="3947000" />
       <workItem from="1427711253731" duration="756000" />
+      <workItem from="1427734955124" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="Scene swaps">
       <created>1425856719404</created>
@@ -601,7 +602,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81468000" />
+    <option name="totallyTimeSpent" value="81739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -678,6 +679,27 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/TestWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1020">
+          <caret line="41" column="73" selection-start-line="41" selection-start-column="73" selection-end-line="41" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/TestWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6817">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/TestWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -958,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/TestWindowController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3645267" vertical-offset="5898" max-vertical-offset="6817">
-          <caret line="111" column="52" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.44396082" vertical-offset="187" max-vertical-offset="6817">
+          <caret line="35" column="61" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
