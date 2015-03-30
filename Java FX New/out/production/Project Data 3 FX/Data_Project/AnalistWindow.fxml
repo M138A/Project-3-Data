@@ -10,7 +10,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="800.0" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: white;"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Data_Project.AnalistController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="800.0" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Data_Project.AnalistController">
     <top>
         <AnchorPane prefHeight="80.0" style="-fx-background-color: rgba(0,0,0,0.8);" BorderPane.alignment="CENTER">
             <children>
@@ -215,18 +215,12 @@
                         <Font name="Roboto Condensed Bold" size="13.0" />
                     </font>
                 </Label>
-                <PieChart id="Piechart" fx:id="Piechart" prefHeight="202.0" prefWidth="237.0" title="Social media Content" GridPane.columnIndex="3" GridPane.rowIndex="11">                  </PieChart>
+                <PieChart id="Piechart" fx:id="Piechart" prefHeight="202.0" prefWidth="237.0" title="Social media Content" GridPane.columnIndex="3" GridPane.rowIndex="11">
+                </PieChart>
+
                 <TextField id="outputTempArea" fx:id="outputTempArea" disable="true" editable="false" prefHeight="40.0" prefWidth="194.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
                 <TextField id="outputTempDisc" fx:id="outputTempDisc" disable="true" editable="false" prefHeight="43.0" prefWidth="194.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-                <StackPane fx:id="sp" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="3">
-                    <children>
-                        <ImageView fx:id="weerplaatje" fitHeight="200.0" fitWidth="200.0">
-                            <image>
-                                <Image url="@../Images/1.png" />
-                            </image>
-                        </ImageView>
-                    </children>
-                </StackPane>
             </children>
         </GridPane>
     </center>
+</BorderPane>
