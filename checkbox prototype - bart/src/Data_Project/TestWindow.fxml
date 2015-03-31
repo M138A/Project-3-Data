@@ -55,7 +55,6 @@
       </RadioButton>
       <RadioButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Negatief" toggleGroup="$raiting" GridPane.columnIndex="3" GridPane.rowIndex="3" />
       <RadioButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Allebei" toggleGroup="$raiting" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-<<<<<<< HEAD
       <CheckBox fx:id="F1" mnemonicParsing="false" text="&lt; 0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
       <CheckBox fx:id="F2" mnemonicParsing="false" text="&gt; = 0 &lt;= 15" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
       <CheckBox fx:id="F3" mnemonicParsing="false" text="&gt; 15" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
@@ -65,27 +64,5 @@
       <CheckBox fx:id="W4" layoutX="56.0" layoutY="327.0" mnemonicParsing="false" text="Rain" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="8" />
       <CheckBox fx:id="W5" layoutX="56.0" layoutY="327.0" mnemonicParsing="false" text="Snow" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="9" />
       <CheckBox fx:id="W6" mnemonicParsing="false" text="mist" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="10" />
-=======
-      <RadioButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="&lt; 0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-         <toggleGroup>
-            <ToggleGroup fx:id="temperatuur" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text=" = 0 &gt; 15" toggleGroup="$temperatuur" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-      <RadioButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="&gt; 15" toggleGroup="$temperatuur" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-      <RadioButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Alle temperaturen" toggleGroup="$temperatuur" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-      <RadioButton mnemonicParsing="false" text="Zon" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8">
-         <toggleGroup>
-            <ToggleGroup fx:id="weer" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$weer" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9" />
-      <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$weer" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10" />
-      <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$weer" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="8" />
-      <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$weer" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="9" />
-      <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$weer" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="10" />
-      <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$weer" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="11" />
-      <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$weer" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="11" />
->>>>>>> parent of 7863acc... hotfix checkbox
    </children>
 </GridPane>

@@ -38,8 +38,6 @@ public class TestWindowController implements Initializable {
      * Bart
      */
     public void getSocialMediaGroup() {
-<<<<<<< HEAD
-=======
        try {
            String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
            if(toggle.equals("Alles")){
@@ -62,8 +60,6 @@ public class TestWindowController implements Initializable {
 
 
     public void getTemperature() {
-
->>>>>>> parent of 7863acc... hotfix checkbox
         try {
             String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
             if (toggle.equals("Alles")) {
