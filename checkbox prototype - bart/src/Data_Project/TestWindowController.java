@@ -42,15 +42,15 @@ public class TestWindowController implements Initializable {
            String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
            if(toggle.equals("Alles")){
                sql = "";
-               sql += "SELECT COUNT(socialmedia='Twitter'), " +
-                       "COUNT(socialmedia='Facebook'), " +
-                       "COUNT(socialmedia='Google') FROM Bericht";
-               getTemperature();
+               sql += "SELECT COUNT(IF(socialmedia='Twitter','1',null)) AS T, " +
+                       "COUNT(IF(socialmedia='Facebook','1',null)) AS F, " +
+                       "COUNT(IF(socialmedia='Google','1',null)) AS G FROM Bericht";
+               getPositiveOrNegative();
            }
            else {
                sql = "";
-               sql += "SELECT COUNT (socialmedia='" + toggle + "') FROM Bericht";
-               getTemperature();
+               sql += "SELECT COUNT(IF(socialmedia='" + toggle +"','1',null)) FROM Bericht";
+               getPositiveOrNegative();
            }
        }
        catch (Exception e){
@@ -58,31 +58,17 @@ public class TestWindowController implements Initializable {
        }
     }
 
-
-    public void getTemperature() {
-        try {
-            String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
-            if (toggle.equals("Alles")) {
-                sql = "";
-                sql += "SELECT Weersituatie COUNT(IF(socialmedia='Twitter',1,null)), " +
-                        "COUNT(IF(socialmedia='Facebook',1,null)), " +
-                        "COUNT(IF(socialmedia='Google',1,null)) FROM Bericht";
-                getPositiveOrNegative();
-            } else {
-                sql = "";
-                sql += "SELECT COUNT (IF(socialmedia='" + toggle + "',1,null)) FROM Bericht";
-                getPositiveOrNegative();
-            }
-        } catch (Exception e) {
-            System.out.println("Klik een button aan om een analyse te doen!");
-        }
-    }
-
     public void getTemperature1() {
+        int Count = 0;
         try {
             for (CheckBox aChb : ChbTemp) {
-                if (aChb.isSelected()) {
+                if (aChb.isSelected() && Count == 0) {
                     sql += " AND temperatuur " + aChb.getText();
+                    Count++;
+                    getWeather();
+                }
+                else if(aChb.isSelected() && Count >= 1){
+                    sql += " OR temperatuur " + aChb.getText();
                     getWeather();
                 }
                 else {
@@ -121,17 +107,24 @@ public class TestWindowController implements Initializable {
         }
     }
 
-    public String getWeather() {
+    public void getWeather() {
+        int Count = 0;
         try {
             for (CheckBox aChb : ChbWeather) {
-                if (aChb.isSelected()) {
-                   return sql += " AND Weersituatie = " + aChb.getText();
+                if (aChb.isSelected() && Count == 0) {
+                    sql += " AND Weersituatie = " + aChb.getText();
+                    Count++;
+                }
+                else if(aChb.isSelected() && Count >= 1){
+                    sql += " OR Weersituatie = " + aChb.getText();
+                }
+                else {
+                    System.out.println("check");
                 }
             }
         } catch (Exception e) {
-            System.out.println("nietgoed");
+            System.out.println("TEMPERATUUR");
         }
-        return null;
     }
 
 
