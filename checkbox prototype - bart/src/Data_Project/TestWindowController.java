@@ -38,6 +38,32 @@ public class TestWindowController implements Initializable {
      * Bart
      */
     public void getSocialMediaGroup() {
+<<<<<<< HEAD
+=======
+       try {
+           String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
+           if(toggle.equals("Alles")){
+               sql = "";
+               sql += "SELECT COUNT(socialmedia='Twitter'), " +
+                       "COUNT(socialmedia='Facebook'), " +
+                       "COUNT(socialmedia='Google') FROM Bericht";
+               getTemperature();
+           }
+           else {
+               sql = "";
+               sql += "SELECT COUNT (socialmedia='" + toggle + "') FROM Bericht";
+               getTemperature();
+           }
+       }
+       catch (Exception e){
+           System.out.println("Klik een button aan om een analyse te doen!");
+       }
+    }
+
+
+    public void getTemperature() {
+
+>>>>>>> parent of 7863acc... hotfix checkbox
         try {
             String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
             if (toggle.equals("Alles")) {
