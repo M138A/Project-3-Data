@@ -6,12 +6,12 @@ import net.aksingh.owmjapis.OpenWeatherMap;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class weerInfo {
 
     private double gemid;
     private String Descriptionfinal;
-    private String translate;
     private String image;
 
 
@@ -37,30 +37,61 @@ public class weerInfo {
             gemid = (Math.floor((mid)*10)/10.0); // < klopt geen fuck van vlgens mij
             // System.out.println("Temperatuur:(min) " + Math.floor((minC)*10)/10.0 + "/ (max)" + Math.ceil((maxC)*10)/10.0  + "\'C");
             System.out.println(String.valueOf(Math.floor((gemid)*10)/10.0) + "\'C " + Descriptionfinal);
-            getWeatherConditionImg(getDescrip());
+            System.out.println(getWeatherConditionImg(getDescrip()));
         }
     }
 
     public String getTranslate() throws Exception {
         Translate.setClientId("buildinganalytics_1");
         Translate.setClientSecret("o5oXm3zRYKidc/Xb3L9FD8TYwmvcfgoWBhWIw6Y0Vc8=");
-        translate = Translate.execute(getDescrip(), Language.ENGLISH, Language.DUTCH);
-        return translate;
+        return Translate.execute(getDescrip(), Language.ENGLISH, Language.DUTCH);
     }
 
-    /**
-     * TODO
-     * @param x
-     */
-    public void getWeatherConditionImg(String x) {
-        String[] myStringArray = {"Thunderstorm","clouds","Sky",}; // need additional information
-        for (String aMyStringArray : myStringArray) {
-            if (x.contains(aMyStringArray)) {
-                //image = "sun.png";
-            }
+    public String getWeatherConditionImg(String x){
+        ArrayList<String> Rain = new ArrayList<String>();
+        Rain.add("drizzle");
+        Rain.add("rain");
+        ArrayList<String> Snow = new ArrayList<String>();
+        Snow.add("snow");
+        Snow.add("sleet");
+        ArrayList<String> Sunny = new ArrayList<String>();
+        Sunny.add("clear sky");
+        Sunny.add("sun");
+        ArrayList<String> Mist = new ArrayList<String>();
+        Mist.add("mist");
+        Mist.add("haze");
+        ArrayList<String> Clouds = new ArrayList<String>();
+        Clouds.add("clouds");
+        Clouds.add("clear sky");
+        ArrayList<String> Thunderstorm = new ArrayList<String>();
+        Thunderstorm.add("thunderstorm");
+
+          for (String s : Thunderstorm) if (s.contains(x)) return "Thunderstorm";
+          for (String s : Rain) if (x.contains(s)) return "Rain";
+          for (String s : Snow) if (x.contains(s)) return "Snow";
+          for (String s : Mist) if (x.contains(s)) return "Mist";
+          for (String s : Clouds) if (x.contains(s)) return "Clouds";
+          for (String s : Sunny) if (x.contains(s)) return "Sunny";
+    return null;
+}
+
+    public String setWeatherImage(String x) {
+        switch(x){
+            case "Rain":
+                return "Images/12.png";
+            case "Thunderstorm":
+                return "Images/15.png";
+            case "Snow":
+                return "Images/19.png";
+            case "Mist":
+                return "Images/11.png";
+            case "Clouds":
+                return "Images/8.png";
+            case "Sunny":
+                return "Images/1.png";
         }
+        return null;
     }
-
     public double getGemid() {
         return gemid;
     }
@@ -69,7 +100,4 @@ public class weerInfo {
         return Descriptionfinal;
     }
 
-    public String getImage() {
-        return image;
-    }
 }
