@@ -10,8 +10,8 @@ import java.sql.*;
  * password : pass
  */
 
-public class authorizedUser{
-
+public class authorizedUser extends crypt{
+    private crypt encryptAES = new crypt();
     public authorizedUser(){};
     public authorizedUser(String name, String pass, String rl)
     {
@@ -70,7 +70,7 @@ public class authorizedUser{
         String dbPass = null;
 
 
-        crypt encryptAES = new crypt();
+
         String password = null;
 
         try {
@@ -118,7 +118,18 @@ public class authorizedUser{
 
     public String getPassword() {return password;}
     public String getRole() {return role;}
+    public String getDecryptPass()
+    {
+        String x = "";
+        try {
+            x = decrypt(password);
 
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(0);
+        }
+        return x;
+    }
     public String getDBRole() {
         return dbRole;
     }

@@ -2,6 +2,7 @@ package Data_Project;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -22,6 +23,7 @@ public class DataGridController implements Initializable{
     @FXML TableColumn userCol;
     @FXML TableColumn passCol;
     @FXML TableColumn roleCol;
+
     ObservableList<authorizedUser> users = FXCollections.observableList(new ArrayList<authorizedUser>());
 
     @Override
@@ -82,4 +84,8 @@ public class DataGridController implements Initializable{
     }
 
 
+    public void addNewUser(Event event) {
+        fxmlController x = new fxmlController();
+        x.setMainStage("Add User", "addAccount.fxml");
+    }
 }
