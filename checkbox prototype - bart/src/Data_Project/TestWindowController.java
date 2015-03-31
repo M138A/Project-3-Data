@@ -63,6 +63,9 @@ public class TestWindowController implements Initializable {
                     sql += " AND temperatuur " + aChb.getText();
                     getWeather();
                 }
+                else {
+                    System.out.println("check");
+                }
             }
         } catch (Exception e) {
             System.out.println("TEMPERATUUR");
