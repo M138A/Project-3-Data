@@ -3,6 +3,9 @@ package Data_Project;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by Lappie on 3/26/2015.
@@ -27,6 +30,7 @@ public class Ratinghistorie {
     private dbConnect connect = new dbConnect();
 
     public Ratinghistorie() throws Exception {
+
         try {
             Connection con = connect.connectToDb();
             Statement statement = con.createStatement();

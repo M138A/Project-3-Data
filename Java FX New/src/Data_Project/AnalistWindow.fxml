@@ -331,7 +331,7 @@
             <children>
                 <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="-94.0" text="WOENSDAG 25 MAART 2015" textAlignment="CENTER" textFill="#000000b2">
+                        <Label fx:id="outputDate" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="-94.0" text="WOENSDAG 25 MAART 2015" textAlignment="CENTER" textFill="#000000b2">
                             <font>
                                 <Font name="Roboto Medium" size="16.0" />
                             </font>

@@ -165,6 +165,14 @@
             </RadioButton>
             <RadioButton mnemonicParsing="false" text="Facebook username" toggleGroup="$usrname" GridPane.columnIndex="7" GridPane.rowIndex="17" />
             <TextField fx:id="inputeditdata" prefHeight="29.0" prefWidth="194.0" promptText="Edit data van" GridPane.columnIndex="7" GridPane.rowIndex="15" />
+            <Button mnemonicParsing="false" onAction="#dataButtonAction" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #55ACEE;" text="Temp datachart" textFill="#ffffffb2" GridPane.columnIndex="3" GridPane.rowIndex="15">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </Button>
         </children>
     </GridPane>
    </bottom>

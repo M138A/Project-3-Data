@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * Created by Lappie on 3/22/2015.
@@ -20,35 +23,64 @@ public class weerhistorie {
     private double Tempmin1;
     private double Tempmin0;
 
+    Calendar cal = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     ArrayList<Double> testar = new ArrayList();
 
 
     //SQL
     private dbConnect connect = new dbConnect();
 
-    public weerhistorie() throws Exception {  //TODO dynamic datums
+    public weerhistorie() throws Exception {
+        //set dates
         try {
             Connection con = connect.connectToDb();
             Statement statement = con.createStatement();
-            String sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where Datum = \"2015-03-26\"";
+            String sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            cal.add(Calendar.DATE, -1);
             ResultSet rs = statement.executeQuery(sql);
+            System.out.println("SQLSTUFF");
+            System.out.println(sql);
             if (rs.next()) {
                 Tempmin0 = rs.getDouble(1);
             }
-            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-25\"";
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
             rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            System.out.println(sql);
+
             if (rs.next()) {
                 Tempmin1 = rs.getDouble(1);
             }
-            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-24\"";
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
             rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
             if (rs.next()) {
                 Tempmin2 = rs.getDouble(1);
             }
-            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = \"2015-03-23\"";
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
             rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
             if (rs.next()) {
                 Tempmin3 = rs.getDouble(1);
+            }
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Tempmin4 = rs.getDouble(1);
+            }
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Tempmin5 = rs.getDouble(1);
+            }
+            sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Tempmin6 = rs.getDouble(1);
             }
             con.close();
         } catch (SQLException e ) {

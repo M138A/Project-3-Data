@@ -14,7 +14,10 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 
 /**
@@ -32,9 +35,11 @@ public class AnalistController implements Initializable {
     private dbConnect connect = new dbConnect();
     private Rating positief = new Rating();
     private Connection con;
-
+    Calendar cal = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     public AnalistController() throws Exception {
         con = connect.connectToDb();
+
     }
     //fxml
     @FXML
@@ -43,7 +48,8 @@ public class AnalistController implements Initializable {
     public Label outputTempArea;
     @FXML
     public Label outputTempDisc;
-
+    @FXML
+    public Label outputDate;
 
     @FXML // log out scherm
     private void logoutButtonAction() {
@@ -51,12 +57,6 @@ public class AnalistController implements Initializable {
         logout.setLogin("Log in", "Login.fxml");
     }
 
-    @FXML // data scherm,
-    private void dataButtonAction() {
-        fxmlController Data = new fxmlController();
-        DataChartController dc = new DataChartController();
-        Data.setLogin("Data", "Data.fxml");
-    }
     @FXML // data scherm,
     private void UpdatedataButtonAction() {
         fxmlController UD = new fxmlController();
@@ -70,6 +70,10 @@ public class AnalistController implements Initializable {
         weerInfo info = new weerInfo(); //init weerInfo
         outputTempArea.setText(String.valueOf(info.getGemid()) + "'C "); // vult labels met de juiste info uit de weerinfo class
         outputTempDisc.setText(String.valueOf(info.getTranslate()));
+        //date
+        outputDate.setText(dateFormat.format(cal.getTime()));
+
+
     }
     @FXML // Button voor het wegschrijven van het weer naar de db
     private void UpdateWeather() throws Exception {
