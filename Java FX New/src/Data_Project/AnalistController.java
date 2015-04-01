@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -16,7 +16,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
-
 
 /**
  * Created by bart on 10-3-2015.
@@ -41,9 +40,9 @@ public class AnalistController implements Initializable {
     @FXML
     PieChart Piechart;
     @FXML
-    public TextField outputTempArea;
+    public Label outputTempArea;
     @FXML
-    public TextField outputTempDisc;
+    public Label outputTempDisc;
 
 
     @FXML // log out scherm
@@ -66,11 +65,11 @@ public class AnalistController implements Initializable {
 
     @FXML // Button voor het ophalen van het weer.
     private void WeerButtonAction() throws Exception {
-        outputTempArea.setText("");
+        outputTempArea.setText("");//cleanup
         outputTempDisc.setText("");
-        weerInfo info = new weerInfo();
-        outputTempArea.appendText(String.valueOf(info.getGemid()) + "'C ");
-        outputTempDisc.appendText(String.valueOf(info.getTranslate()));
+        weerInfo info = new weerInfo(); //init weerInfo
+        outputTempArea.setText(String.valueOf(info.getGemid()) + "'C "); // vult labels met de juiste info uit de weerinfo class
+        outputTempDisc.setText(String.valueOf(info.getTranslate()));
     }
     @FXML // Button voor het wegschrijven van het weer naar de db
     private void UpdateWeather() throws Exception {
