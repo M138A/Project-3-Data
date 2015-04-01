@@ -76,7 +76,7 @@ public class TestWindowController implements Initializable {
                 }
             }
         } catch (Exception e) {
-            System.out.println("TEMPERATUUR");
+            e.printStackTrace();
         }
     }
 
@@ -123,7 +123,7 @@ public class TestWindowController implements Initializable {
                 }
             }
         } catch (Exception e) {
-            System.out.println("TEMPERATUUR");
+            e.printStackTrace();
         }
     }
 
@@ -134,7 +134,7 @@ public class TestWindowController implements Initializable {
         ChbTemp.add(F1);
         ChbTemp.add(F2);
         ChbTemp.add(F3);
-        ChbTemp.add(F4);
+       // ChbTemp.add(F4);
         ChbWeather.add(W1);
         ChbWeather.add(W2);
         ChbWeather.add(W3);
@@ -145,8 +145,8 @@ public class TestWindowController implements Initializable {
 
     public void testbutton(ActionEvent event) {
         getSocialMediaGroup();
+        System.out.println("mkay");
         System.out.println(sql);
-        System.out.println();
     }
 
 }
