@@ -15,6 +15,70 @@ public class Ratinghistorie {
     private Double Ratingmin1;
     private Double Ratingmin2;
     private Double Ratingmin3;
+    private Double Ratingmin4;
+    private Double Ratingmin5;
+    private Double Ratingmin6;
+
+    private dbConnect connect = new dbConnect();
+    Calendar cal = Calendar.getInstance();
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+
+    public Ratinghistorie() throws Exception {
+
+        try {
+            Connection con = connect.connectToDb();
+            Statement statement = con.createStatement();
+            String sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            ResultSet rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Ratingvandaag = rs.getDouble(1);
+            }
+            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Ratingmin1 = rs.getDouble(1);
+            }
+            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Ratingmin2 = rs.getDouble(1);
+            }
+            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Ratingmin3 = rs.getDouble(1);
+            }
+            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Ratingmin4 = rs.getDouble(1);
+            }
+            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Ratingmin5 = rs.getDouble(1);
+            }
+            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
+            rs = statement.executeQuery(sql);
+            cal.add(Calendar.DATE, -1);
+            if (rs.next()) {
+                Ratingmin6 = rs.getDouble(1);
+            }
+            con.close();
+
+        }catch (Exception e) {
+            e.printStackTrace();
+
+        }
+    }
+
     public Double getRtoday() {
         return Ratingvandaag;
     }
@@ -27,38 +91,13 @@ public class Ratinghistorie {
     public Double getRmin3(){
         return Ratingmin3;
     }
-    private dbConnect connect = new dbConnect();
-
-    public Ratinghistorie() throws Exception {
-
-        try {
-            Connection con = connect.connectToDb();
-            Statement statement = con.createStatement();
-            String sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where datum = \"2015-03-26\"";
-            ResultSet rs = statement.executeQuery(sql);
-            if (rs.next()) {
-                Ratingvandaag = rs.getDouble(1);
-            }
-            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where datum = \"2015-03-25\"";
-            rs = statement.executeQuery(sql);
-            if (rs.next()) {
-                Ratingmin1 = rs.getDouble(1);
-            }
-            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where datum = \"2015-03-24\"";
-            rs = statement.executeQuery(sql);
-            if (rs.next()) {
-                Ratingmin2 = rs.getDouble(1);
-            }
-            sql = "SELECT AVG(positief) AS Positief,datum FROM Bericht where datum = \"2015-03-23\"";
-            rs = statement.executeQuery(sql);
-            if (rs.next()) {
-                Ratingmin3 = rs.getDouble(1);
-            }
-            con.close();
-
-        }catch (Exception e) {
-            e.printStackTrace();
-
-        }
+    public Double getRmin4(){
+        return Ratingmin4;
+    }
+    public Double getRmin5(){
+        return Ratingmin5;
+    }
+    public Double getRmin6(){
+        return Ratingmin6;
     }
 }

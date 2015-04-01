@@ -73,12 +73,16 @@ public class DataChartController implements Initializable {
         series.getData().add(new XYChart.Data<>("dag-2",WH.getminD2()));
         series.getData().add(new XYChart.Data<>("dag-3",WH.getminD3()));
         series.getData().add(new XYChart.Data<>("dag-4",WH.getminD4()));
+        series.getData().add(new XYChart.Data<>("dag-5",WH.getminD5()));
+        series.getData().add(new XYChart.Data<>("dag-6",WH.getminD6()));
 
         rating.getData().add(new XYChart.Data<>("Vandaag",rat.getRtoday()));
         rating.getData().add(new XYChart.Data<>("dag-1",rat.getRmin1()));
         rating.getData().add(new XYChart.Data<>("dag-2",rat.getRmin2()));
         rating.getData().add(new XYChart.Data<>("dag-3",rat.getRmin3()));
-        rating.getData().add(new XYChart.Data<>("dag-4",5.2));
+        rating.getData().add(new XYChart.Data<>("dag-4",rat.getRmin4()));
+        rating.getData().add(new XYChart.Data<>("dag-5",rat.getRmin5()));
+        rating.getData().add(new XYChart.Data<>("dag-6",rat.getRmin6()));
 
         Linechart.getData().addAll(series,rating);
 
