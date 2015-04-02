@@ -106,6 +106,7 @@ public class AnalistController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
       //  System.out.println(weatherInfo.setWeatherImage(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip())));
+
        weerplaatje.setImage((new Image(weatherInfo.setWeatherImage(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip())))));
         try {
             WeerButtonAction();

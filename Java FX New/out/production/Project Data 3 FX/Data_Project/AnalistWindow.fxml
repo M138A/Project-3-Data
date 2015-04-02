@@ -338,7 +338,7 @@
                         </Label>
                     </children>
                 </AnchorPane>
-                <AnchorPane prefHeight="245.0" prefWidth="245.0" style="-fx-background-color: #2196f3;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <AnchorPane prefHeight="245.0" prefWidth="245.0" style="-fx-background-color: #4caf50;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <effect>
                         <DropShadow color="#00000033" height="30.0" offsetY="4.0" radius="14.5" spread="0.15" width="30.0" />
                     </effect>
@@ -370,7 +370,7 @@
                         <DropShadow color="#00000033" height="30.0" offsetY="4.0" radius="14.5" spread="0.15" width="30.0" />
                     </effect>
                 </AnchorPane>
-                <AnchorPane prefHeight="245.0" prefWidth="510.0" style="-fx-background-color: #4caf50;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                <AnchorPane prefHeight="245.0" prefWidth="510.0" style="-fx-background-color: #2196f3;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
                     <children>
                         <Label text="Beoordeling" textFill="#ffffffd9" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="30.0">
                             <font>
