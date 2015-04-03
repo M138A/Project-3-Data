@@ -73,7 +73,7 @@
                 <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="287.0" style="-fx-background-color: none; -fx-border-color: rgba(0,0,0,0.2) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);" text="NIEUWE ANALYSE" textFill="#000000b2" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+                <Button contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#AnalyseUitvoeren" prefHeight="120.0" prefWidth="287.0" style="-fx-background-color: none; -fx-border-color: rgba(0,0,0,0.2) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);" text="NIEUWE ANALYSE" textFill="#000000b2" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
                     <font>
                         <Font name="Roboto Medium" size="16.0" />
                     </font>
@@ -83,90 +83,40 @@
                 </Button>
                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <children>
-                        <CheckBox layoutY="91.0" mnemonicParsing="false" AnchorPane.topAnchor="80.0">
-                            <font>
-                                <Font name="Roboto Regular" size="9.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </CheckBox>
-                        <CheckBox layoutX="13.0" layoutY="30.0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
-                            <font>
-                                <Font name="Roboto Regular" size="9.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </CheckBox>
                         <Label layoutX="49.0" layoutY="1.0" text="BERICHT" textFill="#90a4ae" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="0.0">
                             <font>
                                 <Font name="Roboto Condensed Bold" size="13.0" />
                             </font>
                         </Label>
-                        <Label layoutX="35.0" layoutY="38.0" text="Positief" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="35.0" layoutY="78.0" text="Negatief" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
+                  <RadioButton layoutX="17.0" layoutY="29.0" mnemonicParsing="false" text="Positief">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="raiting" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="17.0" layoutY="52.0" mnemonicParsing="false" text="Negatief" toggleGroup="$raiting" />
+                  <RadioButton layoutX="17.0" layoutY="78.0" mnemonicParsing="false" text="Allebei" toggleGroup="$raiting" />
                     </children>
                 </AnchorPane>
                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <children>
-                        <CheckBox layoutY="91.0" mnemonicParsing="false" AnchorPane.topAnchor="80.0">
-                            <font>
-                                <Font name="Roboto Regular" size="9.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </CheckBox>
-                        <CheckBox layoutX="13.0" layoutY="30.0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
-                            <font>
-                                <Font name="Roboto Regular" size="9.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </CheckBox>
                         <Label layoutX="39.0" text="SOCIAL MEDIA" textFill="#90a4ae" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="0.0">
                             <font>
                                 <Font name="Roboto Condensed Bold" size="13.0" />
                             </font>
                         </Label>
-                        <Label layoutX="35.0" layoutY="38.0" text="Twitter" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="32.0" layoutY="78.0" text="Facebook" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="40.0" layoutY="118.0" text="Google+" textFill="#000000cc" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="118.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <CheckBox layoutX="10.0" layoutY="101.0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="120.0">
-                            <font>
-                                <Font name="Roboto Regular" size="9.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </CheckBox>
+                  <RadioButton layoutX="14.0" layoutY="37.0" mnemonicParsing="false" text="Twitter">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="socialmedia" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="14.0" layoutY="67.0" mnemonicParsing="false" text="Facebook" toggleGroup="$socialmedia" />
+                  <RadioButton layoutX="14.0" layoutY="94.0" mnemonicParsing="false" text="Google" toggleGroup="$socialmedia" />
+                  <RadioButton layoutX="14.0" layoutY="119.0" mnemonicParsing="false" text="Alles" toggleGroup="$socialmedia" />
                     </children>
                 </AnchorPane>
                 <AnchorPane maxWidth="-Infinity" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.rowSpan="3">
                     <children>
-                        <CheckBox layoutY="91.0" mnemonicParsing="false" AnchorPane.topAnchor="80.0">
+                        <CheckBox fx:id="W2" layoutY="91.0" mnemonicParsing="false" text="'Clouds'" AnchorPane.topAnchor="80.0">
                             <font>
                                 <Font name="Roboto Regular" size="9.0" />
                             </font>
@@ -174,7 +124,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </CheckBox>
-                        <CheckBox layoutX="13.0" layoutY="30.0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+                        <CheckBox fx:id="W1" layoutX="13.0" layoutY="30.0" mnemonicParsing="false" text="'Sunny'" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
                             <font>
                                 <Font name="Roboto Regular" size="9.0" />
                             </font>
@@ -187,22 +137,7 @@
                                 <Font name="Roboto Condensed Bold" size="13.0" />
                             </font>
                         </Label>
-                        <Label layoutX="33.0" layoutY="38.0" text="Zon" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="35.0" layoutY="78.0" text="Bewolkt" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="36.0" layoutY="118.0" text="Regen" textFill="#000000cc" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="118.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <CheckBox layoutX="10.0" layoutY="101.0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="120.0">
+                        <CheckBox fx:id="W3" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" text="'Thunderstorm'" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="120.0">
                             <font>
                                 <Font name="Roboto Regular" size="9.0" />
                             </font>
@@ -210,7 +145,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </CheckBox>
-                        <CheckBox layoutX="20.0" layoutY="111.0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="160.0">
+                        <CheckBox fx:id="W4" layoutX="20.0" layoutY="111.0" mnemonicParsing="false" text="'Rain'" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="160.0">
                             <font>
                                 <Font name="Roboto Regular" size="9.0" />
                             </font>
@@ -218,12 +153,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </CheckBox>
-                        <Label layoutX="36.0" layoutY="158.0" text="Hagel" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <CheckBox layoutY="200.0" mnemonicParsing="false">
+                        <CheckBox fx:id="W5" layoutY="200.0" mnemonicParsing="false" text="'Snow'">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
@@ -231,7 +161,7 @@
                                 <Font name="Roboto Regular" size="9.0" />
                             </font>
                         </CheckBox>
-                        <CheckBox layoutY="240.0" mnemonicParsing="false">
+                        <CheckBox fx:id="W6" layoutY="240.0" mnemonicParsing="false" text="'Mist'">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
@@ -239,21 +169,11 @@
                                 <Font name="Roboto Regular" size="9.0" />
                             </font>
                         </CheckBox>
-                        <Label layoutX="35.0" layoutY="198.0" text="Sneeuw" textFill="#000000cc">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="35.0" layoutY="238.0" text="Onweer" textFill="#000000cc">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
                     </children>
                 </AnchorPane>
                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                     <children>
-                        <CheckBox layoutY="91.0" mnemonicParsing="false" AnchorPane.topAnchor="80.0">
+                        <CheckBox fx:id="F2" layoutY="91.0" mnemonicParsing="false" text="&gt;= 0 &lt;= 15" AnchorPane.topAnchor="80.0">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
@@ -261,7 +181,7 @@
                                 <Font name="Roboto Regular" size="9.0" />
                             </font>
                         </CheckBox>
-                        <CheckBox layoutX="13.0" layoutY="30.0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+                        <CheckBox fx:id="F1" layoutX="13.0" layoutY="30.0" mnemonicParsing="false" text="&lt; 0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
@@ -274,22 +194,7 @@
                                 <Font name="Roboto Condensed Bold" size="13.0" />
                             </font>
                         </Label>
-                        <Label layoutX="35.0" layoutY="38.0" text="&lt; 0" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="32.0" layoutY="78.0" text="0 - 15" textFill="#000000cc" AnchorPane.leftAnchor="35.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="40.0" layoutY="118.0" text="&gt; 15" textFill="#000000cc" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="118.0">
-                            <font>
-                                <Font name="Roboto Regular" size="14.0" />
-                            </font>
-                        </Label>
-                        <CheckBox layoutX="10.0" layoutY="101.0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="120.0">
+                        <CheckBox fx:id="F3" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" text="&gt; 15" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="120.0">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>

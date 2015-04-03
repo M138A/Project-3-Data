@@ -5,7 +5,10 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -17,7 +20,9 @@ import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -50,6 +55,21 @@ public class AnalistController implements Initializable {
     public Label outputTempDisc;
     @FXML
     public Label outputDate;
+    public ToggleGroup raiting;
+    public CheckBox F1;
+    public CheckBox F2;
+    public CheckBox F3;
+    public CheckBox W1;
+    public CheckBox W2;
+    public CheckBox W3;
+    public CheckBox W4;
+    public CheckBox W5;
+    public CheckBox W6;
+    private List<CheckBox> ChbTemp = new ArrayList<CheckBox>();
+    private List<CheckBox> ChbWeather = new ArrayList<CheckBox>();
+    @FXML
+    private ToggleGroup socialmedia;
+    private String sql = "";
 
     @FXML // log out scherm
     private void logoutButtonAction() {
@@ -75,6 +95,104 @@ public class AnalistController implements Initializable {
 
 
     }
+    public void getSocialMediaGroup() {
+        try {
+            String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
+            if(toggle.equals("Alles")){
+                sql = "";
+                sql += "SELECT COUNT(IF(socialmedia='Twitter','1',null)) AS T, " +
+                        "COUNT(IF(socialmedia='Facebook','1',null)) AS F, " +
+                        "COUNT(IF(socialmedia='Google','1',null)) AS G FROM Bericht";
+                getPositiveOrNegative();
+            }
+            else {
+                sql = "";
+                sql += "SELECT COUNT(IF(socialmedia='" + toggle +"','1',null)) FROM Bericht";
+                getPositiveOrNegative();
+            }
+        }
+        catch (Exception e){
+            System.out.println("Klik een button aan om een analyse te doen!");
+        }
+    }
+
+    public void getTemperature1() {
+        int Count = 0;
+        try {
+            for (CheckBox aChb : ChbTemp) {
+                if (aChb.isSelected() && Count == 0) {
+                    sql += " AND temperatuur " + aChb.getText();
+                    Count++;
+                    getWeather();
+                }
+                else if(aChb.isSelected() && Count >= 1){
+                    sql += " OR temperatuur " + aChb.getText();
+                    getWeather();
+                }
+                else {
+                    System.out.println("check");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void getPositiveOrNegative() {
+        String positief = "positief >= 5";
+        String negatief = "positief <= 5";
+        String allebei = "positief > -50";
+
+        try {
+            String toggle = ((RadioButton) raiting.selectedToggleProperty().getValue()).getText();
+            switch (toggle) {
+                case "Allebei":
+                    sql += " LEFT OUTER JOIN Weersvoorspelling ON Weersvoorspelling.Datum = Bericht.Datum WHERE" + " " + allebei;
+                    getTemperature1();
+                    break;
+                case "Positief":
+                    sql += " LEFT OUTER JOIN Weersvoorspelling ON Weersvoorspelling.Datum = Bericht.Datum WHERE" + " " + positief;
+                    getTemperature1();
+                    break;
+                default:
+                    sql += " LEFT OUTER JOIN Weersvoorspelling ON Weersvoorspelling.Datum = Bericht.Datum WHERE" + " " + negatief;
+                    getTemperature1();
+                    break;
+            }
+        } catch (Exception e) {
+            System.out.println("Kies!");
+        }
+    }
+
+    public void getWeather() {
+        int Count = 0;
+        try {
+            for (CheckBox aChb : ChbWeather) {
+                if (aChb.isSelected() && Count == 0) {
+                    sql += " AND Weersituatie = " + aChb.getText();
+                    Count++;
+                }
+                else if(aChb.isSelected() && Count >= 1){
+                    sql += " OR Weersituatie = " + aChb.getText();
+                }
+                else {
+                    System.out.println("check");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void AnalyseUitvoeren(){
+        getSocialMediaGroup();
+        System.out.println(sql);
+
+    }
+
+
     @FXML // Button voor het wegschrijven van het weer naar de db
     private void UpdateWeather() throws Exception {
         weerInfo info = new weerInfo();
@@ -105,7 +223,16 @@ public class AnalistController implements Initializable {
     // maakt pie chart op basis van SQL query
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-      //  System.out.println(weatherInfo.setWeatherImage(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip())));
+        System.out.println("\n\r");
+        ChbTemp.add(F1);
+        ChbTemp.add(F2);
+        ChbTemp.add(F3);
+        ChbWeather.add(W1);
+        ChbWeather.add(W2);
+        ChbWeather.add(W3);
+        ChbWeather.add(W4);
+        ChbWeather.add(W5);
+        ChbWeather.add(W6);
 
        weerplaatje.setImage((new Image(weatherInfo.setWeatherImage(weatherInfo.getWeatherConditionImg(weatherInfo.getDescrip())))));
         try {
