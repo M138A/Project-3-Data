@@ -22,6 +22,11 @@ public class DataChartController implements Initializable {
     @FXML
     public ScatterChart<Number, Number> Scatterchart;
 
+    @FXML
+    public void BackButton(){
+        fxmlController UD = new fxmlController();
+        UD.setMainStage("Analyse", "AnalistWindow.fxml");
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Ratinghistorie rat = null;

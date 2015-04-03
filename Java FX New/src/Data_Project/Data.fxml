@@ -7,98 +7,84 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Data_Project.DataChartController">
-    <tabs>
-        <Tab text="Grafiek 1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Data_Project.DataChartController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TabPane prefHeight="56.0" prefWidth="88.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="10" GridPane.rowIndex="1" GridPane.rowSpan="6">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+               <content>
+                   <LineChart fx:id="Linechart" layoutX="51.0" layoutY="5.0" prefHeight="366.0" prefWidth="491.0">
+                       <xAxis>
+                           <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                       </xAxis>
+                       <yAxis>
+                           <NumberAxis fx:id="yAxis" side="LEFT" />
+                       </yAxis>
+                  </LineChart>
+               </content>
+            </Tab>
+          <Tab text="Untitled Tab 2">
+               <content>
+                   <PieChart id="Piechart" fx:id="Piechart" layoutX="14.0" layoutY="14.0" prefHeight="343.0" prefWidth="569.0" title="Social media Content">
+                       <effect>
+                           <Glow />
+                       </effect>
+                   </PieChart>               </content>
+            </Tab>
+            <Tab text="Untitled Tab 3">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <children>
-                        <PieChart id="Piechart" fx:id="Piechart" layoutX="14.0" layoutY="14.0" prefHeight="343.0" prefWidth="569.0" title="Social media Content">
-                            <effect>
-                                <Glow />
-                            </effect>
-                        </PieChart>
-                    </children></AnchorPane>
-            </content>
-        </Tab>
-        <Tab text="Grafiek 2">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <children>
-                        <LineChart fx:id="Linechart" layoutX="51.0" layoutY="5.0" prefHeight="366.0" prefWidth="491.0">
-                            <xAxis>
-                                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
-                            </xAxis>
-                            <yAxis>
-                                <NumberAxis fx:id="yAxis" side="LEFT" />
-                            </yAxis>
-                        </LineChart>
-                    </children></AnchorPane>
-            </content>
-        </Tab>
-        <Tab text="Grafiek 3">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <children>
-                        <StackedAreaChart id="Stackedchart" fx:id="Stackedchart" layoutX="50.0" layoutY="9.0" prefHeight="356.0" prefWidth="500.0">
-                            <xAxis>
-                                <NumberAxis side="BOTTOM" />
-                            </xAxis>
-                            <yAxis>
-                                <NumberAxis side="LEFT" />
-                            </yAxis>
-                        </StackedAreaChart>
-                    </children>
-                </AnchorPane>
-            </content>
-        </Tab>
-      <Tab text="Grafiek 4">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <ScatterChart id="Scatterchart" fx:id="Scatterchart" layoutX="27.0" layoutY="11.0" prefHeight="349.0" prefWidth="513.0">
+                <StackedAreaChart id="Stackedchart" fx:id="Stackedchart" layoutX="50.0" layoutY="9.0" prefHeight="356.0" prefWidth="500.0">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" />
+                        <NumberAxis side="BOTTOM" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" />
+                        <NumberAxis side="LEFT" />
                     </yAxis>
-                  </ScatterChart>
-               </children>
-            </AnchorPane>
+                </StackedAreaChart>
         </content>
-      </Tab>
-      <Tab text="Grafiek 5">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <BubbleChart id="Bubblechart" fx:id="Bubblechart" layoutX="62.0" layoutY="51.0" prefHeight="306.0" prefWidth="464.0">
-                    <xAxis>
-                      <NumberAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis side="LEFT" />
-                    </yAxis>
-                  </BubbleChart>
-               </children>
-            </AnchorPane>
-        </content>
-      </Tab>
-      <Tab text="Grafiek 6">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <BarChart id="Barchart" fx:id="Barchart" layoutX="53.0" layoutY="47.0" prefHeight="310.0" prefWidth="494.0">
-                    <xAxis>
-                      <CategoryAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis side="LEFT" />
-                    </yAxis>
-                  </BarChart>
-               </children>
-            </AnchorPane>
-        </content>
-      </Tab>
-    </tabs>
-</TabPane>
+        </Tab>
+        </tabs>
+      </TabPane>
+      <GridPane prefHeight="58.0" prefWidth="545.0" style="-fx-background-color: black;" GridPane.columnSpan="10">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" text="Terug" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

@@ -13,10 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -40,6 +37,7 @@ public class AnalistController implements Initializable {
     private dbConnect connect = new dbConnect();
     private Rating positief = new Rating();
     private Connection con;
+    private int SQLT;
     Calendar cal = Calendar.getInstance();
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     public AnalistController() throws Exception {
@@ -189,6 +187,23 @@ public class AnalistController implements Initializable {
     private void AnalyseUitvoeren(){
         getSocialMediaGroup();
         System.out.println(sql);
+        System.out.println("--==--==--==--==--");
+        System.out.println("--==--==--==--==--");
+        System.out.println("--==--==--==--==--");
+/** TODORETURNSTUFF       try{
+            Connection con = connect.connectToDb();
+            Statement statement = con.createStatement();
+            String sql = "SELECT COUNT(socialmedia) as 'Twitter' FROM Bericht where socialmedia ='twitter'";
+            ResultSet rs = statement.executeQuery(sql);
+            if(rs.next()){
+                SQLT = rs.getInt(1);
+            }
+            System.out.println(SQLT);
+
+        }catch(Exception e){
+            e.printStackTrace();
+
+        }*/
 
     }
 
