@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -22,8 +23,10 @@ public class ResultController implements Initializable {
     private int socialmediaSQLcount1;
     private int socialmediaSQLcount2;
     private int socialmediaSQLcount3;
-    static int [] SocialmediaSQLresult = new int[3];
-    static String [] SocialmediaSQLnaam = new String[3];
+ //   static int [] SocialmediaSQLresult = new int[3];
+  //  static String [] SocialmediaSQLnaam = new String[3];
+    static  ArrayList Socialmedialist = new ArrayList();
+    static ArrayList Socialnaamlist = new ArrayList();
 
 
     //Start analyse
@@ -48,13 +51,15 @@ public class ResultController implements Initializable {
                 for (int i = 1; i <= columnsNummer; i++) {// loop op lengte van het aantal rijen
                     if (i > 1) System.out.print(",  ");
                     String columnValue = rs.getString(i);
-                    SocialmediaSQLnaam[i -1] = rsmd.getColumnName(i); // sql rij naam array
-                    SocialmediaSQLresult[i -1] = Integer.parseInt(columnValue); // result array
-                    System.out.print(SocialmediaSQLnaam[i -1] + " " + SocialmediaSQLresult[i -1]); // test print arrays
+                    Socialnaamlist.add(rsmd.getColumnName(i)); // sql rij naam array
+                    Socialmedialist.add(Integer.parseInt(columnValue)); // result array
+                    System.out.print(Socialnaamlist.get(i - 1) + " " + Socialmedialist.get(i - 1)); // test print arrays
                 }
                 System.out.println("");
             }
             System.out.println("--=SQL Finished=--");
+            System.out.println("Arraylist contains: " + Socialnaamlist.toString());
+            System.out.println("Arraylist contains: " + Socialmedialist.toString());
         }catch(Exception e){
             e.printStackTrace();
             System.out.println("Niet alle data is gebruikt, probeer meer social media te gebruiken");

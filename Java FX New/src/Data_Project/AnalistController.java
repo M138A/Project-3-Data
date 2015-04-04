@@ -110,7 +110,7 @@ public class AnalistController implements Initializable {
             }
             else {
                 sql = "";
-                sql += "SELECT COUNT(IF(socialmedia='" + toggle +"','1',null)) FROM Bericht";
+                sql += "SELECT COUNT(IF(socialmedia='" + toggle +"','1',null)) AS "+ toggle + " FROM Bericht";
                 getPositiveOrNegative();
             }
         }
