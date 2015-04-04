@@ -37,10 +37,10 @@ public class Socialmediacount {
             }
 
             con.close();
-            System.out.println("Social media results klaar");
+/*            System.out.println("Social media results klaar");
             System.out.println("Twitter:" + Twittercount);
             System.out.println("Facebook:" + Facebookcount);
-            System.out.println("Google:" + Googlecount);
+            System.out.println("Google:" + Googlecount);*/
 
 
         } catch (SQLException e ) {

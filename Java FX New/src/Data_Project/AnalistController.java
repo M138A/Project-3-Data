@@ -13,7 +13,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -38,12 +41,14 @@ public class AnalistController implements Initializable {
     private Rating positief = new Rating();
     private Connection con;
     private int SQLT;
+    static String SQLresult;
+
     Calendar cal = Calendar.getInstance();
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     public AnalistController() throws Exception {
         con = connect.connectToDb();
-
     }
+
     //fxml
     @FXML
     PieChart Piechart;
@@ -98,9 +103,9 @@ public class AnalistController implements Initializable {
             String toggle = ((RadioButton) socialmedia.selectedToggleProperty().getValue()).getText();
             if(toggle.equals("Alles")){
                 sql = "";
-                sql += "SELECT COUNT(IF(socialmedia='Twitter','1',null)) AS T, " +
-                        "COUNT(IF(socialmedia='Facebook','1',null)) AS F, " +
-                        "COUNT(IF(socialmedia='Google','1',null)) AS G FROM Bericht";
+                sql += "SELECT COUNT(IF(socialmedia='Twitter','1',null)) AS Twitter, " +
+                        "COUNT(IF(socialmedia='Facebook','1',null)) AS Facebook, " +
+                        "COUNT(IF(socialmedia='Google','1',null)) AS Google FROM Bericht";
                 getPositiveOrNegative();
             }
             else {
@@ -184,35 +189,23 @@ public class AnalistController implements Initializable {
     }
 
     @FXML
-    private void AnalyseUitvoeren(){
+    private void AnalyseUitvoeren() throws Exception {
+
+        //TODO reset string
         getSocialMediaGroup();
+        System.out.println("--==--==---==--==--");
         System.out.println(sql);
-        System.out.println("--==--==--==--==--");
-        System.out.println("--==--==--==--==--");
-        System.out.println("--==--==--==--==--");
-/** TODORETURNSTUFF       try{
-            Connection con = connect.connectToDb();
-            Statement statement = con.createStatement();
-            String sql = "SELECT COUNT(socialmedia) as 'Twitter' FROM Bericht where socialmedia ='twitter'";
-            ResultSet rs = statement.executeQuery(sql);
-            if(rs.next()){
-                SQLT = rs.getInt(1);
-            }
-            System.out.println(SQLT);
-
-        }catch(Exception e){
-            e.printStackTrace();
-
-        }*/
-
+        System.out.println("--==--==---==--==--");
+        SQLresult = sql;
+        new ResultController();
+        fxmlController AN = new fxmlController();
+        AN.setMainStage("Analyse", "Data.fxml");
     }
 
 
     @FXML // Button voor het wegschrijven van het weer naar de db
     private void UpdateWeather() throws Exception {
         weerInfo info = new weerInfo();
-        System.out.println(info.getTranslate());
-
         try {
             Connection con = connect.connectToDb();
             String sql = "INSERT INTO Weersvoorspelling (Datum, Temperatuur, Weersituatie) VALUES (?,?,?)";
@@ -276,7 +269,9 @@ public class AnalistController implements Initializable {
 
     }
 
-
+    public String ReturnSQL(){
+        return sql;
+    }
 
 }
 

@@ -83,7 +83,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="Terug" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#BackButton" text="Terug" GridPane.columnIndex="7" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>

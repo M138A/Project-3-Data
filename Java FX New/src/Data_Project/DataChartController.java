@@ -47,10 +47,7 @@ public class DataChartController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(WH.getToday());
-        System.out.println(WH.getminD2());
-        System.out.println(WH.getminD3());
-        System.out.println(WH.getminD4());
+
 
         // working piechartr
         ObservableList<PieChart.Data> pieChartData =

@@ -39,15 +39,13 @@ public class weerhistorie {
             String sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where Datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
             cal.add(Calendar.DATE, -1);
             ResultSet rs = statement.executeQuery(sql);
-            System.out.println("SQLSTUFF");
-            System.out.println(sql);
+
             if (rs.next()) {
                 Tempmin0 = rs.getDouble(1);
             }
             sql = "SELECT Temperatuur FROM mijnma1q_PrjData.Weersvoorspelling where datum = " + "'" + dateFormat.format(cal.getTime()) + "'";
             rs = statement.executeQuery(sql);
             cal.add(Calendar.DATE, -1);
-            System.out.println(sql);
 
             if (rs.next()) {
                 Tempmin1 = rs.getDouble(1);
@@ -89,10 +87,7 @@ public class weerhistorie {
             e.printStackTrace();
         }
 
-        for(double x = 1; x < 8; x = x+1) {
-            testar.add(x);
-            System.out.println(testar);
-        }
+
     }
     public double getminD1() {
         return Tempmin1;

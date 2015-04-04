@@ -34,10 +34,7 @@ public class weerInfo {
 
             //Descriptionfinal =  description.substring(89, 107); // dit moet anders
 
-            gemid = (Math.floor((mid)*10)/10.0); // < klopt geen fuck van vlgens mij
-            // System.out.println("Temperatuur:(min) " + Math.floor((minC)*10)/10.0 + "/ (max)" + Math.ceil((maxC)*10)/10.0  + "\'C");
-            System.out.println(String.valueOf(Math.floor((gemid)*10)/10.0) + "\'C " + Descriptionfinal);
-            System.out.println(getWeatherConditionImg(getDescrip()));
+            gemid = (Math.floor((mid)*10)/10.0); // zet temp. om
         }
     }
 
