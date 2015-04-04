@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/TestWindow.fxml" afterPath="$PROJECT_DIR$/src/Data_Project/TestWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/TestWindowController.java" afterPath="$PROJECT_DIR$/src/Data_Project/TestWindowController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Java FX New/src/Data_Project/ResultController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/AnalistController.class" afterPath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/AnalistController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/DataChartController.class" afterPath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/DataChartController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/Socialmediacount.class" afterPath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/Socialmediacount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/weerInfo.class" afterPath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/weerInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/src/Data_Project/AnalistController.java" afterPath="$PROJECT_DIR$/../Java FX New/src/Data_Project/AnalistController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/Data.fxml" afterPath="$PROJECT_DIR$/../Java FX New/out/production/Project Data 3 FX/Data_Project/Data.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/src/Data_Project/Data.fxml" afterPath="$PROJECT_DIR$/../Java FX New/src/Data_Project/Data.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/src/Data_Project/DataChartController.java" afterPath="$PROJECT_DIR$/../Java FX New/src/Data_Project/DataChartController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/src/Data_Project/Socialmediacount.java" afterPath="$PROJECT_DIR$/../Java FX New/src/Data_Project/Socialmediacount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/src/Data_Project/weerInfo.java" afterPath="$PROJECT_DIR$/../Java FX New/src/Data_Project/weerInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Java FX New/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Java FX New/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -80,7 +90,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4" vertical-offset="438" max-vertical-offset="1258">
+            <state vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="1258">
               <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
               <folding />
             </state>
@@ -90,8 +100,8 @@
       <file leaf-file-name="TestWindowController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Data_Project/TestWindowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6699029" vertical-offset="2139" max-vertical-offset="2703">
-              <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
+            <state vertical-scroll-proportion="1.9937888" vertical-offset="1891" max-vertical-offset="2703">
+              <caret line="159" column="7" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="7" />
               <folding>
                 <element signature="e#762#772#0" expanded="true" />
               </folding>
@@ -217,7 +227,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,6 +280,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -651,6 +661,8 @@
       <workItem from="1427804193128" duration="1743000" />
       <workItem from="1427806004839" duration="379000" />
       <workItem from="1427883301948" duration="1147000" />
+      <workItem from="1428095071034" duration="47000" />
+      <workItem from="1428137474072" duration="1251000" />
     </task>
     <task id="LOCAL-00001" summary="Scene swaps">
       <created>1425856719404</created>
@@ -692,11 +704,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107692000" />
+    <option name="totallyTimeSpent" value="108990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1226,7 +1238,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4" vertical-offset="438" max-vertical-offset="1258">
+        <state vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="1258">
           <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
           <folding />
         </state>
@@ -1234,8 +1246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/TestWindowController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6699029" vertical-offset="2139" max-vertical-offset="2703">
-          <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
+        <state vertical-scroll-proportion="1.9937888" vertical-offset="1891" max-vertical-offset="2703">
+          <caret line="159" column="7" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="7" />
           <folding>
             <element signature="e#762#772#0" expanded="true" />
           </folding>
