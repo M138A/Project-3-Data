@@ -34,7 +34,16 @@
         <tabs>
           <Tab text="Untitled Tab 1">
                <content>
-                   <LineChart fx:id="Linechart" layoutX="51.0" layoutY="5.0" prefHeight="366.0" prefWidth="491.0">
+                   <PieChart id="Piechart" fx:id="Piechart" prefHeight="343.0" prefWidth="569.0" title="Resultaat">
+                       <effect>
+                           <Glow />
+                       </effect>
+                   </PieChart>
+               </content>
+            </Tab>
+          <Tab text="Untitled Tab 2">
+               <content>
+                   <LineChart fx:id="Linechart" prefHeight="366.0" prefWidth="491.0">
                        <xAxis>
                            <CategoryAxis side="BOTTOM" fx:id="xAxis" />
                        </xAxis>
@@ -43,14 +52,6 @@
                        </yAxis>
                   </LineChart>
                </content>
-            </Tab>
-          <Tab text="Untitled Tab 2">
-               <content>
-                   <PieChart id="Piechart" fx:id="Piechart" layoutX="14.0" layoutY="14.0" prefHeight="343.0" prefWidth="569.0" title="Social media Content">
-                       <effect>
-                           <Glow />
-                       </effect>
-                   </PieChart>               </content>
             </Tab>
             <Tab text="Untitled Tab 3">
             <content>
@@ -64,6 +65,11 @@
                 </StackedAreaChart>
         </content>
         </Tab>
+            <Tab text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
         </tabs>
       </TabPane>
       <GridPane prefHeight="58.0" prefWidth="545.0" style="-fx-background-color: black;" GridPane.columnSpan="10">

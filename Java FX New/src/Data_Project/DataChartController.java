@@ -21,6 +21,10 @@ public class DataChartController implements Initializable {
     public StackedAreaChart<Number, Number> Stackedchart;
     @FXML
     public ScatterChart<Number, Number> Scatterchart;
+    //referenties
+
+    public DataChartController() throws Exception {
+    }
 
     @FXML
     public void BackButton(){
@@ -34,29 +38,34 @@ public class DataChartController implements Initializable {
         weerhistorie WH = null;
         try {
             rat = new Ratinghistorie();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
             WH = new weerhistorie();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
             SocMed = new Socialmediacount();
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
 
-        // working piechartr
+/**        // working piechart op basis van social media aantal
         ObservableList<PieChart.Data> pieChartData =
                 FXCollections.observableArrayList(
                         new PieChart.Data("Google", SocMed.getGoogle()),
                         new PieChart.Data("Twitter", SocMed.getTwitter()),
                         new PieChart.Data("Facebook", SocMed.getFacebook()));
 
+        Piechart.setData(pieChartData);*/
+
+        // pie chart die de resultaten laat zien van de query builder!
+        ObservableList<PieChart.Data> pieChartData =
+                FXCollections.observableArrayList(
+                        new PieChart.Data(ResultController.SocialmediaSQLnaam[0], ResultController.SocialmediaSQLresult[0]),
+                        new PieChart.Data(ResultController.SocialmediaSQLnaam[1], ResultController.SocialmediaSQLresult[1]),
+                        new PieChart.Data(ResultController.SocialmediaSQLnaam[2], ResultController.SocialmediaSQLresult[2]));
+
         Piechart.setData(pieChartData);
+
+
         //  working line chart
         Linechart.getXAxis().setAutoRanging(true);
         Linechart.getYAxis().setAutoRanging(true);

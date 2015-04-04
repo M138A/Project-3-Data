@@ -68,13 +68,13 @@ public class UpdateDataController implements Initializable {
     }
 
     @FXML // data scherm,
-    private void dataButtonAction() {
+    private void dataButtonAction() throws Exception {
         fxmlController logout = new fxmlController();
         DataChartController dc = new DataChartController();
         logout.setLogin("Data", "Data.fxml");
     }
     @FXML // data scherm,
-    private void UpdatedataButtonAction() {
+    private void UpdatedataButtonAction() throws Exception {
         fxmlController logout = new fxmlController();
         DataChartController dc = new DataChartController();
         logout.setLogin("Log in", "UpdateDataWindow.fxml");
