@@ -55,6 +55,7 @@ public class weerInfo {
         Sunny.add("clear sky");
         Sunny.add("sun");
         Sunny.add("sky is clear");
+        Sunny.add("Clear");
         ArrayList<String> Mist = new ArrayList<String>();
         Mist.add("mist");
         Mist.add("haze");

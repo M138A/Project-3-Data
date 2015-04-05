@@ -42,6 +42,7 @@ public class AnalistController implements Initializable {
     private Connection con;
     private int SQLT;
     static String SQLresult;
+    static String SQLresult2 = "";
 
     Calendar cal = Calendar.getInstance();
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -106,11 +107,17 @@ public class AnalistController implements Initializable {
                 sql += "SELECT COUNT(IF(socialmedia='Twitter','1',null)) AS Twitter, " +
                         "COUNT(IF(socialmedia='Facebook','1',null)) AS Facebook, " +
                         "COUNT(IF(socialmedia='Google','1',null)) AS Google FROM Bericht";
+                SQLresult2 += "SELECT COUNT(IF(socialmedia='Twitter','1',null)) AS Twitter, " +
+                        "COUNT(IF(socialmedia='Facebook','1',null)) AS Facebook, " +
+                        "COUNT(IF(socialmedia='Google','1',null)) AS Google FROM Bericht";
+
+
                 getPositiveOrNegative();
             }
             else {
                 sql = "";
                 sql += "SELECT COUNT(IF(socialmedia='" + toggle +"','1',null)) AS "+ toggle + " FROM Bericht";
+                SQLresult2 += "SELECT COUNT(IF(socialmedia='" + toggle +"','1',null)) AS "+ toggle + " FROM Bericht";
                 getPositiveOrNegative();
             }
         }
@@ -195,6 +202,8 @@ public class AnalistController implements Initializable {
         getSocialMediaGroup();
         System.out.println("--==--==---==--==--");
         System.out.println(sql);
+        System.out.println("--==--==---==--==--");
+        System.out.println(SQLresult2);
         System.out.println("--==--==---==--==--");
         SQLresult = sql;
         new ResultController();

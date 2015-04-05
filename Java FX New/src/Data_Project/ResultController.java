@@ -17,6 +17,7 @@ public class ResultController implements Initializable {
 
     //setup
     private String ResultSQL = "leeg";
+    private String ResultSQL2 = "leeg";
     private dbConnect connect = new dbConnect();
     private Connection con;
     //analyse variables
@@ -27,12 +28,14 @@ public class ResultController implements Initializable {
   //  static String [] SocialmediaSQLnaam = new String[3];
     static  ArrayList Socialmedialist = new ArrayList();
     static ArrayList Socialnaamlist = new ArrayList();
+    static ArrayList Socialratinglist = new ArrayList();
 
 
     //Start analyse
     public ResultController() throws Exception {
+        ResultSQL2 = AnalistController.SQLresult2 + " WHERE positief >= 5";
         ResultSQL = AnalistController.SQLresult;
-      //  System.out.println(ResultSQL);
+        //  System.out.println(ResultSQL);
         setResults();
     }
 
@@ -64,6 +67,28 @@ public class ResultController implements Initializable {
             e.printStackTrace();
             System.out.println("Niet alle data is gebruikt, probeer meer social media te gebruiken");
         }
+
+        try { // probeer positiviteit te controleren - TOTAALE/GLOBAAL POSITIVITEIT
+            Statement statement = con.createStatement(); // maakt sql statement
+            ResultSet rs = statement.executeQuery(ResultSQL2);// van de string
+            ResultSetMetaData rsmd = rs.getMetaData(); // haalt de collumn naam op
+            int columnsNummer = rsmd.getColumnCount(); // kijkt naar het aantal rijen beschikbaar
+
+            System.out.println("--=SQL positiviteit Results=--");
+            while (rs.next()) { // loop op lengte van het aantal rijen
+                for (int i = 1; i <= columnsNummer; i++) {// loop op lengte van het aantal rijen
+                    String columnValue = rs.getString(i);
+                    Socialratinglist.add(Integer.parseInt(columnValue)); // result array
+                }
+            }
+            System.out.println(" Arraylist media: " + Socialnaamlist.toString());
+            System.out.println(" Arraylist rating: " + Socialratinglist.toString()); // test print arrays
+            System.out.println("--=SQL positiviteit Results Finished=--");
+
+        }catch(Exception e){
+            System.out.println("Nope rating");
+        }
+
 
         con.close(); // sluit sql connectie
 

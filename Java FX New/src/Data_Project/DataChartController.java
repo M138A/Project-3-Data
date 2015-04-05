@@ -99,14 +99,9 @@ public class DataChartController implements Initializable {
         for(int i =0; i < sizechecker; i++) {
 
             try {
-                y.getData().add(new XYChart.Data<>(ResultController.Socialnaamlist.get(i), 156));
+                y.getData().add(new XYChart.Data<>(ResultController.Socialnaamlist.get(i), ResultController.Socialratinglist.get(i)));
                 x.getData().add(new XYChart.Data<>(ResultController.Socialnaamlist.get(i), 234));
 
-                    y.getData().add(new XYChart.Data<>(ResultController.Socialnaamlist.get(i), 126));
-                    x.getData().add(new XYChart.Data<>(ResultController.Socialnaamlist.get(i), 115));
-
-                        y.getData().add(new XYChart.Data<>(ResultController.Socialnaamlist.get(i), 126));
-                        x.getData().add(new XYChart.Data<>(ResultController.Socialnaamlist.get(i), 115));
 
             }catch (Exception e) {
                 System.out.println("Woops");
