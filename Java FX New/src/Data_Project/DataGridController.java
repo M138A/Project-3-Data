@@ -88,4 +88,21 @@ public class DataGridController implements Initializable{
         fxmlController x = new fxmlController();
         x.setMainStage("Add User", "addAccount.fxml");
     }
+    public void removeAccount()
+    {
+        authorizedUser x = users.get(userTable.getSelectionModel().getFocusedIndex());
+        String username = x.getUsername();
+        try {
+            Connection conn = new dbConnect().connectToDb();
+            Statement statement = conn.createStatement();
+            String sql;
+            sql = "DELETE FROM Leden WHERE username='" + username + "'";
+            statement.execute(sql);
+            conn.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        refreshList();
+    }
 }
