@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Rating also negative now">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/AnalistController.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/AnalistController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/DataChartController.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/DataChartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/ResultController.class" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/ResultController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/AnalistController.java" afterPath="$PROJECT_DIR$/src/Data_Project/AnalistController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/Data.fxml" afterPath="$PROJECT_DIR$/out/production/Project Data 3 FX/Data_Project/Data.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/DataChartController.java" afterPath="$PROJECT_DIR$/src/Data_Project/DataChartController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Project/ResultController.java" afterPath="$PROJECT_DIR$/src/Data_Project/ResultController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Rating also negative now" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -85,86 +76,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Data.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/Data.fxml">
+      <file leaf-file-name="DataGridController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Data_Project/DataGridController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1569" max-vertical-offset="2584">
-              <caret line="103" column="25" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/ResultController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1428">
-              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.38630807" vertical-offset="1151" max-vertical-offset="1717">
+              <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ratinghistorie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/Ratinghistorie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1530">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding>
-                <marker date="1427922162081" expanded="true" signature="846:959" placeholder="SELECT AVG(p..Bericht..." />
-                <marker date="1427922162081" expanded="true" signature="1169:1282" placeholder="SELECT AVG(p..Bericht..." />
-                <marker date="1427922162081" expanded="true" signature="1479:1592" placeholder="SELECT AVG(p..Bericht..." />
-                <marker date="1427922162081" expanded="true" signature="1789:1902" placeholder="SELECT AVG(p..Bericht..." />
-                <marker date="1427922162081" expanded="true" signature="2099:2212" placeholder="SELECT AVG(p..Bericht..." />
-                <marker date="1427922162081" expanded="true" signature="2409:2522" placeholder="SELECT AVG(p..Bericht..." />
-                <marker date="1427922162081" expanded="true" signature="2719:2832" placeholder="SELECT AVG(p..Bericht..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataChartController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/DataChartController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86175114" vertical-offset="1428" max-vertical-offset="3162">
-              <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnalistController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="4420">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-              <folding>
-                <marker date="1428153648843" expanded="true" signature="7032:7111" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateDataController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="811" max-vertical-offset="6919">
-              <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
-              <folding>
-                <marker date="1428145424108" expanded="true" signature="3862:3953" placeholder="INSERT INTO ..." />
-                <marker date="1428145424108" expanded="true" signature="4400:4511" placeholder="INSERT INTO ..." />
-                <marker date="1428145424108" expanded="true" signature="7887:7978" placeholder="INSERT INTO ..." />
-                <marker date="1428145424108" expanded="true" signature="8481:8592" placeholder="INSERT INTO ..." />
-                <marker date="1428145424108" expanded="true" signature="10773:10864" placeholder="INSERT INTO ..." />
-                <marker date="1428145424108" expanded="true" signature="11358:11416" placeholder="INSERT INTO ..." />
-                <marker date="1428145424108" expanded="true" signature="13545:13636" placeholder="INSERT INTO ..." />
-                <marker date="1428145424108" expanded="true" signature="14083:14152" placeholder="INSERT INTO ..." />
-                <marker date="1428145424108" expanded="true" signature="15915:15994" placeholder="INSERT INTO ..." />
+                <marker date="1428497440204" expanded="true" signature="1486:1526" placeholder="SELECT usern..Leden..." />
+                <marker date="1428497440204" expanded="true" signature="3622:3673" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -202,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/Data_Project/weatherConditions.txt" />
         <option value="$PROJECT_DIR$/src/Data_Project/NewAnalistController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/TweetData.java" />
-        <option value="$PROJECT_DIR$/src/Data_Project/DataGridController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/DataController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/sample.css" />
         <option value="$PROJECT_DIR$/src/facebook4j.properties" />
@@ -219,21 +137,22 @@
         <option value="$PROJECT_DIR$/src/Data_Project/Controller.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/addAccount.fxml" />
         <option value="$PROJECT_DIR$/src/Data_Project/dbConnect.java" />
-        <option value="$PROJECT_DIR$/src/Data_Project/AdminWindow.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/EditDataWindow.fxml" />
         <option value="$PROJECT_DIR$/src/Data_Project/Main.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/Login.fxml" />
         <option value="$PROJECT_DIR$/src/Data_Project/positief.txt" />
-        <option value="$PROJECT_DIR$/src/Data_Project/CheckboxController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml" />
         <option value="$PROJECT_DIR$/src/Data_Project/weerInfo.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/Socialmediacount.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/weerhistorie.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/UpdateDataController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/Data.fxml" />
-        <option value="$PROJECT_DIR$/src/Data_Project/AnalistController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/ResultController.java" />
         <option value="$PROJECT_DIR$/src/Data_Project/DataChartController.java" />
+        <option value="$PROJECT_DIR$/src/Data_Project/AnalistController.java" />
+        <option value="$PROJECT_DIR$/src/Data_Project/AdminWindow.java" />
+        <option value="$PROJECT_DIR$/src/Data_Project/CheckboxController.java" />
+        <option value="$PROJECT_DIR$/src/Data_Project/DataGridController.java" />
       </list>
     </option>
   </component>
@@ -245,9 +164,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-68" />
-    <option name="y" value="16" />
-    <option name="width" value="1378" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -300,6 +219,8 @@
       <sortByType ProjectPane="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -346,32 +267,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Java FX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Java FX New" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Data_Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -386,7 +287,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../checkbox prototype - bart" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Data_1/Java FX New" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -481,10 +382,17 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -654,6 +562,9 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -826,6 +737,8 @@
       <workItem from="1428136758824" duration="9300000" />
       <workItem from="1428146876364" duration="3558000" />
       <workItem from="1428150545937" duration="6011000" />
+      <workItem from="1428484749485" duration="2719000" />
+      <workItem from="1428496902934" duration="804000" />
     </task>
     <task id="LOCAL-00001" summary="Scene swaps">
       <created>1425856719404</created>
@@ -885,7 +798,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228943000" />
+    <option name="totallyTimeSpent" value="232466000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -908,8 +821,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-68" y="16" width="1378" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -920,12 +833,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3257329" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.023520486" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.023449318" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909784" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22638437" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2198697" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22989377" sideWeight="0.6703755" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22919819" sideWeight="0.6703755" order="1" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="7.320644E-4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -985,16 +898,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1024" max-vertical-offset="1700">
-          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-          <folding>
-            <marker date="1428153648843" expanded="true" signature="7032:7111" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4097">
@@ -1010,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1156">
           <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,9 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1428153648843" expanded="true" signature="7032:7111" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1084,9 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1077" max-vertical-offset="1734">
           <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-          <folding>
-            <marker date="1428153648843" expanded="true" signature="7032:7111" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1105,7 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,9 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1077" max-vertical-offset="1734">
           <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-          <folding>
-            <marker date="1428153648843" expanded="true" signature="7032:7111" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1185,13 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18498367" vertical-offset="0" max-vertical-offset="919">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/dbConnect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4624592" vertical-offset="0" max-vertical-offset="919">
@@ -1215,13 +1100,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/AdminWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39906833" vertical-offset="219" max-vertical-offset="1802">
-          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/EditDataWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6888519" vertical-offset="3343" max-vertical-offset="3944">
@@ -1233,13 +1111,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/EditDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.431962" vertical-offset="749" max-vertical-offset="1394">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/UpdateDataWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.868932" vertical-offset="2391" max-vertical-offset="3009">
@@ -1249,13 +1120,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/authorizedUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1036" max-vertical-offset="2193">
-          <caret line="95" column="67" selection-start-line="95" selection-start-column="67" selection-end-line="95" selection-end-column="67" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/Login.fxml">
@@ -1290,13 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/CheckboxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2317" max-vertical-offset="2890">
-          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistWindow.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2431466" vertical-offset="0" max-vertical-offset="5083">
@@ -1306,13 +1163,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/fxmlController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="697">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/FacebookData.java">
@@ -1329,21 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/weerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7477876" vertical-offset="155" max-vertical-offset="1598">
-          <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/DataGridController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03761062" vertical-offset="357" max-vertical-offset="1411">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/weerhistorie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="921" max-vertical-offset="1700">
@@ -1355,23 +1190,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="811" max-vertical-offset="6919">
           <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
-          <folding>
-            <marker date="1428145424108" expanded="true" signature="3862:3953" placeholder="INSERT INTO ..." />
-            <marker date="1428145424108" expanded="true" signature="4400:4511" placeholder="INSERT INTO ..." />
-            <marker date="1428145424108" expanded="true" signature="7887:7978" placeholder="INSERT INTO ..." />
-            <marker date="1428145424108" expanded="true" signature="8481:8592" placeholder="INSERT INTO ..." />
-            <marker date="1428145424108" expanded="true" signature="10773:10864" placeholder="INSERT INTO ..." />
-            <marker date="1428145424108" expanded="true" signature="11358:11416" placeholder="INSERT INTO ..." />
-            <marker date="1428145424108" expanded="true" signature="13545:13636" placeholder="INSERT INTO ..." />
-            <marker date="1428145424108" expanded="true" signature="14083:14152" placeholder="INSERT INTO ..." />
-            <marker date="1428145424108" expanded="true" signature="15915:15994" placeholder="INSERT INTO ..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/ResultController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1428">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/Ratinghistorie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1734">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/DataChartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2512" max-vertical-offset="3077">
+          <caret line="162" column="34" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/fxmlController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6194539" vertical-offset="28" max-vertical-offset="697">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/CheckboxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2720">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/negatief.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3771331" vertical-offset="0" max-vertical-offset="714">
+          <caret line="15" column="123" selection-start-line="15" selection-start-column="123" selection-end-line="15" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/AdminWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1216" max-vertical-offset="1802">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09598604" vertical-offset="3141" max-vertical-offset="4573">
+          <caret line="211" column="5" selection-start-line="211" selection-start-column="5" selection-end-line="211" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Project/Data.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1569" max-vertical-offset="2584">
+        <state vertical-scroll-proportion="0.33517495" vertical-offset="1569" max-vertical-offset="2584">
           <caret line="103" column="25" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
           <folding />
         </state>
@@ -1380,47 +1268,36 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/AnalistController.java">
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/weerInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="4420">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-          <folding>
-            <marker date="1428153648843" expanded="true" signature="7032:7111" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/ResultController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1428">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/Ratinghistorie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1734">
+        <state vertical-scroll-proportion="1.9877836" vertical-offset="0" max-vertical-offset="1615">
           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <marker date="1427922162081" expanded="true" signature="846:959" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427922162081" expanded="true" signature="1169:1282" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427922162081" expanded="true" signature="1479:1592" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427922162081" expanded="true" signature="1789:1902" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427922162081" expanded="true" signature="2099:2212" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427922162081" expanded="true" signature="2409:2522" placeholder="SELECT AVG(p..Bericht..." />
-            <marker date="1427922162081" expanded="true" signature="2719:2832" placeholder="SELECT AVG(p..Bericht..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data_Project/DataChartController.java">
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/authorizedUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86175114" vertical-offset="1428" max-vertical-offset="3162">
-          <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+        <state vertical-scroll-proportion="2.7559726" vertical-offset="0" max-vertical-offset="2380">
+          <caret line="95" column="67" selection-start-line="95" selection-start-column="67" selection-end-line="95" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/EditDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5973155" vertical-offset="131" max-vertical-offset="1394">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Project/DataGridController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38630807" vertical-offset="1151" max-vertical-offset="1717">
+          <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
+          <folding>
+            <marker date="1428497440204" expanded="true" signature="1486:1526" placeholder="SELECT usern..Leden..." />
+            <marker date="1428497440204" expanded="true" signature="3622:3673" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>

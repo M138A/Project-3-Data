@@ -6,12 +6,14 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -80,6 +82,7 @@ public class DataGridController implements Initializable{
     private void refreshList()
     {
         userTable.getColumns().removeAll();
+
         setUserTable(userTable);
     }
 
