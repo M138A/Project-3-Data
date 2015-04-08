@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
 
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class DataChartController implements Initializable {
@@ -22,9 +23,19 @@ public class DataChartController implements Initializable {
     public ScatterChart<Number, Number> Scatterchart;
     @FXML
     public  StackedBarChart<String,Number> Stackedbarchart;
+    @FXML
+    public StackedBarChart<Date,Integer> barChart2;
     //referenties
     String sqldone = AnalistController.SQLresult;
-    public DataChartController() throws Exception {
+    private static AnalistController a;
+
+
+    public DataChartController(AnalistController a) throws Exception {
+        DataChartController.a = a;
+
+    }
+    public DataChartController() {
+
     }
     private int sizechecker = ResultController.Socialmedialist.size();
     public void BackButton(){
@@ -176,6 +187,25 @@ public class DataChartController implements Initializable {
 
 
          Scatterchart.getData().addAll(series1);*/
+
+        try {
+            XYChart.Series x1 = new XYChart.Series<>();
+            barChart2.setTitle("Posts/Datum");
+            x1.setName("Geposte Social Media");
+            for (int h = 0; h < a.getAmount().size(); h++) {
+
+                try {
+                    x1.getData().add(new XYChart.Data<>(a.getDate().get(h).toString(), a.getAmount().get(h)));
+
+
+                } catch (Exception e) {
+                    System.out.println("Woops");
+                }
+            } // set data
+            barChart2.getData().addAll(x1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 

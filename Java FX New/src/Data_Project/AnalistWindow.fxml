@@ -212,6 +212,11 @@
                   <Font name="Roboto Medium" size="16.0" />
                </font>
             </Button>
+                <Button mnemonicParsing="false" text="Voorbeeld Analyse" GridPane.columnIndex="3" GridPane.rowIndex="3" fx:id="b1" onAction="#grafiek1">
+                    <GridPane.margin>
+                        <Insets bottom="70.0" />
+                    </GridPane.margin>
+                </Button>
             </children>
         </GridPane>
     </left>

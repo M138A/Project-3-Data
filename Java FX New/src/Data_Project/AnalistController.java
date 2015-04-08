@@ -2,6 +2,7 @@ package Data_Project;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
@@ -13,10 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -71,6 +69,8 @@ public class AnalistController implements Initializable {
     public CheckBox W6;
     private List<CheckBox> ChbTemp = new ArrayList<CheckBox>();
     private List<CheckBox> ChbWeather = new ArrayList<CheckBox>();
+    private List<Date> dates = new ArrayList<Date>();
+    private List<Integer> berichten = new ArrayList<Integer>();
     @FXML
     private ToggleGroup socialmedia;
     private String sql = "";
@@ -277,6 +277,45 @@ public class AnalistController implements Initializable {
 
 
     }
+    public  List<Date> getDate() {
+        return dates;
+    }
+
+    public  List<Integer> getAmount() {
+        return berichten;
+    }
+
+    public void grafiek1(ActionEvent actionEvent) {
+        try {
+            Connection con = connect.connectToDb();
+            Statement statement = con.createStatement();
+            String sql;
+            sql = "SELECT count(Bericht.BerichtId), Datum FROM Bericht \n" +
+                    "GROUP BY Datum";
+            //execute sql query
+            ResultSet rs = statement.executeQuery(sql);
+            //process result of query
+            while (rs.next()) {
+                dates.add((Date) rs.getDate("Datum"));
+                int a = rs.getInt(("count(Bericht.BerichtId)"));
+                berichten.add(a);
+            }
+            //close database connection
+            DataChartController d = new DataChartController(this);
+            con.close();
+
+
+            /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
+        } catch (SQLException e) {
+            System.out.println("Weer al ge-update, wacht tot morgen.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 
     public String ReturnSQL(){
         return sql;
