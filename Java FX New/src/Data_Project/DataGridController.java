@@ -81,7 +81,7 @@ public class DataGridController implements Initializable{
     }
     private void refreshList()
     {
-        userTable.getColumns().removeAll();
+        users.removeAll(users);
 
         setUserTable(userTable);
     }
