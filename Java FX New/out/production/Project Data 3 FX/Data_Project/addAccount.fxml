@@ -1,50 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" stylesheets="/Data_Project/sample.css" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Data_Project.AdminWindow">
-    <children>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="800.0" prefHeight="810.0" prefWidth="1000.0" style="-fx-background-color: rgb(250,250,250);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Data_Project.AdminWindow">
+<top>
+    <AnchorPane maxHeight="-Infinity" prefHeight="100.0" style="-fx-background-color: rgba(0,0,0,0.8);" BorderPane.alignment="CENTER">
+        <Button id="top-button button-back" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="80.0" style="-fx-background-color: rgba(0,0,0,0.3);" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <padding><Insets top="-1.0" /></padding>
+            <font><Font name="Roboto Medium" size="12.0" /></font>
+            <cursor><Cursor fx:constant="HAND" /></cursor>
 
-        <Label text="Username" GridPane.columnIndex="1" />
-        <TextField fx:id="userField" GridPane.columnIndex="2" />
-        <Label text="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <PasswordField fx:id="passField" GridPane.columnIndex="2" GridPane.columnSpan="1" GridPane.rowIndex="2" />
-        <Button fx:id="AccountAddToDB" onAction="#addAccount" text="Voeg account toe" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
-        <Label fx:id="errorLabel" textFill="#c30808" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
-        <VBox spacing="11.0" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.rowSpan="2">
-            <children>
-                <RadioButton fx:id="Administrator" mnemonicParsing="false" text="Administrator" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                    <toggleGroup>
-                        <ToggleGroup fx:id="roleGroup" />
-                    </toggleGroup>
-                </RadioButton>
-            <RadioButton fx:id="Systeembeheerder" mnemonicParsing="false" text="Systeembeheerder" toggleGroup="$roleGroup" />
-                <RadioButton fx:id="Analist" mnemonicParsing="false" text="Analist" toggleGroup="$roleGroup" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            </children>
-        </VBox>
-        <Label text="Role" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" text="Label" textFill="#c30808" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-      <Label fx:id="passLabel" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" text="Label" textFill="#3f901f" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-    </children>
-    <columnConstraints>
-        <ColumnConstraints />
-        <ColumnConstraints />
-        <ColumnConstraints />
-        <ColumnConstraints />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-      <RowConstraints />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-    </rowConstraints>
+            <graphic><ImageView fitHeight="80.0" pickOnBounds="true" preserveRatio="true"><image>
+                <Image url="@../Images/top-button-back.png" />
+            </image></ImageView></graphic>
+        </Button>
 
-</GridPane>
+        <Button id="top-button button-logout" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="80.0" style="-fx-background-color: none;" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <padding><Insets top="-1.0" /></padding>
+            <font><Font name="Roboto Medium" size="12.0" /></font>
+            <cursor><Cursor fx:constant="HAND" /></cursor>
+
+            <graphic><ImageView fitWidth="80.0" pickOnBounds="true" preserveRatio="true"><image>
+                <Image url="@../Images/top-button-logout.png" />
+            </image></ImageView></graphic>
+        </Button>
+    </AnchorPane>
+</top>
+<center>
+    <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="0.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+
+        <Label text="GEBRUIKERSNAAM" textFill="#90a4ae"  GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font><Font name="Roboto Condensed Bold" size="13.0" /></font>
+            <GridPane.margin><Insets top="-50.0" /></GridPane.margin>
+        </Label>
+        <Label text="WACHTWOORD" textFill="#90a4ae"  GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <font><Font name="Roboto Condensed Bold" size="13.0" /></font>
+            <GridPane.margin><Insets top="-50.0" /></GridPane.margin>
+        </Label>
+
+        <Label fx:id="errorLabel" textFill="red" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <font><Font name="Roboto Condensed Bold" size="13.0" /></font>
+            <GridPane.margin><Insets top="-50.0" /></GridPane.margin>
+        </Label>
+
+        <TextField fx:id="userField" prefHeight="50.0" style="-fx-border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0.25) rgba(0,0,0,0); -fx-background-color: none;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <font><Font name="Roboto Medium" size="15.0" /></font>
+            <GridPane.margin><Insets top="20.0" /></GridPane.margin>
+        </TextField>
+        <PasswordField fx:id="passField" prefHeight="50.0" style="-fx-border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0.25) rgba(0,0,0,0); -fx-background-color: none;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <GridPane.margin><Insets top="20.0" /></GridPane.margin>
+            <font><Font name="Roboto Medium" size="16.0" /></font>
+        </PasswordField>
+
+        <Button text="VOEG ACCOUNT TOE" fx:id="AccountAddToDB" onAction="#addAccount" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #03A9F4;" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7">
+            <font><Font name="Roboto Medium" size="14.0" /></font>
+            <cursor><Cursor fx:constant="HAND" /></cursor>
+        </Button>
+
+        <AnchorPane id="select-functie" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5">
+            <Label layoutX="0" text="FUNCTIE" textFill="#90a4ae" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="0.0">
+                <font>
+                    <Font name="Roboto Condensed Bold" size="13.0" />
+                </font>
+            </Label>
+
+            <RadioButton text="Administrator" fx:id="Administrator" layoutX="0" layoutY="0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+                <font>
+                    <Font name="Roboto Regular" size="9.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <toggleGroup>
+                    <ToggleGroup fx:id="$roleGroup" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton text="Systeembeheerder" fx:id="Systeembeheerder" layoutX="0" layoutY="0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+                <font>
+                    <Font name="Roboto Regular" size="9.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <toggleGroup>
+                    <ToggleGroup fx:id="$roleGroup" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton text="Analist" fx:id="Analist" layoutX="0" layoutY="0" mnemonicParsing="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="120.0">
+                <font>
+                    <Font name="Roboto Regular" size="9.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <toggleGroup>
+                    <ToggleGroup fx:id="$roleGroup" />
+                </toggleGroup>
+            </RadioButton>
+
+            <Label text="Administrator" layoutX="0" layoutY="0" style="-fx-background-color: rgb(250,250,250);" textFill="#000000cc" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="38.0">
+                <font>
+                    <Font name="Roboto Regular" size="14.0" />
+                </font>
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </Label>
+            <Label text="Systeembeheerder" layoutX="0" layoutY="0" style="-fx-background-color: rgb(250,250,250);" textFill="#000000cc" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="78.0">
+                <font>
+                    <Font name="Roboto Regular" size="14.0" />
+                </font>
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </Label>
+            <Label text="Analist" layoutX="0" layoutY="0" style="-fx-background-color: rgb(250,250,250);" textFill="#000000cc" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="118.0">
+                <font>
+                    <Font name="Roboto Regular" size="14.0" />
+                </font>
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </Label>
+        </AnchorPane>
+
+        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" text="Label" textFill="#c30808" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+        <Label fx:id="passLabel" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" text="Label" textFill="#3f901f" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+
+    </GridPane>
+</center>
+</BorderPane>
