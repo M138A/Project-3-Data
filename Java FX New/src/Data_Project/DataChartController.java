@@ -3,6 +3,7 @@ package Data_Project;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
@@ -207,6 +208,8 @@ public class DataChartController implements Initializable {
             e.printStackTrace();
         }
     }
-}
 
+    public void logoutButtonAction(ActionEvent actionEvent) {
+    }
+}
 

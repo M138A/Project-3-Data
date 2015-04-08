@@ -301,8 +301,10 @@ public class AnalistController implements Initializable {
                 berichten.add(a);
             }
             //close database connection
-            DataChartController d = new DataChartController(this);
             con.close();
+            VoorbeeldAnalyse d = new VoorbeeldAnalyse(this);
+            fxmlController AN = new fxmlController();
+            AN.setMainStage("Analyse", "Voorbeeld.fxml");
 
 
             /**Catch exception when data can't be saved into database for example: There is nothing filled in **/
