@@ -21,7 +21,7 @@
                 </image></ImageView></graphic>
             </Button>
 
-            <Button id="top-button button-logout" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="80.0" style="-fx-background-color: none;" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <Button id="top-button button-logout" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#LogoutScreen" prefHeight="80.0" style="-fx-background-color: none;" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                 <padding><Insets top="-1.0" /></padding>
                 <font><Font name="Roboto Medium" size="12.0" /></font>
                 <cursor><Cursor fx:constant="HAND" /></cursor>

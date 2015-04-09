@@ -50,7 +50,7 @@
                 <cursor><Cursor fx:constant="HAND" /></cursor>
             </Button>
 
-            <Button text="ANNULEREN" layoutX="410.0" layoutY="403.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: none;" textFill="#00000040" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button text="ANNULEREN" layoutX="410.0" onAction="#exit" layoutY="403.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: none;" textFill="#00000040" GridPane.columnIndex="1" GridPane.rowIndex="5">
                 <font><Font name="Roboto Medium" size="14.0" /></font>
                 <GridPane.margin><Insets left="15.0" /></GridPane.margin>
                 <cursor><Cursor fx:constant="HAND" /></cursor>

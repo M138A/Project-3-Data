@@ -22,7 +22,7 @@
           <Image url="@../Images/top-button-back.png" />
         </image></ImageView></graphic>
       </Button>
-
+<!--
       <Button id="top-button button-refresh" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#UpdatedataButtonAction" prefHeight="80.0" style="-fx-background-color: rgba(0,0,0,0.3);" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="10.0">
         <padding><Insets top="-1.0" /></padding>
         <font><Font name="Roboto Medium" size="12.0" /></font>
@@ -32,8 +32,8 @@
           <Image url="@../Images/top-button-refresh.png" />
         </image></ImageView></graphic>
       </Button>
-
-      <Button id="top-button button-logout" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="80.0" style="-fx-background-color: none;" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+-->
+      <Button id="top-button button-logout" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#LogoutScreen" prefHeight="80.0" style="-fx-background-color: none;" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <padding><Insets top="-1.0" /></padding>
         <font><Font name="Roboto Medium" size="12.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
@@ -80,12 +80,12 @@
         </columns>
       </TableView>
 
-      <Button text="VOEG TOE" fx:id="addUser" onAction="#addAccount" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #03A9F4;" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+      <Button text="VOEG TOE" fx:id="addUser" onAction="#addNewUser" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #03A9F4;" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
         <font><Font name="Roboto Medium" size="14.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
       </Button>
 
-      <Button text="VERWIJDER" fx:id="DeleteButton" layoutX="410.0" layoutY="403.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: none;" textFill="#00000060" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <Button text="VERWIJDER" fx:id="DeleteButton" onAction="#removeAccount" layoutX="410.0" layoutY="403.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: none;" textFill="#00000060" GridPane.columnIndex="1" GridPane.rowIndex="3">
         <font><Font name="Roboto Medium" size="14.0" /></font>
         <GridPane.margin><Insets left="15.0" /></GridPane.margin>
         <cursor><Cursor fx:constant="HAND" /></cursor>
