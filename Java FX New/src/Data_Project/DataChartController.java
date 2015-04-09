@@ -193,16 +193,16 @@ public class DataChartController implements Initializable {
             XYChart.Series x1 = new XYChart.Series<>();
             barChart2.setTitle("Posts/Datum");
             x1.setName("Geposte Social Media");
-            for (int h = 0; h < a.getAmount().size(); h++) {
+            try {
+            for (int h = 0; h < a.getAmount().size(); h++)
+            {
+                x1.getData().add(new XYChart.Data<>(a.getDate().get(h).toString(), a.getAmount().get(h)));
+            }
 
-                try {
-                    x1.getData().add(new XYChart.Data<>(a.getDate().get(h).toString(), a.getAmount().get(h)));
-
-
-                } catch (Exception e) {
+            } catch (Exception e) {
                     System.out.println("Woops");
-                }
-            } // set data
+            }
+             // set data
             barChart2.getData().addAll(x1);
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,8 +1,6 @@
 package Data_Project;
 
 import facebook4j.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
@@ -410,6 +408,7 @@ public class UpdateDataController implements Initializable {
         }
 
 
+/**
         ObservableList<PieChart.Data> pieChartData =
                 FXCollections.observableArrayList(
                         new PieChart.Data("Google", SocMed.getGoogle()),
@@ -417,6 +416,7 @@ public class UpdateDataController implements Initializable {
                         new PieChart.Data("Facebook", SocMed.getFacebook()));
 
         Piechart.setData(pieChartData);
+*/
 
 
 

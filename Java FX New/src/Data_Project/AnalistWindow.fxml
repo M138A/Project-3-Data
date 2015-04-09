@@ -50,6 +50,17 @@
                         <Insets top="-1.0" />
                     </padding>
                 </Button>
+            <Button id="top-button" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="62.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#UpdatedataButtonAction" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: rgba(0,0,0,0.3);" text="New Data" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Roboto Medium" size="12.0" />
+               </font>
+               <padding>
+                  <Insets top="-1.0" />
+               </padding>
+            </Button>
             </children>
         </AnchorPane>
     </top>
@@ -73,7 +84,7 @@
                 <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#AnalyseUitvoeren" prefHeight="120.0" prefWidth="287.0" style="-fx-background-color: none; -fx-border-color: rgba(0,0,0,0.2) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);" text="NIEUWE ANALYSE" textFill="#000000b2" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" >
+                <Button contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#AnalyseUitvoeren" prefHeight="120.0" prefWidth="287.0" style="-fx-background-color: none; -fx-border-color: rgba(0,0,0,0.2) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);" text="NIEUWE ANALYSE" textFill="#000000b2" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
                     <font>
                         <Font name="Roboto Medium" size="16.0" />
                     </font>
@@ -204,7 +215,7 @@
                         </CheckBox>
                     </children>
                 </AnchorPane>
-                <Button contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#UpdatedataButtonAction" prefHeight="120.0" prefWidth="175.0" style="-fx-background-color: none; -fx-border-color: rgba(0,0,0,0.2) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);" text="NIEUWE DATA" textFill="#000000b2" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                <Button contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#grafiek1" prefHeight="120.0" prefWidth="300.0" style="-fx-background-color: none; -fx-border-color: rgba(0,0,0,0.2) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);" text="VOORBEELD ANALYSE" textFill="#000000b2" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="5">
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
