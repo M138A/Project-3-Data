@@ -91,7 +91,7 @@
                   <Insets top="-50.0" />
                </GridPane.margin>
                </Label>
-   
+   <!--
                <Label fx:id="errorLabel" textFill="red" GridPane.columnIndex="2" GridPane.rowIndex="7">
                    <font>
                   <Font name="Roboto Condensed Bold" size="13.0" />
@@ -100,7 +100,7 @@
                   <Insets top="-50.0" />
                </GridPane.margin>
                </Label>
-   
+   -->
                <TextField fx:id="userField" prefHeight="50.0" style="-fx-border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0.25) rgba(0,0,0,0); -fx-background-color: none;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
                    <font>
                   <Font name="Roboto Medium" size="15.0" />
@@ -144,8 +144,8 @@
       </children>
                </AnchorPane>
    
-               <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" text="Label" textFill="#c30808" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-               <Label fx:id="passLabel" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" text="Label" textFill="#3f901f" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+               <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="130.0" text="Label" textFill="#c30808" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+               <Label fx:id="passLabel" alignment="CENTER" prefHeight="17.0" prefWidth="130.0" text="Label" textFill="#3f901f" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
            </children>
 
         </GridPane>
