@@ -21,15 +21,7 @@
                 </image></ImageView></graphic>
             </Button>
 
-            <Button id="top-button button-refresh" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#UpdatedataButtonAction" prefHeight="80.0" style="-fx-background-color: rgba(0,0,0,0.3);" textAlignment="CENTER" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="10.0">
-                <padding><Insets top="-1.0" /></padding>
-                <font><Font name="Roboto Medium" size="12.0" /></font>
-                <cursor><Cursor fx:constant="HAND" /></cursor>
-
-                <graphic><ImageView fitWidth="80.0" pickOnBounds="true" preserveRatio="true"><image>
-                    <Image url="@../Images/top-button-refresh.png" />
-                </image></ImageView></graphic>
-            </Button>
+ 
 
             <Button id="top-button button-logout" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="80.0" style="-fx-background-color: none;" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                 <padding><Insets top="-1.0" /></padding>
