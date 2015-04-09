@@ -2,6 +2,7 @@ package Data_Project;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -107,5 +108,9 @@ public class DataGridController implements Initializable{
             e.printStackTrace();
         }
         refreshList();
+    }
+    public void LogoutScreen(ActionEvent actionEvent) {
+        fxmlController logout = new fxmlController();
+        logout.setLogin("Log in", "Login.fxml");
     }
 }

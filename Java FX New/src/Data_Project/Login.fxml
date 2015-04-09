@@ -45,7 +45,7 @@
                 <font><Font name="Roboto Medium" size="16.0" /></font>
             </PasswordField>
 
-            <Button text="INLOGGEN" onAction="#submitForm" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #03A9F4;" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Button text="INLOGGEN" defaultButton="true" onAction="#submitForm" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #03A9F4;" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
                 <font><Font name="Roboto Medium" size="14.0" /></font>
                 <cursor><Cursor fx:constant="HAND" /></cursor>
             </Button>

@@ -25,6 +25,7 @@ public class AdminWindow {
     public TextField userField;
     public PasswordField passField;
     public ToggleGroup roleGroup;
+
     public RadioButton Analist;
     public RadioButton Administrator;
     public RadioButton Systeembeheerder;
